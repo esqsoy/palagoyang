@@ -6,7 +6,7 @@
 
 Instituto Cervantes, *Plan curricular del Instituto Cervantes. Niveles de referencia para el español*(2006)의 두 장이다.
 
-- 5장 기능(Funciones): 기능 약 140개, 수준마다 스페인어 보기 표현이 달려 있다. 기능×수준 칸은 약 860개, 보기 표현 줄은 약 5,000줄이다(26.11.03 대충 셈).
+- 5장 기능(Funciones): 기능 약 140개, 수준마다 스페인어 보기 표현이 달려 있다. 보기 표현 줄은 약 5,000줄이다(26.11.03 대충 셈). 26.11.04 실측: 기능 표 140개, 기능×수준 840칸 가운데 643칸에 표현 꼴이 있다(꼴 2,444개). 수준 분포를 쓴 사다리 칸 초안은 [ladder.py](ladder.py)·[ladder-draft-20261104.json](ladder-draft-20261104.json).
 - 6장 화용 전술·전략(Tácticas y estrategias pragmáticas): 담화 짜기·양태(강조·누그러뜨리기)·공손 전략.
 
 공통 원장은 이 중 **목차(할 일)만** 받았다. 목차 번호와 원장 id의 대응은 [source-check-20261103.json](source-check-20261103.json)의 `pcic_functions`·`pcic_tactics`에 있다. 보기 표현은 스페인어로 말하는 여러 방식이라 공통 원장(한국어 공통 내용)에는 맞지 않고, 빨라고양의 판 고유 원장 몫이다.

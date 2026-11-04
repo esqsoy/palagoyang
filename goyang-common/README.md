@@ -5,6 +5,7 @@
 - 원장: [expressions.json](expressions.json) · 초안 0.3(2026-11-03) · 258항목. 0.1의 141항목에 원문 대조로 0.2에서 85항목(Threshold 1990·Vantage·JF), 0.3에서 32항목(PCIC)을 더했다(`"added"`에 판, 근거는 `ref`).
 - 원문 대조표: [source-check-20261103.json](source-check-20261103.json). 원문 목차 한 줄마다 원장 id와 상태(있음·더함·보강·묻기 꼴·판 고유·뺌)를 적었다.
 - 빨라고양(스페인어판)용으로 남긴 PCIC 자료: [spanish-pcic-sources.md](spanish-pcic-sources.md). 보관본 주소와 쓰는 법. 원문 파일은 공개 저장소라 넣지 않고 맥미니 비공개 폴더(`10 언어/고양/비공개/`)에 둔다.
+- 기능×수준 사다리 칸 초안(26.11.04): [ladder-draft-20261104.json](ladder-draft-20261104.json), [ladder.py](ladder.py)로 만든다(PCIC 원문은 맥미니 지정 폴더에서 읽음). 영신 검토 페이지 https://claude.ai/artifact/5v9b3inZWWQU1jvLEVigMb
 - 아직 영신 검수 전이다. 항목·문장·수준은 바뀔 수 있다. 직검수 페이지 https://claude.ai/artifact/TDwB3yZf3sAwqooZS38zXA (0.3으로 갱신, 새 항목은 '0.2 추가'·'0.3 추가' 표시).
 - 26.11.03 탄고고양 저장소에서 만들고, 26.11.04 영신 결정으로 이 저장소(palagoyang)로 옮겼다. 그 전 기록은 [tangogoyang WORK_LOG](https://github.com/esqsoy/tangogoyang/blob/main/WORK_LOG.md)의 11/03 고양공유 절들.
 
