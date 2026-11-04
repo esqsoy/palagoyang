@@ -7,13 +7,22 @@
 - **언어불문 필수 표현 원장 초안 0.3** (258항목, [goyang-common/](goyang-common/README.md)). **영신 검수 대기.** 직검수 페이지 https://claude.ai/artifact/TDwB3yZf3sAwqooZS38zXA (0.3, 새 항목에 '0.2 추가'·'0.3 추가' 표시, 줄마다 댓글).
   - 0.1(141항목)을 원문과 대조해 0.2에서 85항목(Threshold 1990·Vantage·JF Can-do), 0.3에서 32항목(PCIC)을 더했다. 네 원문 대조는 끝났다. 대조표는 [source-check-20261103.json](goyang-common/source-check-20261103.json).
   - 각 판은 항목마다 `same`/`counterpart`/`none`을 단다. 원장에 없는 그 언어 고유 표현은 판 고유 원장에 둔다.
-- **PCIC 원문은 빨라고양 판 고유 원장용으로 남김**(영신 26.11.03). 주소와 쓰는 법은 [spanish-pcic-sources.md](goyang-common/spanish-pcic-sources.md). 원문 파일 여섯 쪽은 영신이 갖고 있고, Google Drive `빨라고양 자료 · PCIC 보관본` 폴더(26.11.03 만듦, '읽어 두기' 문서 있음)에 올리기로 했다. 맥미니 지정 폴더를 정하면 그쪽으로도 옮긴다.
+- **PCIC 원문은 빨라고양 판 고유 원장용으로 남김**(영신 26.11.03). 주소와 쓰는 법은 [spanish-pcic-sources.md](goyang-common/spanish-pcic-sources.md). 원문 8쪽(5·6장 목록 6쪽, 소개 2쪽)은 26.11.04 맥미니 세션이 Internet Archive에서 다시 받아 아래 비공개 폴더 `pcic/`에 두었다.
+
+## 작업 환경 (26.11.04~)
+
+- 작업은 늘 켜 두는 **맥미니**의 Claude 데스크톱 앱(Code 탭)에서 한다. 클라우드 세션은 쓰지 않는다.
+- 저장소: 맥미니 iCloud Drive `10 언어/고양/palagoyang/`(영신 결정, "저기가 안전해").
+- **맥미니 지정 폴더**(공개하면 안 되는 자료): 저장소 옆 `10 언어/고양/비공개/`. git 밖이고 어디에도 올리지 않는다. 지금은 `pcic/` 8쪽과 README.
+- 맥미니 세션은 web.archive.org에 들어갈 수 있다(26.11.04 확인).
+- iCloud 안의 git 저장소다. ` 2`가 붙은 사본처럼 이상한 파일이 `.git` 안에 생기면 손으로 고치지 말고, 커밋 안 된 변경을 빼 둔 뒤 GitHub에서 다시 받는다. 원본은 GitHub다.
+- GitHub CLI는 `~/.local/bin/gh`(PATH에 없음, 전체 경로로 부른다). 이 저장소의 커밋 작성자는 `esqsoy` noreply 주소로 설정돼 있다(`git config` 저장소 범위).
+- 26.11.03에 만든 Google Drive `빨라고양 자료 · PCIC 보관본` 폴더('읽어 두기' 문서)는 맥미니 폴더를 정하기 전 것이다. 둘지 지울지는 영신이 정한다.
 
 ## 열린 질문 (영신 결정 대기)
 
 - 공통 원장을 **기능×수준 사다리**로 키울지. 기능마다 A1~A2 기본꼴 / B1~B2 / C1 다듬은 꼴로 2~3문장, PCIC의 기능×수준 분포(약 860칸)를 따르면 약 600~850문장.
 - 고양공유 원칙 전문(지금은 tangogoyang PRINCIPLES 0절)을 이 저장소로 옮길지.
-- 맥미니 지정 폴더(공개하면 안 되는 자료 보관)의 위치. 클라우드 세션에서 쓰려면 맥미니 Claude 앱의 Remote Control에 그 폴더를 추가해야 한다.
 
 ## 그 밖의 고양공유 후보 (tangogoyang HANDOFF에서 넘겨받음)
 

@@ -13,7 +13,7 @@ Instituto Cervantes, *Plan curricular del Instituto Cervantes. Niveles de refere
 
 ## 어디에 있나
 
-원래 주소 cvc.cervantes.es는 26.11.03 현재 서버가 모든 주소에 404를 돌려준다. 영신이 Internet Archive 보관본을 내려받아 갖고 있다. 다시 받을 주소:
+원래 주소 cvc.cervantes.es는 26.11.03 현재 서버가 모든 주소에 404를 돌려준다. Internet Archive 보관본을 받아 맥미니 지정 폴더에 두었다(아래). 다시 받을 주소:
 
 | 쪽 | 보관본 |
 |---|---|
@@ -26,7 +26,7 @@ Instituto Cervantes, *Plan curricular del Instituto Cervantes. Niveles de refere
 
 소개 쪽: `05_funciones_introduccion.htm`, `06_tacticas_pragmaticas_introduccion.htm`(같은 보관본, 20260624131351). 같은 책의 다른 장(문법·발음·개념·문화 등)도 같은 `niveles/` 아래에 있다.
 
-**원문 파일은 이 저장소에 넣지 않는다.** 이 저장소는 공개이고 PCIC는 세르반테스 문화원의 저작물이라, 올리면 재배포가 된다. 파일은 영신 Google Drive 최상위의 비공개 폴더 `빨라고양 자료 · PCIC 보관본`에 둔다(26.11.03 Claude가 폴더와 '읽어 두기' 문서를 만들고, 파일은 영신이 올림). Claude 세션은 web.archive.org에 못 들어갈 수 있으니(26.11.03 이 세션은 막힘), 쓸 때는 영신이 파일을 올려 준다.
+**원문 파일은 이 저장소에 넣지 않는다.** 이 저장소는 공개이고 PCIC는 세르반테스 문화원의 저작물이라, 올리면 재배포가 된다. 파일은 맥미니 iCloud Drive `10 언어/고양/비공개/pcic/`에 둔다. 26.11.04 맥미니 세션이 위 주소의 보관 시점에서 보관본 툴바 없는 원래 HTML(`/web/<시점>id_/…`)로 8쪽(목록 6쪽, 소개 2쪽)을 받았다. 맥미니 세션은 web.archive.org에 들어갈 수 있고, 클라우드 세션은 막힐 수 있다(26.11.03 막힘). 26.11.03에 만든 Google Drive `빨라고양 자료 · PCIC 보관본` 폴더('읽어 두기' 문서)는 맥미니 폴더를 정하기 전 것이다.
 
 ## 빨라고양에서 쓰는 법
 
