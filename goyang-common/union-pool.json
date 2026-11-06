@@ -1,0 +1,3421 @@
+{
+ "title": "고양공유 합집합 풀",
+ "date": "2026-11-07",
+ "how": {
+  "decision": "영신 26.11.07: 합집합 끝까지, 건지는 비율이 작아지면 완성으로 보고 멈춘다. 처음엔 완벽을 노리지 않는다.",
+  "stop_rule": "언어·계보가 다르고 새 항목이 많이 나올 출처부터 대조한다. 목차·제목 단위까지만 맞춘다. 연달아 두 출처에서 새 항목이 각각 5개 미만이면 멈춘다.",
+  "status": "있음(원장 항목이 덮음) / 후보(앞 출처에서 나온 풀 후보와 같음) / 새(원장에도 풀에도 없는 상황·기능) / 특화(직업·한 나라 행정에 묶임) / 원장 밖(듣기·읽기·서식·긴 글·셈처럼 말할 문장 항목이 아님) / 애매",
+  "families": "계보: T = Threshold 기능 목록 계열(TL90·VA·PCIC·국립국어원 기능), E = CEFR 기술문 계열(JF·CEFR CV), 그 밖은 목록마다 독자 계보 하나. 교집합은 목록 수가 아니라 계보 수로 센다.",
+  "order_note": "에이전트 조사 순서는 계보 다양성 기준이었다. 생활 과제 목록 둘(fide·生活Can do)이 서로 크게 겹쳐서, 셋째부터는 새 항목이 많이 나올 순서(CV → 국립국어원 → CASAS)로 바꿨다."
+ },
+ "sources": [
+  {
+   "id": "TL90",
+   "family": "T",
+   "lang": "영어(언어 무관 지향)",
+   "compared": "source-check-20261103.json"
+  },
+  {
+   "id": "VA",
+   "family": "T",
+   "lang": "영어(언어 무관 지향)",
+   "compared": "source-check-20261103.json"
+  },
+  {
+   "id": "JF",
+   "family": "E",
+   "lang": "일본어",
+   "compared": "source-check-20261103.json"
+  },
+  {
+   "id": "PCIC",
+   "family": "T",
+   "lang": "스페인어",
+   "compared": "source-check-20261103.json"
+  },
+  {
+   "id": "fide",
+   "family": "fide",
+   "lang": "독·불·이(스위스)",
+   "what": "SEM fide 시나리오(생활 101·직업 30)",
+   "url": "https://www.fide-info.ch/de/unterrichtshilfen/szenarien",
+   "license": "개인 이용만 허락. 시나리오 제목만 적음",
+   "unit": "시나리오",
+   "read": "2026-11-07"
+  },
+  {
+   "id": "seikatsu",
+   "family": "seikatsu",
+   "lang": "일본어",
+   "what": "文化審議会 生活Can do 一覧(2022, 2023 수정) 생활상 행위 사례 상위",
+   "url": "https://www.nihongo-ews.mext.go.jp/information/download/371",
+   "license": "PDL1.0(출처 표시)",
+   "unit": "사례 상위 124개",
+   "read": "2026-11-07",
+   "note": "Can do 문장 117개는 JF에서 왔다(E). 사례 분류는 2010 標準的なカリキュラム案에서 온 독자 계보로 센다."
+  },
+  {
+   "id": "CV",
+   "family": "E",
+   "lang": "언어 무관",
+   "what": "Council of Europe, CEFR Companion Volume(2020) 척도",
+   "url": "https://rm.coe.int/cefr-descriptors-2020-/16809ed2c7",
+   "license": "비상업·출처 표시·짧은 인용",
+   "unit": "척도",
+   "read": "2026-11-07",
+   "note": "원문 xlsx를 이 세션에서 열지 못해 Claude가 아는 척도 목록으로 맞췄다(미대조)."
+  },
+  {
+   "id": "KR-STD",
+   "family": "T",
+   "lang": "한국어",
+   "what": "국립국어원 국제 통용 한국어 표준 교육과정 적용 연구(4단계, 2017) <표23> 기능 52개",
+   "url": "https://www.korean.go.kr/front/reportData/reportDataView.do?mn_id=207&report_seq=932",
+   "license": "공공누리 1유형",
+   "unit": "기능",
+   "read": "2026-11-07",
+   "note": "기능은 van Ek·Trim을 참고했다고 밝혀 T로 센다. <표11> 주제 85개는 단어 주제라 새 항목이 없었다."
+  },
+  {
+   "id": "CASAS",
+   "family": "casas",
+   "lang": "미국 영어",
+   "what": "CASAS Competencies(2008)",
+   "url": "https://portal.ct.gov/-/media/sde/adult-ed/casas_competency_list.pdf",
+   "license": "© CASAS. 번호·짧은 제목만",
+   "unit": "소분류(항목 360개를 훑음)",
+   "read": "2026-11-07"
+  }
+ ],
+ "stop_log": [
+  {
+   "source": "fide",
+   "entries": 131,
+   "counts": {
+    "새": 41,
+    "있음": 65,
+    "원장 밖": 5,
+    "특화": 20
+   },
+   "new": [
+    "N-01",
+    "N-02",
+    "N-03",
+    "N-04",
+    "N-05",
+    "N-06",
+    "N-07",
+    "N-08"
+   ],
+   "new_n": 8
+  },
+  {
+   "source": "seikatsu",
+   "entries": 124,
+   "counts": {
+    "원장 밖": 43,
+    "있음": 45,
+    "새": 4,
+    "후보": 23,
+    "특화": 8,
+    "애매": 1
+   },
+   "new": [
+    "N-09"
+   ],
+   "new_n": 1
+  },
+  {
+   "source": "CV",
+   "entries": 49,
+   "counts": {
+    "원장 밖": 6,
+    "있음": 33,
+    "새": 6,
+    "후보": 4
+   },
+   "new": [
+    "N-10",
+    "N-11",
+    "N-12",
+    "N-13",
+    "N-14",
+    "N-15"
+   ],
+   "new_n": 6
+  },
+  {
+   "source": "KR-STD",
+   "entries": 52,
+   "counts": {
+    "있음": 51,
+    "새": 1
+   },
+   "new": [
+    "N-16"
+   ],
+   "new_n": 1
+  },
+  {
+   "source": "CASAS",
+   "entries": 49,
+   "counts": {
+    "있음": 19,
+    "원장 밖": 22,
+    "후보": 8
+   },
+   "new": [],
+   "new_n": 0
+  }
+ ],
+ "stopped": "국립국어원(1)과 CASAS(0)가 연달아 5개 미만이라 멈췄다(26.11.07).",
+ "not_compared": "Trinity GESE(받은 사본이 1~3급뿐), Wikivoyage·Refugee Phrasebook, GF0025, CLB, BAMF, Cambridge, ALTE, LIAM, ACTFL, Camões, Profile deutsch, Beacco, Core Inventory, Breakthrough, GSE. 목록·주소는 조사 보고(WORK_LOG 26.11.07).",
+ "candidates": [
+  {
+   "id": "N-01",
+   "task": "집 구하기·빌리기(집 보고 묻기, 계약)",
+   "group": "T",
+   "domain": "주거"
+  },
+  {
+   "id": "N-02",
+   "task": "고장·문제 알리고 고쳐 달라고 하기(맡기기 포함)",
+   "group": "T",
+   "domain": "주거·서비스"
+  },
+  {
+   "id": "N-03",
+   "task": "그만둔다고 알리기(집 계약 해지·퇴사)",
+   "group": "T",
+   "domain": "주거·일"
+  },
+  {
+   "id": "N-04",
+   "task": "신청·등록하기(수업·모임·기관·보험)",
+   "group": "T",
+   "domain": "기관"
+  },
+  {
+   "id": "N-05",
+   "task": "못 간다고 알리기(결석·결근·빠짐)",
+   "group": "T",
+   "domain": "일·배움"
+  },
+  {
+   "id": "N-06",
+   "task": "아이 맡기고 데려오기",
+   "group": "T",
+   "domain": "아이"
+  },
+  {
+   "id": "N-07",
+   "task": "일 구하기(지원·면접)",
+   "group": "T",
+   "domain": "일"
+  },
+  {
+   "id": "N-08",
+   "task": "예약·약속 날짜 잡기(기관·가게)",
+   "group": "T",
+   "domain": "기관·서비스"
+  },
+  {
+   "id": "N-09",
+   "task": "재난 때 알리고 피하기(불·지진·태풍)",
+   "group": "T",
+   "domain": "안전"
+  },
+  {
+   "id": "N-10",
+   "task": "여럿에게 알리기(주목시키고 안내하기)",
+   "group": "F5",
+   "domain": "말하기"
+  },
+  {
+   "id": "N-11",
+   "task": "온라인 대화·댓글·채팅",
+   "group": "T",
+   "domain": "온라인"
+  },
+  {
+   "id": "N-12",
+   "task": "그래프·표 설명하기(늘고 줄기)",
+   "group": "F5",
+   "domain": "중개"
+  },
+  {
+   "id": "N-13",
+   "task": "통역·번역해 주기(이 말은 ~라는 뜻이에요)",
+   "group": "F6",
+   "domain": "중개"
+  },
+  {
+   "id": "N-14",
+   "task": "사이에서 중재하기(다툼 가라앉히기)",
+   "group": "C",
+   "domain": "중개"
+  },
+  {
+   "id": "N-15",
+   "task": "우리 문화 설명하기(한국에서는 ~해요)",
+   "group": "F5",
+   "domain": "문화"
+  },
+  {
+   "id": "N-16",
+   "task": "상대를 부르는 말(호칭)",
+   "group": "F4",
+   "domain": "사교",
+   "note": "0.3 PCIC 대조 때 '부르는 말'을 판 고유로 뺐다. 층 나누기(공통 상황 + 판마다 꼴)로 보면 공통 후보다. 영신초이 '초이!'도 여기 든다."
+  },
+  {
+   "id": "N-17",
+   "task": "말 놓자고 하기(높임 바꾸기)",
+   "group": "F4",
+   "domain": "사교",
+   "from_research": "화용 비교 조사(26.11.07): 영신이 든 예. 목록 대조에서 나온 것이 아니라 멈춤 규칙 수에는 넣지 않는다."
+  },
+  {
+   "id": "N-18",
+   "task": "누가 낼지 정하기(한턱내기·나눠 내기)",
+   "group": "F4",
+   "domain": "사교",
+   "from_research": "화용 비교 조사(26.11.07): 영신이 든 예. 목록 대조에서 나온 것이 아니라 멈춤 규칙 수에는 넣지 않는다."
+  }
+ ],
+ "entries": {
+  "fide": [
+   {
+    "no": "001",
+    "section": "WOHNUMGEBUNG",
+    "title": "Eine Wohnung suchen und mieten",
+    "status": "새",
+    "cand": "N-01"
+   },
+   {
+    "no": "002",
+    "section": "WOHNUMGEBUNG",
+    "title": "Einen Schaden beheben lassen",
+    "status": "새",
+    "cand": "N-02"
+   },
+   {
+    "no": "003",
+    "section": "WOHNUMGEBUNG",
+    "title": "Die Wohnung kündigen",
+    "status": "새",
+    "cand": "N-03"
+   },
+   {
+    "no": "004",
+    "section": "WOHNUMGEBUNG",
+    "title": "Sich bei den Nachbarn vorstellen",
+    "status": "있음",
+    "ledger": [
+     "F4-02",
+     "F1-01"
+    ]
+   },
+   {
+    "no": "005",
+    "section": "WOHNUMGEBUNG",
+    "title": "Einer Nachbarin begegnen",
+    "status": "있음",
+    "ledger": [
+     "F4-01",
+     "F4-09"
+    ]
+   },
+   {
+    "no": "006",
+    "section": "WOHNUMGEBUNG",
+    "title": "Eine Mitteilung des Abwarts verstehen",
+    "status": "원장 밖"
+   },
+   {
+    "no": "007",
+    "section": "WOHNUMGEBUNG",
+    "title": "An einer Mieterversammlung teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F5-09",
+     "F2-44"
+    ]
+   },
+   {
+    "no": "008",
+    "section": "WOHNUMGEBUNG",
+    "title": "Sich bei Nachbarn beschweren",
+    "status": "있음",
+    "ledger": [
+     "F5-16",
+     "F3-16"
+    ]
+   },
+   {
+    "no": "009",
+    "section": "WOHNUMGEBUNG",
+    "title": "Auf eine Beschwerde von Nachbarn reagieren",
+    "status": "있음",
+    "ledger": [
+     "F4-06",
+     "F3-14"
+    ]
+   },
+   {
+    "no": "010",
+    "section": "WOHNUMGEBUNG",
+    "title": "Einen Nachbarn um etwas bitten",
+    "status": "있음",
+    "ledger": [
+     "F3-01"
+    ]
+   },
+   {
+    "no": "011",
+    "section": "WOHNUMGEBUNG",
+    "title": "Einer Nachbarin Hilfe anbieten",
+    "status": "있음",
+    "ledger": [
+     "F3-10"
+    ]
+   },
+   {
+    "no": "012",
+    "section": "WOHNUMGEBUNG",
+    "title": "Einem Verein beitreten",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "013",
+    "section": "WOHNUMGEBUNG",
+    "title": "Zum ersten Mal in einen Sportverein gehen",
+    "status": "있음",
+    "ledger": [
+     "F4-02",
+     "F1-25"
+    ]
+   },
+   {
+    "no": "014",
+    "section": "KINDER",
+    "title": "Einen Betreuungsplatz für ein Kind finden",
+    "status": "새",
+    "cand": "N-06"
+   },
+   {
+    "no": "015",
+    "section": "KINDER",
+    "title": "Das Kind in einer Krippe oder einem Hort anmelden",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "016",
+    "section": "KINDER",
+    "title": "Das Kind zum Hort oder zur Krippe bringen",
+    "status": "새",
+    "cand": "N-06"
+   },
+   {
+    "no": "017",
+    "section": "KINDER",
+    "title": "Das Kind vom Hort oder von der Krippe abholen",
+    "status": "새",
+    "cand": "N-06"
+   },
+   {
+    "no": "018",
+    "section": "KINDER",
+    "title": "An einem Elternabend teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F5-09",
+     "F1-25"
+    ]
+   },
+   {
+    "no": "019",
+    "section": "KINDER",
+    "title": "Um ein Elterngespräch bitten",
+    "status": "새",
+    "cand": "N-08"
+   },
+   {
+    "no": "020",
+    "section": "KINDER",
+    "title": "An einem Elterngespräch teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F2-11",
+     "F1-13"
+    ]
+   },
+   {
+    "no": "021",
+    "section": "KINDER",
+    "title": "Ein Dispensationsgesuch stellen",
+    "status": "있음",
+    "ledger": [
+     "F3-03"
+    ]
+   },
+   {
+    "no": "022",
+    "section": "KINDER",
+    "title": "Das Kind vom Unterricht abmelden",
+    "status": "새",
+    "cand": "N-05"
+   },
+   {
+    "no": "023",
+    "section": "KINDER",
+    "title": "An einer Schulveranstaltung teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F4-01",
+     "F4-24"
+    ]
+   },
+   {
+    "no": "024",
+    "section": "KINDER",
+    "title": "Das Kind für ein Schullager anmelden",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "025",
+    "section": "KINDER",
+    "title": "Auf Mitteilungen der Schule bei Zwischenfällen reagieren",
+    "status": "있음",
+    "ledger": [
+     "F2-11",
+     "F1-13"
+    ]
+   },
+   {
+    "no": "026",
+    "section": "ARBEIT",
+    "title": "Ein Anstellungsgespräch führen",
+    "status": "새",
+    "cand": "N-07"
+   },
+   {
+    "no": "027",
+    "section": "ARBEIT",
+    "title": "Aufträge für den Arbeitstag entgegennehmen",
+    "status": "있음",
+    "ledger": [
+     "F3-25",
+     "F6-10"
+    ]
+   },
+   {
+    "no": "028",
+    "section": "ARBEIT",
+    "title": "Den Dienst abtauschen",
+    "status": "있음",
+    "ledger": [
+     "F3-01"
+    ]
+   },
+   {
+    "no": "029",
+    "section": "ARBEIT",
+    "title": "Einen Arbeitsbericht erstellen",
+    "status": "있음",
+    "ledger": [
+     "F5-02",
+     "F1-18"
+    ]
+   },
+   {
+    "no": "030",
+    "section": "ARBEIT",
+    "title": "Eine Materialbestellung machen",
+    "status": "있음",
+    "ledger": [
+     "F3-02"
+    ]
+   },
+   {
+    "no": "031",
+    "section": "ARBEIT",
+    "title": "Eine Warenlieferung entgegennehmen",
+    "status": "있음",
+    "ledger": [
+     "F1-15"
+    ]
+   },
+   {
+    "no": "032",
+    "section": "ARBEIT",
+    "title": "An einer Teamsitzung teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F5-09",
+     "C-06"
+    ]
+   },
+   {
+    "no": "033",
+    "section": "ARBEIT",
+    "title": "Sich am Arbeitsplatz abmelden",
+    "status": "새",
+    "cand": "N-05"
+   },
+   {
+    "no": "034",
+    "section": "ARBEIT",
+    "title": "Einen Unfall melden",
+    "status": "있음",
+    "ledger": [
+     "T-25"
+    ]
+   },
+   {
+    "no": "035",
+    "section": "ARBEIT",
+    "title": "Ferien beantragen",
+    "status": "있음",
+    "ledger": [
+     "F3-03"
+    ]
+   },
+   {
+    "no": "036",
+    "section": "ARBEIT",
+    "title": "An einem Mitarbeitergespräch teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F5-09",
+     "F2-05"
+    ]
+   },
+   {
+    "no": "037",
+    "section": "ARBEIT",
+    "title": "Die Stelle kündigen",
+    "status": "새",
+    "cand": "N-03"
+   },
+   {
+    "no": "038",
+    "section": "ARBEIT",
+    "title": "Die Kündigung erhalten",
+    "status": "원장 밖"
+   },
+   {
+    "no": "039",
+    "section": "ARBEIT",
+    "title": "Einen Bewohner im Altersheim pflegen",
+    "status": "특화"
+   },
+   {
+    "no": "040",
+    "section": "ARBEIT",
+    "title": "Gäste im Restaurant bedienen",
+    "status": "특화"
+   },
+   {
+    "no": "041",
+    "section": "ARBEIT",
+    "title": "Das Zimmer einer Bewohnerin im Altersheim putzen",
+    "status": "특화"
+   },
+   {
+    "no": "042",
+    "section": "ARBEIT | DEUTSCH AUF DER BAUSTELLE",
+    "title": "An einem Briefing teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F6-10",
+     "F3-25"
+    ]
+   },
+   {
+    "no": "043",
+    "section": "ARBEIT | DEUTSCH AUF DER BAUSTELLE",
+    "title": "Ein Problem melden",
+    "status": "새",
+    "cand": "N-02"
+   },
+   {
+    "no": "044",
+    "section": "ARBEIT | DEUTSCH AUF DER BAUSTELLE",
+    "title": "Sich wegen Krankheit oder Unfall abmelden",
+    "status": "새",
+    "cand": "N-05"
+   },
+   {
+    "no": "045",
+    "section": "ARBEIT | DEUTSCH AUF DER BAUSTELLE",
+    "title": "Sich für eine Verspätung entschuldigen",
+    "status": "있음",
+    "ledger": [
+     "F4-32"
+    ]
+   },
+   {
+    "no": "046",
+    "section": "ARBEIT | DEUTSCH AUF DER BAUSTELLE",
+    "title": "An Gesprächen mit Kollegen teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F4-09",
+     "F5-01"
+    ]
+   },
+   {
+    "no": "047",
+    "section": "ARBEIT | DEUTSCH AUF DER BAUSTELLE",
+    "title": "An einem Mitarbeitergespräch teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F5-09",
+     "F2-05"
+    ]
+   },
+   {
+    "no": "048",
+    "section": "ARBEIT | DEUTSCH IN DER GASTRONOMIE",
+    "title": "Den Arbeitsplatz einrichten und ein Menü zubereiten",
+    "status": "특화"
+   },
+   {
+    "no": "049",
+    "section": "ARBEIT | DEUTSCH IN DER GASTRONOMIE",
+    "title": "Die Küche reinigen und das Lager aufräumen",
+    "status": "특화"
+   },
+   {
+    "no": "050",
+    "section": "ARBEIT | DEUTSCH IN DER GASTRONOMIE",
+    "title": "Gäste im Restaurant betreuen und bedienen",
+    "status": "특화"
+   },
+   {
+    "no": "051",
+    "section": "ARBEIT | DEUTSCH IN DER GASTRONOMIE",
+    "title": "Auf ein Missgeschick beim Servieren reagieren",
+    "status": "있음",
+    "ledger": [
+     "F4-06"
+    ]
+   },
+   {
+    "no": "052",
+    "section": "ARBEIT | DEUTSCH IN DER GASTRONOMIE",
+    "title": "An einem Briefing für ein Event teilnehmen",
+    "status": "특화"
+   },
+   {
+    "no": "053",
+    "section": "ARBEIT | DEUTSCH IN DER GASTRONOMIE",
+    "title": "An der Bar bedienen",
+    "status": "특화"
+   },
+   {
+    "no": "054",
+    "section": "ARBEIT | DEUTSCH IN DER GASTRONOMIE",
+    "title": "Ein Gerät bedienen, kontrollieren und reinigen",
+    "status": "특화"
+   },
+   {
+    "no": "055",
+    "section": "ARBEITSSUCHE",
+    "title": "An einem Berufsberatungsgespräch teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "T-31",
+     "F1-25"
+    ]
+   },
+   {
+    "no": "056",
+    "section": "ARBEITSSUCHE",
+    "title": "Sich beim RAV anmelden",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "057",
+    "section": "ARBEITSSUCHE",
+    "title": "Am ersten Beratungsgespräch im RAV teilnehmen",
+    "status": "특화"
+   },
+   {
+    "no": "058",
+    "section": "ARBEITSSUCHE",
+    "title": "Am Informationstag im RAV teilnehmen",
+    "status": "특화"
+   },
+   {
+    "no": "059",
+    "section": "ARBEITSSUCHE",
+    "title": "Sich für eine Stelle bewerben",
+    "status": "새",
+    "cand": "N-07"
+   },
+   {
+    "no": "060",
+    "section": "ARBEITSSUCHE",
+    "title": "Sich bei einer Stellenvermittlungsagentur anmelden",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "061",
+    "section": "ARBEITSSUCHE",
+    "title": "Ein Bewerbungsgespräch auf der Stellenvermittlungsagentur führen",
+    "status": "새",
+    "cand": "N-07"
+   },
+   {
+    "no": "062",
+    "section": "ARBEITSSUCHE",
+    "title": "An einem Einführungskurs teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F4-23"
+    ]
+   },
+   {
+    "no": "063",
+    "section": "BEHÖRDEN",
+    "title": "Die Aufenthaltsbewilligung verlängern",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "064",
+    "section": "BEHÖRDEN",
+    "title": "Sich in einer Gemeinde anmelden",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "065",
+    "section": "BEHÖRDEN",
+    "title": "Eine visumspflichtige Person in die Schweiz einladen",
+    "status": "특화"
+   },
+   {
+    "no": "066",
+    "section": "BEHÖRDEN",
+    "title": "Zu einer Beratungsstelle gehen",
+    "status": "있음",
+    "ledger": [
+     "T-31",
+     "F1-25"
+    ]
+   },
+   {
+    "no": "067",
+    "section": "BEHÖRDEN",
+    "title": "Einen Termin für eine Beratung vereinbaren",
+    "status": "새",
+    "cand": "N-08"
+   },
+   {
+    "no": "068",
+    "section": "BEHÖRDEN",
+    "title": "Bei der Steuerverwaltung Fragen zur Quellensteuer klären",
+    "status": "특화"
+   },
+   {
+    "no": "069",
+    "section": "BEHÖRDEN",
+    "title": "Das Auto beim Strassenverkehrsamt immatrikulieren",
+    "status": "특화"
+   },
+   {
+    "no": "070",
+    "section": "BEHÖRDEN",
+    "title": "Das Auto zur Prüfung beim Strassenverkehrsamt vorführen",
+    "status": "특화"
+   },
+   {
+    "no": "071",
+    "section": "BEHÖRDEN",
+    "title": "Den ausländischen Führerausweis umschreiben lassen",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "072",
+    "section": "BEHÖRDEN",
+    "title": "Ein Dokument übersetzen lassen",
+    "status": "새",
+    "cand": "N-02"
+   },
+   {
+    "no": "073",
+    "section": "MEDIEN UND FREIZEIT",
+    "title": "Sich mit einem Freund verabreden",
+    "status": "있음",
+    "ledger": [
+     "F3-06",
+     "F3-23"
+    ]
+   },
+   {
+    "no": "074",
+    "section": "MEDIEN UND FREIZEIT",
+    "title": "Eine Einladung von einer Kollegin erhalten",
+    "status": "있음",
+    "ledger": [
+     "F3-07",
+     "F3-08"
+    ]
+   },
+   {
+    "no": "075",
+    "section": "MEDIEN UND FREIZEIT",
+    "title": "Eine Zeitung abonnieren",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "076",
+    "section": "MEDIEN UND FREIZEIT",
+    "title": "Ein Buch oder einen Film aus der Bibliothek ausleihen",
+    "status": "있음",
+    "ledger": [
+     "F3-15"
+    ]
+   },
+   {
+    "no": "077",
+    "section": "MEDIEN UND FREIZEIT",
+    "title": "Eine Fernsehsendung schauen",
+    "status": "원장 밖"
+   },
+   {
+    "no": "078",
+    "section": "VERKEHR",
+    "title": "Mit dem Zug reisen",
+    "status": "있음",
+    "ledger": [
+     "T-05",
+     "T-06"
+    ]
+   },
+   {
+    "no": "079",
+    "section": "VERKEHR",
+    "title": "Ein Abonnement kaufen",
+    "status": "있음",
+    "ledger": [
+     "T-05"
+    ]
+   },
+   {
+    "no": "080",
+    "section": "VERKEHR",
+    "title": "Sich für einen Nothelferkurs anmelden",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "081",
+    "section": "EINKÄUFE",
+    "title": "Möbel kaufen",
+    "status": "있음",
+    "ledger": [
+     "T-12",
+     "T-14"
+    ]
+   },
+   {
+    "no": "082",
+    "section": "EINKÄUFE",
+    "title": "Möbel reservieren",
+    "status": "새",
+    "cand": "N-08"
+   },
+   {
+    "no": "083",
+    "section": "EINKÄUFE",
+    "title": "Ein Handy kaufen und ein Abonnement abschliessen",
+    "status": "있음",
+    "ledger": [
+     "T-12",
+     "T-14"
+    ]
+   },
+   {
+    "no": "084",
+    "section": "EINKÄUFE",
+    "title": "Kleider kaufen",
+    "status": "있음",
+    "ledger": [
+     "T-12",
+     "T-13"
+    ]
+   },
+   {
+    "no": "085",
+    "section": "EINKÄUFE",
+    "title": "Ein fehlerhaftes Kleidungsstück zurückbringen",
+    "status": "있음",
+    "ledger": [
+     "T-35"
+    ]
+   },
+   {
+    "no": "086",
+    "section": "EINKÄUFE",
+    "title": "Einen Geschenkgutschein kaufen",
+    "status": "있음",
+    "ledger": [
+     "T-14"
+    ]
+   },
+   {
+    "no": "087",
+    "section": "EINKÄUFE",
+    "title": "Ein Gerät reparieren lassen",
+    "status": "새",
+    "cand": "N-02"
+   },
+   {
+    "no": "088",
+    "section": "EINKÄUFE",
+    "title": "Im Onlineshop einkaufen",
+    "status": "원장 밖"
+   },
+   {
+    "no": "089",
+    "section": "POST, BANK UND VERSICHERUNGEN",
+    "title": "Einer Krankenkasse beitreten",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "090",
+    "section": "POST, BANK UND VERSICHERUNGEN",
+    "title": "Eine Hausrat- oder Haftpflichtversicherung abschliessen",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "091",
+    "section": "POST, BANK UND VERSICHERUNGEN",
+    "title": "Auf der Post einen Nachsendeauftrag aufgeben",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "092",
+    "section": "POST, BANK UND VERSICHERUNGEN",
+    "title": "Ein Paket ins Ausland schicken",
+    "status": "있음",
+    "ledger": [
+     "T-37"
+    ]
+   },
+   {
+    "no": "093",
+    "section": "POST, BANK UND VERSICHERUNGEN",
+    "title": "Geld ins Ausland überweisen",
+    "status": "있음",
+    "ledger": [
+     "T-37",
+     "T-38"
+    ]
+   },
+   {
+    "no": "094",
+    "section": "POST, BANK UND VERSICHERUNGEN",
+    "title": "Am Postschalter eine Einzahlung machen",
+    "status": "있음",
+    "ledger": [
+     "T-37"
+    ]
+   },
+   {
+    "no": "095",
+    "section": "POST, BANK UND VERSICHERUNGEN",
+    "title": "Ein Konto eröffnen",
+    "status": "있음",
+    "ledger": [
+     "T-38"
+    ]
+   },
+   {
+    "no": "096",
+    "section": "POST, BANK UND VERSICHERUNGEN",
+    "title": "Den Bancomat oder Postomat bedienen",
+    "status": "원장 밖"
+   },
+   {
+    "no": "097",
+    "section": "GESUNDHEIT",
+    "title": "Zum Hausarzt gehen",
+    "status": "있음",
+    "ledger": [
+     "T-09",
+     "T-10"
+    ]
+   },
+   {
+    "no": "098",
+    "section": "GESUNDHEIT",
+    "title": "Zur Gynäkologin gehen",
+    "status": "있음",
+    "ledger": [
+     "T-09",
+     "T-10"
+    ]
+   },
+   {
+    "no": "099",
+    "section": "GESUNDHEIT",
+    "title": "Zum Kinderarzt gehen",
+    "status": "있음",
+    "ledger": [
+     "T-09",
+     "T-10"
+    ]
+   },
+   {
+    "no": "100",
+    "section": "GESUNDHEIT",
+    "title": "Zur Zahnärztin gehen",
+    "status": "있음",
+    "ledger": [
+     "T-09",
+     "T-10"
+    ]
+   },
+   {
+    "no": "101",
+    "section": "GESUNDHEIT",
+    "title": "Zur Notfallaufnahme gehen",
+    "status": "있음",
+    "ledger": [
+     "T-25",
+     "T-09"
+    ]
+   },
+   {
+    "no": "102",
+    "section": "GESUNDHEIT",
+    "title": "In der Apotheke ein Medikament kaufen",
+    "status": "있음",
+    "ledger": [
+     "T-36"
+    ]
+   },
+   {
+    "no": "103",
+    "section": "GESUNDHEIT",
+    "title": "An einem Beratungsgespräch mit der Hebamme teilnehmen",
+    "status": "특화"
+   },
+   {
+    "no": "104",
+    "section": "WEITERBILDUNG",
+    "title": "Sich über Weiterbildungen informieren",
+    "status": "있음",
+    "ledger": [
+     "F1-25",
+     "F1-14"
+    ]
+   },
+   {
+    "no": "105",
+    "section": "WEITERBILDUNG",
+    "title": "Sich für eine Weiterbildung anmelden",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "106",
+    "section": "WEITERBILDUNG",
+    "title": "Sich bei Krankheit vom Kurs abmelden",
+    "status": "새",
+    "cand": "N-05"
+   },
+   {
+    "no": "107",
+    "section": "WEITERBILDUNG",
+    "title": "Sich mit anderen Kursteilnehmenden verabreden",
+    "status": "있음",
+    "ledger": [
+     "F3-23"
+    ]
+   },
+   {
+    "no": "108",
+    "section": "WEITERBILDUNG",
+    "title": "Sich für einen Deutschkurs anmelden",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "109",
+    "section": "WEITERBILDUNG",
+    "title": "An einem Einstufungsgespräch teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "T-22",
+     "F6-03"
+    ]
+   },
+   {
+    "no": "110",
+    "section": "WEITERBILDUNG",
+    "title": "Am ersten Kurstag teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F4-02",
+     "F1-01"
+    ]
+   },
+   {
+    "no": "111",
+    "section": "WEITERBILDUNG",
+    "title": "An einem Evaluationsgespräch teilnehmen",
+    "status": "있음",
+    "ledger": [
+     "F2-42",
+     "F2-43"
+    ]
+   },
+   {
+    "no": "112",
+    "section": "WEITERBILDUNG",
+    "title": "Eine Gruppenarbeit machen",
+    "status": "있음",
+    "ledger": [
+     "F3-06",
+     "F3-21"
+    ]
+   },
+   {
+    "no": "113",
+    "section": "WEITERBILDUNG",
+    "title": "Eine Präsentation für den Unterricht vorbereiten",
+    "status": "있음",
+    "ledger": [
+     "F5-02"
+    ]
+   },
+   {
+    "no": "114",
+    "section": "WEITERBILDUNG",
+    "title": "Im Kurs von einer Fernsehsendung erzählen",
+    "status": "있음",
+    "ledger": [
+     "F5-01",
+     "F2-42"
+    ]
+   },
+   {
+    "no": "115",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "Einen Praktikumsplatz finden",
+    "status": "새",
+    "cand": "N-07"
+   },
+   {
+    "no": "116",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "Ein WG-Zimmer mieten",
+    "status": "새",
+    "cand": "N-01"
+   },
+   {
+    "no": "117",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "Sich vom Unterricht abmelden",
+    "status": "새",
+    "cand": "N-05"
+   },
+   {
+    "no": "118",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "Bei finanziellen Problemen Hilfe finden",
+    "status": "있음",
+    "ledger": [
+     "T-31",
+     "F1-25"
+    ]
+   },
+   {
+    "no": "119",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "Sich über Filme etc. unterhalten",
+    "status": "있음",
+    "ledger": [
+     "F2-42"
+    ]
+   },
+   {
+    "no": "120",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "Im Unterricht eine Präsentation halten",
+    "status": "있음",
+    "ledger": [
+     "F5-02",
+     "F5-14"
+    ]
+   },
+   {
+    "no": "121",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "Sich über Polizeieinsätze unterhalten",
+    "status": "있음",
+    "ledger": [
+     "F1-17"
+    ]
+   },
+   {
+    "no": "122",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "An einer Standortbestimmung teilnehmen",
+    "status": "특화"
+   },
+   {
+    "no": "123",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "Ein WG-Zimmer mieten",
+    "status": "새",
+    "cand": "N-01"
+   },
+   {
+    "no": "124",
+    "section": "WEITERBILDUNG | BERUFSVORBEREITUNG",
+    "title": "Den Führerausweis erwerben",
+    "status": "새",
+    "cand": "N-04"
+   },
+   {
+    "no": "125",
+    "section": "WEITERBILDUNG | PFLEGEHILFE (SESAM)",
+    "title": "Beim Aufstehen unterstützen",
+    "status": "특화"
+   },
+   {
+    "no": "126",
+    "section": "WEITERBILDUNG | PFLEGEHILFE (SESAM)",
+    "title": "Beim Toilettengang begleiten",
+    "status": "특화"
+   },
+   {
+    "no": "127",
+    "section": "WEITERBILDUNG | PFLEGEHILFE (SESAM)",
+    "title": "Eine Gruppenarbeit machen",
+    "status": "있음",
+    "ledger": [
+     "F3-06",
+     "F3-21"
+    ]
+   },
+   {
+    "no": "128",
+    "section": "WEITERBILDUNG | PFLEGEHILFE (SESAM)",
+    "title": "Einen Arbeitsauftrag entgegennehmen",
+    "status": "있음",
+    "ledger": [
+     "F3-25",
+     "F6-10"
+    ]
+   },
+   {
+    "no": "129",
+    "section": "WEITERBILDUNG | PFLEGEHILFE (SESAM)",
+    "title": "Eine Präsentation vorbereiten",
+    "status": "있음",
+    "ledger": [
+     "F5-02"
+    ]
+   },
+   {
+    "no": "130",
+    "section": "WEITERBILDUNG | PFLEGEHILFE (SESAM)",
+    "title": "Ins Café begleiten",
+    "status": "특화"
+   },
+   {
+    "no": "131",
+    "section": "WEITERBILDUNG | PFLEGEHILFE (SESAM)",
+    "title": "Sich für ein Praktikum bewerben",
+    "status": "새",
+    "cand": "N-07"
+   }
+  ],
+  "seikatsu": [
+   {
+    "no": "101",
+    "title": "適切な医療機関の選択をする",
+    "levels": "A1,A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "102",
+    "title": "問診表に記入する",
+    "levels": "A1,A2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "103",
+    "title": "医者の説明・指示を理解し、応答する",
+    "levels": "A1,A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "T-09",
+     "T-10",
+     "F6-11"
+    ]
+   },
+   {
+    "no": "201",
+    "title": "処方箋を持って薬局へ行く",
+    "levels": "A2",
+    "status": "있음",
+    "ledger": [
+     "T-36"
+    ]
+   },
+   {
+    "no": "202",
+    "title": "薬局・薬店を利用する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-36"
+    ]
+   },
+   {
+    "no": "301",
+    "title": "病気を予防する",
+    "levels": "A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "302",
+    "title": "衛生管理をする",
+    "levels": "A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "401",
+    "title": "事故を回避する（各種の標識・注意書き等を理解する（高電圧危険、感電注意、立入禁止等））",
+    "levels": "A1,A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "402",
+    "title": "防犯対策（施錠等）を行う",
+    "levels": "A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "403",
+    "title": "防犯に対処する",
+    "levels": "A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-27"
+    ]
+   },
+   {
+    "no": "404",
+    "title": "交通事故に対処する",
+    "levels": "A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "T-25",
+     "T-27"
+    ]
+   },
+   {
+    "no": "501",
+    "title": "避難場所・方法を確認する",
+    "levels": "A1,A2,B1,B2",
+    "status": "새",
+    "cand": "N-09"
+   },
+   {
+    "no": "502",
+    "title": "地震発生時に適切に行動する",
+    "levels": "A1,A2,B1,B2",
+    "status": "새",
+    "cand": "N-09"
+   },
+   {
+    "no": "503",
+    "title": "台風発生時に適切に行動する",
+    "levels": "A2,B1",
+    "status": "새",
+    "cand": "N-09"
+   },
+   {
+    "no": "504",
+    "title": "火災発生時に適切に行動する",
+    "levels": "A2,B1,B2",
+    "status": "새",
+    "cand": "N-09"
+   },
+   {
+    "no": "601",
+    "title": "住居を探す",
+    "levels": "A2,B1",
+    "status": "후보",
+    "cand": "N-01"
+   },
+   {
+    "no": "602",
+    "title": "契約する",
+    "levels": "B1,B2",
+    "status": "후보",
+    "cand": "N-01"
+   },
+   {
+    "no": "603",
+    "title": "引っ越しをする",
+    "levels": "A1,A2,B1",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "701",
+    "title": "電気・ガス・水道等の使用を開始する",
+    "levels": "A1,B1",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "702",
+    "title": "電気・ガス・水道等の使用方法を理解する",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "703",
+    "title": "電気・ガス・水道等の料金を支払う",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-14",
+     "F1-14"
+    ]
+   },
+   {
+    "no": "801",
+    "title": "対面販売で購入する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-12",
+     "T-14"
+    ]
+   },
+   {
+    "no": "802",
+    "title": "飲食店を利用する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-15",
+     "T-17"
+    ]
+   },
+   {
+    "no": "803",
+    "title": "各種サービスを利用する",
+    "levels": "A1,A2,B1",
+    "status": "후보",
+    "cand": "N-02"
+   },
+   {
+    "no": "804",
+    "title": "商品情報（素材、注意書き等）について理解する",
+    "levels": "A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "805",
+    "title": "購入額を確認・計算する",
+    "levels": "A1",
+    "status": "있음",
+    "ledger": [
+     "F1-10",
+     "T-14"
+    ]
+   },
+   {
+    "no": "901",
+    "title": "口座を開設する",
+    "levels": "A1,A2",
+    "status": "있음",
+    "ledger": [
+     "T-38"
+    ]
+   },
+   {
+    "no": "902",
+    "title": "金融機関の各種サービスを利用する",
+    "levels": "B1,B2",
+    "status": "있음",
+    "ledger": [
+     "T-38"
+    ]
+   },
+   {
+    "no": "903",
+    "title": "ＡＴＭを利用する",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1001",
+    "title": "時刻表を確認する",
+    "levels": "A1,A2",
+    "status": "있음",
+    "ledger": [
+     "F1-08"
+    ]
+   },
+   {
+    "no": "1004",
+    "title": "運賃を支払う・切符を購入する",
+    "levels": "A1,B1",
+    "status": "있음",
+    "ledger": [
+     "T-05"
+    ]
+   },
+   {
+    "no": "1101",
+    "title": "タクシーを呼ぶ",
+    "levels": "A1,A2",
+    "status": "있음",
+    "ledger": [
+     "T-29",
+     "T-27"
+    ]
+   },
+   {
+    "no": "1102",
+    "title": "行き先を指示する",
+    "levels": "A1,B1",
+    "status": "있음",
+    "ledger": [
+     "T-29"
+    ]
+   },
+   {
+    "no": "1201",
+    "title": "住所・番地を確認する",
+    "levels": "A1",
+    "status": "있음",
+    "ledger": [
+     "F1-07"
+    ]
+   },
+   {
+    "no": "1202",
+    "title": "地図を理解する",
+    "levels": "A1,A2",
+    "status": "있음",
+    "ledger": [
+     "T-06"
+    ]
+   },
+   {
+    "no": "1301",
+    "title": "交通ルールを遵守する",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1302",
+    "title": "駐輪場を利用する",
+    "levels": "A1,A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1303",
+    "title": "盗難防止（施錠）する",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1401",
+    "title": "運転免許の手続等をする",
+    "levels": "A1,B1,B2",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "1402",
+    "title": "道路交通法を遵守する",
+    "levels": "A1,A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1501",
+    "title": "出産前の健診を受ける",
+    "levels": "A2,B1",
+    "status": "특화"
+   },
+   {
+    "no": "1502",
+    "title": "母子健康手帳をもらう",
+    "levels": "A1,A2,B1",
+    "status": "특화"
+   },
+   {
+    "no": "1601",
+    "title": "出産する",
+    "levels": "A1,A2,B1",
+    "status": "특화"
+   },
+   {
+    "no": "1602",
+    "title": "乳幼児健診を受ける",
+    "levels": "A1,A2,B1",
+    "status": "특화"
+   },
+   {
+    "no": "1603",
+    "title": "身長・体重・身体発達を理解する",
+    "levels": "A1,A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1701",
+    "title": "健康管理（食事、歯磨き、睡眠等）する",
+    "levels": "A2,B1,B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1702",
+    "title": "伝染病の予防接種を受ける",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-31",
+     "T-10"
+    ]
+   },
+   {
+    "no": "1801",
+    "title": "地域の育児サービスを利用する",
+    "levels": "A1,A2,B1",
+    "status": "후보",
+    "cand": "N-06"
+   },
+   {
+    "no": "1802",
+    "title": "公園を利用する",
+    "levels": "A1,A2,B1,B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1901",
+    "title": "託児施設・保育施設を利用する",
+    "levels": "A1,A2,B1,B2",
+    "status": "후보",
+    "cand": "N-06"
+   },
+   {
+    "no": "1902",
+    "title": "託児施設・保育施設を利用する",
+    "levels": "B1",
+    "status": "후보",
+    "cand": "N-06"
+   },
+   {
+    "no": "2001",
+    "title": "就学に関する手続を行う",
+    "levels": "A1,A2,B1",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "2002",
+    "title": "学校行事に参加する",
+    "levels": "A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "F4-01",
+     "F4-24"
+    ]
+   },
+   {
+    "no": "2003",
+    "title": "諸経費を理解し、納入する",
+    "levels": "A1,A2,B1,B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "2004",
+    "title": "差別・いじめ・トラブルなどに対応する",
+    "levels": "A2,B1",
+    "status": "애매",
+    "ledger": [
+     "F2-11",
+     "F3-01"
+    ]
+   },
+   {
+    "no": "2005",
+    "title": "進路相談を行う",
+    "levels": "A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "F5-09",
+     "F1-25"
+    ]
+   },
+   {
+    "no": "2101",
+    "title": "障害の特徴等を理解する",
+    "levels": "A2,B1,B2",
+    "status": "특화"
+   },
+   {
+    "no": "2102",
+    "title": "特別支援学校・学級へ入学する",
+    "levels": "A2,B1,B2",
+    "status": "특화"
+   },
+   {
+    "no": "2201",
+    "title": "情報収集をする",
+    "levels": "A1,A2,B1,B2",
+    "status": "후보",
+    "cand": "N-07"
+   },
+   {
+    "no": "2202",
+    "title": "応募する（面接を受ける）",
+    "levels": "A2,B1",
+    "status": "후보",
+    "cand": "N-07"
+   },
+   {
+    "no": "2203",
+    "title": "雇用契約を交わす",
+    "levels": "A2,B1,B2",
+    "status": "후보",
+    "cand": "N-07"
+   },
+   {
+    "no": "2301",
+    "title": "労働条件について理解する",
+    "levels": "A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "2302",
+    "title": "給与明細について理解する",
+    "levels": "A2,B1,B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "2303",
+    "title": "労働者団体（組合等）へ加入する",
+    "levels": "B2",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "2401",
+    "title": "指示・マニュアル等を理解する",
+    "levels": "A1,A2,B1,B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "2402",
+    "title": "安全上の標示に対応する",
+    "levels": "A1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "2403",
+    "title": "危険・事故・けが・損傷について報告する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F3-11",
+     "T-09"
+    ]
+   },
+   {
+    "no": "2501",
+    "title": "同僚・上司・部下とやりとりする",
+    "levels": "A1,A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "F4-09",
+     "F5-01"
+    ]
+   },
+   {
+    "no": "2502",
+    "title": "各種通信（メモ、メッセージ、電子メール）でやりとりする",
+    "levels": "A2,B2",
+    "status": "있음",
+    "ledger": [
+     "T-45",
+     "T-46"
+    ]
+   },
+   {
+    "no": "2503",
+    "title": "文書（発表、通知）について理解する",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "2601",
+    "title": "自身が関係する業務に関する情報提供をする",
+    "levels": "A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "F1-04"
+    ]
+   },
+   {
+    "no": "2602",
+    "title": "進捗（しんちょく）状況・問題などを報告する",
+    "levels": "B1,B2",
+    "status": "있음",
+    "ledger": [
+     "F3-14",
+     "F1-18"
+    ]
+   },
+   {
+    "no": "2603",
+    "title": "指示された業務を遂行する",
+    "levels": "A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F3-25"
+    ]
+   },
+   {
+    "no": "2701",
+    "title": "人事考課の面談を受ける",
+    "levels": "A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "F5-09",
+     "F2-05"
+    ]
+   },
+   {
+    "no": "2702",
+    "title": "契約更新の手続を行う",
+    "levels": "B1,B2",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "2801",
+    "title": "アイデアや見解を効果的に発表する",
+    "levels": "A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "F5-09"
+    ]
+   },
+   {
+    "no": "2802",
+    "title": "就業上必要なスキルについて理解する",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "2901",
+    "title": "事務機器を活用する",
+    "levels": "A1,A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3001",
+    "title": "あいさつをする",
+    "levels": "A1,A2",
+    "status": "있음",
+    "ledger": [
+     "F4-01"
+    ]
+   },
+   {
+    "no": "3002",
+    "title": "手助けに感謝する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F4-04"
+    ]
+   },
+   {
+    "no": "3003",
+    "title": "誘う、誘われる",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F3-06",
+     "F3-07",
+     "F3-08"
+    ]
+   },
+   {
+    "no": "3101",
+    "title": "あいさつをする",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F4-01"
+    ]
+   },
+   {
+    "no": "3102",
+    "title": "自己紹介をする",
+    "levels": "A1,A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "F1-01",
+     "F4-02"
+    ]
+   },
+   {
+    "no": "3103",
+    "title": "マナーを理解し、マナーにのっとって行動する",
+    "levels": "A1,A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3201",
+    "title": "異文化コミュニケーションについて理解する",
+    "levels": "A2,B1,B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3202",
+    "title": "異文化摩擦について理解する",
+    "levels": "A2,B1,B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3203",
+    "title": "多様なあいさつ（おじぎ、握手、ハグ、キス等）に対応する",
+    "levels": "A2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3301",
+    "title": "各種手続（転入・転出等）をする",
+    "levels": "A1,A2,B1",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "3302",
+    "title": "各種税金（所得税、住民税等）を支払う",
+    "levels": "A1,A2,B1,B2",
+    "status": "특화"
+   },
+   {
+    "no": "3303",
+    "title": "確定申告・還付申告を行う",
+    "levels": "B2",
+    "status": "특화"
+   },
+   {
+    "no": "3401",
+    "title": "ごみ出し（ごみの分け方）について理解する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F1-08"
+    ]
+   },
+   {
+    "no": "3402",
+    "title": "公共マナー（ポイ捨て禁止、歩きたばこ禁止等）を理解する",
+    "levels": "A1,A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3403",
+    "title": "ペットを飼育する（新規）",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F2-01"
+    ]
+   },
+   {
+    "no": "3501",
+    "title": "自治会行事に参加・協力する",
+    "levels": "A1,A2,B1,B2",
+    "status": "있음",
+    "ledger": [
+     "F4-01",
+     "F3-21"
+    ]
+   },
+   {
+    "no": "3502",
+    "title": "地方参政権、選挙等について理解する",
+    "levels": "B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3601",
+    "title": "各種手当（育児手当、扶養手当等）を申請する",
+    "levels": "A1,A2,B1,B2",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "3602",
+    "title": "福祉サービス、ネットワーク、相談窓口などの支援を利用する",
+    "levels": "B1",
+    "status": "있음",
+    "ledger": [
+     "T-31",
+     "F1-25"
+    ]
+   },
+   {
+    "no": "3701",
+    "title": "国民健康保険・国民年金等に加入する",
+    "levels": "B1",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "3702",
+    "title": "各種助成金を申請する・受給する（修正）",
+    "levels": "B1",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "3703",
+    "title": "医療費助成を請求する（修正）",
+    "levels": "B1,B2",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "3801",
+    "title": "目標を設定する",
+    "levels": "A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F1-19"
+    ]
+   },
+   {
+    "no": "3802",
+    "title": "各種資格等に関する情報を収集し、理解する",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3901",
+    "title": "学習機会を利用する",
+    "levels": "A1,A2,B1",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "3902",
+    "title": "各種資格を取得する",
+    "levels": "B1",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "4001",
+    "title": "学習目標を設定する",
+    "levels": "A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F1-19"
+    ]
+   },
+   {
+    "no": "4002",
+    "title": "学習の自己管理をする",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4101",
+    "title": "辞書や教材を利用する",
+    "levels": "A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4102",
+    "title": "日常生活の中で学習する",
+    "levels": "A2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4103",
+    "title": "コンピューターを活用し自学自習する",
+    "levels": "A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4201",
+    "title": "辞書や教材を利用する",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4202",
+    "title": "日常生活の中で日本語を学習する",
+    "levels": "A1,A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4301",
+    "title": "言語（共通語、方言、敬語）について理解する",
+    "levels": "A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4302",
+    "title": "社会問題について理解する",
+    "levels": "A2,B1,B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4303",
+    "title": "教育事情、学校制度について理解する",
+    "levels": "A2,B1,B2",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4401",
+    "title": "外出や余暇の計画を立てる",
+    "levels": "A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F1-19",
+     "F3-06"
+    ]
+   },
+   {
+    "no": "4402",
+    "title": "情報（イベント、娯楽施設、地域のサークル活動等）を収集する",
+    "levels": "A2,B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4403",
+    "title": "地域の公共施設（図書館、スポーツセンター等）を利用する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "F3-15"
+    ]
+   },
+   {
+    "no": "4501",
+    "title": "郵便を利用する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-37"
+    ]
+   },
+   {
+    "no": "4502",
+    "title": "宅配便を利用する",
+    "levels": "A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-37",
+     "F3-01"
+    ]
+   },
+   {
+    "no": "4601",
+    "title": "インターネットプロバイダーと契約する",
+    "levels": "A2,B1",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "4602",
+    "title": "ネット検索する",
+    "levels": "B1",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4603",
+    "title": "電子メールを利用する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-45",
+     "T-46"
+    ]
+   },
+   {
+    "no": "4701",
+    "title": "電話を発信する",
+    "levels": "A1,A2,B1",
+    "status": "있음",
+    "ledger": [
+     "T-40"
+    ]
+   },
+   {
+    "no": "4801",
+    "title": "新聞・雑誌・テレビ・ラジオ・インターネットから情報を収集する",
+    "levels": "A1,A2,B1,B2",
+    "status": "원장 밖"
+   }
+  ],
+  "CV": [
+   {
+    "no": "R",
+    "title": "Reception 척도 12개와 reception strategies",
+    "status": "원장 밖"
+   },
+   {
+    "no": "P1",
+    "title": "Overall oral production",
+    "status": "있음",
+    "ledger": [
+     "F5-09"
+    ]
+   },
+   {
+    "no": "P2",
+    "title": "Sustained monologue: describing experience",
+    "status": "있음",
+    "ledger": [
+     "F1-18",
+     "F5-01"
+    ]
+   },
+   {
+    "no": "P3",
+    "title": "Sustained monologue: giving information",
+    "status": "있음",
+    "ledger": [
+     "F1-04",
+     "F3-18"
+    ]
+   },
+   {
+    "no": "P4",
+    "title": "Sustained monologue: putting a case",
+    "status": "있음",
+    "ledger": [
+     "F5-09",
+     "C-14"
+    ]
+   },
+   {
+    "no": "P5",
+    "title": "Public announcements",
+    "status": "새",
+    "cand": "N-10"
+   },
+   {
+    "no": "P6",
+    "title": "Addressing audiences",
+    "status": "있음",
+    "ledger": [
+     "C-16",
+     "F5-14"
+    ]
+   },
+   {
+    "no": "P7",
+    "title": "Written production(creative writing, reports and essays)",
+    "status": "원장 밖"
+   },
+   {
+    "no": "P8",
+    "title": "Production strategies: planning",
+    "status": "원장 밖"
+   },
+   {
+    "no": "P9",
+    "title": "Production strategies: compensating",
+    "status": "있음",
+    "ledger": [
+     "F6-13"
+    ]
+   },
+   {
+    "no": "P10",
+    "title": "Production strategies: monitoring and repair",
+    "status": "있음",
+    "ledger": [
+     "F6-09"
+    ]
+   },
+   {
+    "no": "I1",
+    "title": "Overall spoken interaction",
+    "status": "있음",
+    "ledger": [
+     "F4-09"
+    ]
+   },
+   {
+    "no": "I2",
+    "title": "Understanding an interlocutor",
+    "status": "있음",
+    "ledger": [
+     "F6-11"
+    ]
+   },
+   {
+    "no": "I3",
+    "title": "Conversation",
+    "status": "있음",
+    "ledger": [
+     "F4-09",
+     "F5-01"
+    ]
+   },
+   {
+    "no": "I4",
+    "title": "Informal discussion (with friends)",
+    "status": "있음",
+    "ledger": [
+     "F2-15",
+     "F2-04"
+    ]
+   },
+   {
+    "no": "I5",
+    "title": "Formal discussion (meetings)",
+    "status": "있음",
+    "ledger": [
+     "C-06",
+     "F5-09"
+    ]
+   },
+   {
+    "no": "I6",
+    "title": "Goal-oriented co-operation",
+    "status": "있음",
+    "ledger": [
+     "F3-06",
+     "F3-21"
+    ]
+   },
+   {
+    "no": "I7",
+    "title": "Obtaining goods and services",
+    "status": "있음",
+    "ledger": [
+     "T-12",
+     "T-15"
+    ]
+   },
+   {
+    "no": "I8",
+    "title": "Information exchange",
+    "status": "있음",
+    "ledger": [
+     "F1-07"
+    ]
+   },
+   {
+    "no": "I9",
+    "title": "Interviewing and being interviewed",
+    "status": "후보",
+    "cand": "N-07"
+   },
+   {
+    "no": "I10",
+    "title": "Using telecommunications",
+    "status": "있음",
+    "ledger": [
+     "T-40"
+    ]
+   },
+   {
+    "no": "I11",
+    "title": "Correspondence",
+    "status": "있음",
+    "ledger": [
+     "T-45",
+     "T-46"
+    ]
+   },
+   {
+    "no": "I12",
+    "title": "Notes, messages and forms",
+    "status": "있음",
+    "ledger": [
+     "T-46"
+    ]
+   },
+   {
+    "no": "I13",
+    "title": "Online conversation and discussion",
+    "status": "새",
+    "cand": "N-11"
+   },
+   {
+    "no": "I14",
+    "title": "Goal-oriented online transactions and collaboration",
+    "status": "후보",
+    "cand": "N-11"
+   },
+   {
+    "no": "I15",
+    "title": "Interaction strategies: taking the floor (turntaking)",
+    "status": "있음",
+    "ledger": [
+     "F5-12",
+     "C-06"
+    ]
+   },
+   {
+    "no": "I16",
+    "title": "Interaction strategies: co-operating",
+    "status": "있음",
+    "ledger": [
+     "F5-10",
+     "F5-11"
+    ]
+   },
+   {
+    "no": "I17",
+    "title": "Interaction strategies: asking for clarification",
+    "status": "있음",
+    "ledger": [
+     "F6-01",
+     "F6-10"
+    ]
+   },
+   {
+    "no": "M1",
+    "title": "Relaying specific information (speech, writing)",
+    "status": "있음",
+    "ledger": [
+     "F1-17"
+    ]
+   },
+   {
+    "no": "M2",
+    "title": "Explaining data (graphs, diagrams)",
+    "status": "새",
+    "cand": "N-12"
+   },
+   {
+    "no": "M3",
+    "title": "Processing text",
+    "status": "있음",
+    "ledger": [
+     "F5-06"
+    ]
+   },
+   {
+    "no": "M4",
+    "title": "Translating a written text",
+    "status": "새",
+    "cand": "N-13"
+   },
+   {
+    "no": "M5",
+    "title": "Note-taking",
+    "status": "원장 밖"
+   },
+   {
+    "no": "M6",
+    "title": "Expressing a personal response to creative texts",
+    "status": "있음",
+    "ledger": [
+     "F2-42",
+     "F2-43"
+    ]
+   },
+   {
+    "no": "M7",
+    "title": "Analysis and criticism of creative texts",
+    "status": "있음",
+    "ledger": [
+     "F2-43",
+     "C-09"
+    ]
+   },
+   {
+    "no": "M8",
+    "title": "Facilitating collaborative interaction with peers",
+    "status": "있음",
+    "ledger": [
+     "F5-12",
+     "C-13"
+    ]
+   },
+   {
+    "no": "M9",
+    "title": "Collaborating to construct meaning",
+    "status": "있음",
+    "ledger": [
+     "F2-15"
+    ]
+   },
+   {
+    "no": "M10",
+    "title": "Managing interaction",
+    "status": "있음",
+    "ledger": [
+     "F5-12"
+    ]
+   },
+   {
+    "no": "M11",
+    "title": "Encouraging conceptual talk",
+    "status": "있음",
+    "ledger": [
+     "F2-15"
+    ]
+   },
+   {
+    "no": "M12",
+    "title": "Facilitating pluricultural space",
+    "status": "후보",
+    "cand": "N-15"
+   },
+   {
+    "no": "M13",
+    "title": "Acting as intermediary in informal situations",
+    "status": "후보",
+    "cand": "N-13"
+   },
+   {
+    "no": "M14",
+    "title": "Facilitating communication in delicate situations and disagreements",
+    "status": "새",
+    "cand": "N-14"
+   },
+   {
+    "no": "M15",
+    "title": "Mediation strategies: linking to previous knowledge",
+    "status": "원장 밖"
+   },
+   {
+    "no": "M16",
+    "title": "Mediation strategies: adapting language",
+    "status": "있음",
+    "ledger": [
+     "C-13"
+    ]
+   },
+   {
+    "no": "M17",
+    "title": "Mediation strategies: breaking down complicated information",
+    "status": "있음",
+    "ledger": [
+     "F5-02"
+    ]
+   },
+   {
+    "no": "M18",
+    "title": "Mediation strategies: amplifying a dense text",
+    "status": "있음",
+    "ledger": [
+     "F5-03"
+    ]
+   },
+   {
+    "no": "M19",
+    "title": "Mediation strategies: streamlining a text",
+    "status": "있음",
+    "ledger": [
+     "F5-06"
+    ]
+   },
+   {
+    "no": "PL1",
+    "title": "Building on pluricultural repertoire",
+    "status": "새",
+    "cand": "N-15"
+   },
+   {
+    "no": "PL2",
+    "title": "Plurilingual comprehension / building on plurilingual repertoire",
+    "status": "원장 밖"
+   }
+  ],
+  "KR-STD": [
+   {
+    "no": "1",
+    "title": "설명하기",
+    "status": "있음",
+    "ledger": [
+     "F5-02",
+     "F1-04"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "진술하기",
+    "status": "있음",
+    "ledger": [
+     "F1-18"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "보고하기",
+    "status": "있음",
+    "ledger": [
+     "F3-14",
+     "F1-18"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "묘사하기",
+    "status": "있음",
+    "ledger": [
+     "F1-21"
+    ]
+   },
+   {
+    "no": "5",
+    "title": "서술하기",
+    "status": "있음",
+    "ledger": [
+     "F5-01"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "기술하기",
+    "status": "있음",
+    "ledger": [
+     "F5-02"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "확인하기",
+    "status": "있음",
+    "ledger": [
+     "F1-15"
+    ]
+   },
+   {
+    "no": "8",
+    "title": "비교하기",
+    "status": "있음",
+    "ledger": [
+     "F2-14"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "대조하기",
+    "status": "있음",
+    "ledger": [
+     "F5-05"
+    ]
+   },
+   {
+    "no": "10",
+    "title": "수정하기",
+    "status": "있음",
+    "ledger": [
+     "F1-16"
+    ]
+   },
+   {
+    "no": "11",
+    "title": "질문하고 답하기",
+    "status": "있음",
+    "ledger": [
+     "F1-07",
+     "F1-22"
+    ]
+   },
+   {
+    "no": "12",
+    "title": "제안하기",
+    "status": "있음",
+    "ledger": [
+     "F3-06"
+    ]
+   },
+   {
+    "no": "13",
+    "title": "권유하기",
+    "status": "있음",
+    "ledger": [
+     "F3-19",
+     "F3-06"
+    ]
+   },
+   {
+    "no": "14",
+    "title": "요청하기",
+    "status": "있음",
+    "ledger": [
+     "F3-01"
+    ]
+   },
+   {
+    "no": "15",
+    "title": "경고하기",
+    "status": "있음",
+    "ledger": [
+     "F3-11"
+    ]
+   },
+   {
+    "no": "16",
+    "title": "충고하기/충고구하기",
+    "status": "있음",
+    "ledger": [
+     "F3-12"
+    ]
+   },
+   {
+    "no": "17",
+    "title": "조언하기/조언구하기",
+    "status": "있음",
+    "ledger": [
+     "F3-12"
+    ]
+   },
+   {
+    "no": "18",
+    "title": "허락하기/허락구하기",
+    "status": "있음",
+    "ledger": [
+     "F3-03",
+     "F3-04"
+    ]
+   },
+   {
+    "no": "19",
+    "title": "명령하기",
+    "status": "있음",
+    "ledger": [
+     "F3-18"
+    ]
+   },
+   {
+    "no": "20",
+    "title": "금지하기",
+    "status": "있음",
+    "ledger": [
+     "F3-05"
+    ]
+   },
+   {
+    "no": "21",
+    "title": "주의주기/주의하기",
+    "status": "있음",
+    "ledger": [
+     "F3-11",
+     "F2-25"
+    ]
+   },
+   {
+    "no": "22",
+    "title": "지시하기",
+    "status": "있음",
+    "ledger": [
+     "F3-18"
+    ]
+   },
+   {
+    "no": "23",
+    "title": "동의하기",
+    "status": "있음",
+    "ledger": [
+     "F2-04"
+    ]
+   },
+   {
+    "no": "24",
+    "title": "반대하기",
+    "status": "있음",
+    "ledger": [
+     "F2-05",
+     "F2-44"
+    ]
+   },
+   {
+    "no": "25",
+    "title": "부인하기",
+    "status": "있음",
+    "ledger": [
+     "F2-21",
+     "F2-46"
+    ]
+   },
+   {
+    "no": "26",
+    "title": "추측하기",
+    "status": "있음",
+    "ledger": [
+     "F2-08"
+    ]
+   },
+   {
+    "no": "27",
+    "title": "문제 제기하기",
+    "status": "있음",
+    "ledger": [
+     "C-09",
+     "C-25"
+    ]
+   },
+   {
+    "no": "28",
+    "title": "의도 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F1-19"
+    ]
+   },
+   {
+    "no": "29",
+    "title": "바람·희망·기대 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-34"
+    ]
+   },
+   {
+    "no": "30",
+    "title": "가능/불가능 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-20"
+    ]
+   },
+   {
+    "no": "31",
+    "title": "능력 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-20"
+    ]
+   },
+   {
+    "no": "32",
+    "title": "의무 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-19"
+    ]
+   },
+   {
+    "no": "33",
+    "title": "사과 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F4-06"
+    ]
+   },
+   {
+    "no": "34",
+    "title": "거절 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F3-08"
+    ]
+   },
+   {
+    "no": "35",
+    "title": "만족/불만족 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-31",
+     "F3-16"
+    ]
+   },
+   {
+    "no": "36",
+    "title": "걱정 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-11"
+    ]
+   },
+   {
+    "no": "37",
+    "title": "고민 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-11"
+    ]
+   },
+   {
+    "no": "38",
+    "title": "위로 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F4-16"
+    ]
+   },
+   {
+    "no": "39",
+    "title": "불평·불만 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F3-16"
+    ]
+   },
+   {
+    "no": "40",
+    "title": "후회 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-17"
+    ]
+   },
+   {
+    "no": "41",
+    "title": "안도 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-37"
+    ]
+   },
+   {
+    "no": "42",
+    "title": "놀람 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-10"
+    ]
+   },
+   {
+    "no": "43",
+    "title": "선호 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-14"
+    ]
+   },
+   {
+    "no": "44",
+    "title": "희로애락 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-09",
+     "F2-29",
+     "F2-49"
+    ]
+   },
+   {
+    "no": "45",
+    "title": "심정 표현하기",
+    "status": "있음",
+    "ledger": [
+     "F2-30"
+    ]
+   },
+   {
+    "no": "46",
+    "title": "인사하기",
+    "status": "있음",
+    "ledger": [
+     "F4-01",
+     "F4-03"
+    ]
+   },
+   {
+    "no": "47",
+    "title": "소개하기",
+    "status": "있음",
+    "ledger": [
+     "F4-10",
+     "F1-01"
+    ]
+   },
+   {
+    "no": "48",
+    "title": "감사하기",
+    "status": "있음",
+    "ledger": [
+     "F4-04"
+    ]
+   },
+   {
+    "no": "49",
+    "title": "축하하기",
+    "status": "있음",
+    "ledger": [
+     "F4-11"
+    ]
+   },
+   {
+    "no": "50",
+    "title": "칭찬하기",
+    "status": "있음",
+    "ledger": [
+     "F2-16"
+    ]
+   },
+   {
+    "no": "51",
+    "title": "환영하기",
+    "status": "있음",
+    "ledger": [
+     "F4-24"
+    ]
+   },
+   {
+    "no": "52",
+    "title": "호칭하기",
+    "status": "새",
+    "cand": "N-16"
+   }
+  ],
+  "CASAS": [
+   {
+    "no": "0.1",
+    "title": "Communicate in interpersonal interactions",
+    "status": "있음",
+    "ledger": [
+     "F4-01",
+     "F4-04",
+     "F4-06",
+     "F6-01"
+    ]
+   },
+   {
+    "no": "0.2",
+    "title": "Communicate regarding personal information",
+    "status": "있음",
+    "ledger": [
+     "F1-01",
+     "F1-02",
+     "T-04"
+    ]
+   },
+   {
+    "no": "1.1",
+    "title": "Use measurement and money",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1.2",
+    "title": "Use information to identify and purchase goods",
+    "status": "있음",
+    "ledger": [
+     "T-12",
+     "F1-10"
+    ]
+   },
+   {
+    "no": "1.3",
+    "title": "Purchases, returns, exchanges(1.3.3)",
+    "status": "있음",
+    "ledger": [
+     "T-35",
+     "T-14"
+    ]
+   },
+   {
+    "no": "1.4",
+    "title": "Housing; communicate maintenance needs(1.4.7)",
+    "status": "후보",
+    "cand": "N-01"
+   },
+   {
+    "no": "1.4.7",
+    "title": "Communicate maintenance needs",
+    "status": "후보",
+    "cand": "N-02"
+   },
+   {
+    "no": "1.5",
+    "title": "Budget, bills",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1.6",
+    "title": "Consumer protection",
+    "status": "원장 밖"
+   },
+   {
+    "no": "1.7",
+    "title": "Care, maintenance, repair of goods(1.7.5)",
+    "status": "후보",
+    "cand": "N-02"
+   },
+   {
+    "no": "1.8",
+    "title": "Financial literacy; send money(1.8.7)",
+    "status": "있음",
+    "ledger": [
+     "T-38",
+     "T-37"
+    ]
+   },
+   {
+    "no": "1.9",
+    "title": "Purchase and maintain an automobile; report accident(1.9.7)",
+    "status": "있음",
+    "ledger": [
+     "T-25"
+    ]
+   },
+   {
+    "no": "2.1",
+    "title": "Use the telephone; emergency calls; messages",
+    "status": "있음",
+    "ledger": [
+     "T-40",
+     "T-51",
+     "T-25"
+    ]
+   },
+   {
+    "no": "2.2",
+    "title": "Directions, transportation",
+    "status": "있음",
+    "ledger": [
+     "T-06",
+     "T-21",
+     "T-05"
+    ]
+   },
+   {
+    "no": "2.3",
+    "title": "Time, dates, weather",
+    "status": "있음",
+    "ledger": [
+     "F1-11",
+     "T-23"
+    ]
+   },
+   {
+    "no": "2.4",
+    "title": "Postal services",
+    "status": "있음",
+    "ledger": [
+     "T-37"
+    ]
+   },
+   {
+    "no": "2.5",
+    "title": "Community agencies; library(2.5.6); child care(2.5.9)",
+    "status": "후보",
+    "cand": "N-06"
+   },
+   {
+    "no": "2.6",
+    "title": "Leisure; order from restaurant(2.6.4)",
+    "status": "있음",
+    "ledger": [
+     "T-15",
+     "T-04"
+    ]
+   },
+   {
+    "no": "2.7",
+    "title": "Cultural and civic information",
+    "status": "원장 밖"
+   },
+   {
+    "no": "2.8",
+    "title": "Educational system; schools",
+    "status": "후보",
+    "cand": "N-04"
+   },
+   {
+    "no": "3.1",
+    "title": "Health care services; make appointments(3.1.2)",
+    "status": "후보",
+    "cand": "N-08"
+   },
+   {
+    "no": "3.2",
+    "title": "Medical forms and bills",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3.3",
+    "title": "Medications",
+    "status": "있음",
+    "ledger": [
+     "T-36"
+    ]
+   },
+   {
+    "no": "3.4",
+    "title": "Safety, first aid, disaster information",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3.5",
+    "title": "Nutrition, health practices",
+    "status": "원장 밖"
+   },
+   {
+    "no": "3.6",
+    "title": "Body, illness; communicate with a doctor(3.6.4)",
+    "status": "있음",
+    "ledger": [
+     "T-09",
+     "T-10"
+    ]
+   },
+   {
+    "no": "4.1",
+    "title": "Getting a job; applying, interviewing",
+    "status": "후보",
+    "cand": "N-07"
+   },
+   {
+    "no": "4.2",
+    "title": "Wages, benefits, contracts",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4.3",
+    "title": "Workplace safety; report unsafe conditions(4.3.4)",
+    "status": "있음",
+    "ledger": [
+     "F3-11"
+    ]
+   },
+   {
+    "no": "4.4",
+    "title": "Workplace behavior, responsibilities",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4.5",
+    "title": "Workplace tools and technology",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4.6",
+    "title": "Communicate in the workplace; clarify instructions, report progress",
+    "status": "있음",
+    "ledger": [
+     "F6-10",
+     "F3-14"
+    ]
+   },
+   {
+    "no": "4.7",
+    "title": "Workplace resources",
+    "status": "원장 밖"
+   },
+   {
+    "no": "4.8",
+    "title": "Working with others; negotiate to resolve conflicts(4.8.6)",
+    "status": "후보",
+    "cand": "N-14"
+   },
+   {
+    "no": "4.9",
+    "title": "Organizational systems",
+    "status": "원장 밖"
+   },
+   {
+    "no": "5.1",
+    "title": "Voting; express opinions on issues(5.1.6)",
+    "status": "있음",
+    "ledger": [
+     "F5-09"
+    ]
+   },
+   {
+    "no": "5.2",
+    "title": "History, geography",
+    "status": "원장 밖"
+   },
+   {
+    "no": "5.3",
+    "title": "Legal rights; report a crime(5.3.8)",
+    "status": "있음",
+    "ledger": [
+     "T-27"
+    ]
+   },
+   {
+    "no": "5.4",
+    "title": "Taxes, permits",
+    "status": "원장 밖"
+   },
+   {
+    "no": "5.5",
+    "title": "Government",
+    "status": "원장 밖"
+   },
+   {
+    "no": "5.6",
+    "title": "Civic participation",
+    "status": "원장 밖"
+   },
+   {
+    "no": "5.7",
+    "title": "Science and technology issues",
+    "status": "원장 밖"
+   },
+   {
+    "no": "5.8",
+    "title": "Economics",
+    "status": "원장 밖"
+   },
+   {
+    "no": "6",
+    "title": "Math(6.0~6.9: 수·셈·도량형·그래프) — 문장 항목이 아님, 개념 핵 참고",
+    "status": "원장 밖"
+   },
+   {
+    "no": "7.1~7.4",
+    "title": "Goals, thinking, study skills",
+    "status": "원장 밖"
+   },
+   {
+    "no": "7.5",
+    "title": "Personal development; communicate feelings, deal with conflict",
+    "status": "있음",
+    "ledger": [
+     "F2-11",
+     "F2-49"
+    ]
+   },
+   {
+    "no": "7.6~7.7",
+    "title": "Media, technology",
+    "status": "원장 밖"
+   },
+   {
+    "no": "8.1~8.2",
+    "title": "Self-care, home-care",
+    "status": "원장 밖"
+   },
+   {
+    "no": "8.3",
+    "title": "Support services",
+    "status": "있음",
+    "ledger": [
+     "T-31",
+     "F1-25"
+    ]
+   }
+  ]
+ }
+}

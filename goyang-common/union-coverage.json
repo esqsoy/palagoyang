@@ -1,0 +1,3733 @@
+{
+ "title": "원장 항목·풀 후보의 계보 수",
+ "families": [
+  "E",
+  "T",
+  "casas",
+  "fide",
+  "seikatsu"
+ ],
+ "how": "계보 수 = 그 항목을 덮는 출처들의 계보(T, E, 독자 목록 하나하나) 수. 출처는 union-pool.json sources. 원장 항목은 source-check의 대조와 항목 ref, 26.11.07 대조의 '있음'을 합쳐 센다.",
+ "ledger_distribution": {
+  "0": 8,
+  "1": 128,
+  "2": 61,
+  "3": 34,
+  "4": 16,
+  "5": 11
+ },
+ "ledger": [
+  {
+   "id": "F1-01",
+   "task": "이름 말하기",
+   "sources": [
+    "CASAS",
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "F1-02",
+   "task": "어디서 왔는지 말하기",
+   "sources": [
+    "CASAS",
+    "JF",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F1-03",
+   "task": "사는 곳 말하기",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F1-04",
+   "task": "하는 일 말하기",
+   "sources": [
+    "CV",
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F1-05",
+   "task": "나이 말하기",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F1-06",
+   "task": "무엇인지 묻기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F1-07",
+   "task": "어디인지 묻기",
+   "sources": [
+    "CV",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F1-08",
+   "task": "언제인지 묻기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "seikatsu"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F1-09",
+   "task": "누구인지 묻기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F1-10",
+   "task": "값 묻기",
+   "sources": [
+    "CASAS",
+    "PCIC",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F1-11",
+   "task": "시각 묻기",
+   "sources": [
+    "CASAS",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T",
+    "casas"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F1-12",
+   "task": "있는지 묻기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F1-13",
+   "task": "이유 묻기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F1-14",
+   "task": "방법 묻기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F1-15",
+   "task": "맞는지 확인하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F1-16",
+   "task": "바로잡기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F1-17",
+   "task": "들은 말 전하기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F1-18",
+   "task": "겪은 일 말하기",
+   "sources": [
+    "CV",
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F1-19",
+   "task": "계획 말하기",
+   "sources": [
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F1-20",
+   "task": "기억나지 않는다고 말하기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F1-21",
+   "task": "가리켜 알려 주기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F1-22",
+   "task": "맞다고 답하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F1-23",
+   "task": "이유 말하기",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F1-24",
+   "task": "연락처 주고받기",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F1-25",
+   "task": "조심스럽게 묻기",
+   "sources": [
+    "CASAS",
+    "PCIC",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F1-26",
+   "task": "못 이룬 계획 말하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-01",
+   "task": "좋아한다고 말하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "seikatsu"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F2-02",
+   "task": "싫어한다고 말하기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-03",
+   "task": "하고 싶다고 말하기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-04",
+   "task": "같은 생각이라고 말하기",
+   "sources": [
+    "CV",
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F2-05",
+   "task": "생각이 다르다고 말하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F2-06",
+   "task": "확신하기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-07",
+   "task": "모른다고 말하기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-08",
+   "task": "아마 그럴 거라고 말하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-09",
+   "task": "기쁨",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-10",
+   "task": "놀람",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-11",
+   "task": "걱정",
+   "sources": [
+    "CASAS",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F2-12",
+   "task": "피곤함",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-13",
+   "task": "실망",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-14",
+   "task": "더 좋아하는 것 말하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-15",
+   "task": "의견 묻기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F2-16",
+   "task": "칭찬하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-17",
+   "task": "후회",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-18",
+   "task": "관심 말하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-19",
+   "task": "해야 한다고 말하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-20",
+   "task": "할 줄 안다고 말하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-21",
+   "task": "사실이 아니라고 말하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-22",
+   "task": "같은 생각인지 묻기",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F2-23",
+   "task": "아는지 묻기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-24",
+   "task": "잊어버렸다고 말하기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-25",
+   "task": "잊지 말라고 일깨우기",
+   "sources": [
+    "KR-STD",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-26",
+   "task": "할 필요 없다고 말하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-27",
+   "task": "둘 중 무엇이 좋은지 묻기",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F2-28",
+   "task": "아무래도 좋다고 말하기",
+   "sources": [
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-29",
+   "task": "슬픔",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-30",
+   "task": "기분 묻기",
+   "sources": [
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F2-31",
+   "task": "마음에 든다고 말하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-32",
+   "task": "관심 없다고 말하기",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-33",
+   "task": "놀랍지 않다고 말하기",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-34",
+   "task": "바람",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-35",
+   "task": "무서움",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-36",
+   "task": "안심시키기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-37",
+   "task": "안도",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-38",
+   "task": "짜증",
+   "sources": [
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-39",
+   "task": "나무라기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-40",
+   "task": "잘못을 인정하기",
+   "sources": [
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-41",
+   "task": "내 잘못이 아니라고 말하기",
+   "sources": [
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-42",
+   "task": "어땠는지 묻기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F2-43",
+   "task": "평가하기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F2-44",
+   "task": "찬성·반대 밝히기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F2-45",
+   "task": "미심쩍어하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-46",
+   "task": "세게 부정하기",
+   "sources": [
+    "KR-STD",
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-47",
+   "task": "즐거움",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-48",
+   "task": "지루함",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-49",
+   "task": "화남",
+   "sources": [
+    "CASAS",
+    "KR-STD",
+    "PCIC"
+   ],
+   "families": [
+    "T",
+    "casas"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F2-50",
+   "task": "긴장",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-51",
+   "task": "자랑스러움",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-52",
+   "task": "애정",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-53",
+   "task": "가정해 보라고 묻기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-54",
+   "task": "체념",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-55",
+   "task": "창피함",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-56",
+   "task": "원망하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F3-01",
+   "task": "부탁하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F3-02",
+   "task": "주문하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F3-03",
+   "task": "허락 구하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F3-04",
+   "task": "허락하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F3-05",
+   "task": "하지 말라고 하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F3-06",
+   "task": "같이 하자고 하기",
+   "sources": [
+    "CV",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F3-07",
+   "task": "제안 받아들이기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F3-08",
+   "task": "거절하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F3-09",
+   "task": "초대하기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F3-10",
+   "task": "도와주겠다고 하기",
+   "sources": [
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F3-11",
+   "task": "위험 알리기",
+   "sources": [
+    "CASAS",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F3-12",
+   "task": "조언하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F3-13",
+   "task": "꼭 해 보라고 권하기",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F3-14",
+   "task": "약속하기",
+   "sources": [
+    "CASAS",
+    "KR-STD",
+    "PCIC",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F3-15",
+   "task": "정중하게 부탁하기",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F3-16",
+   "task": "불만 말하기",
+   "sources": [
+    "KR-STD",
+    "TL90",
+    "VA",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F3-17",
+   "task": "힘내라고 하기",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F3-18",
+   "task": "하는 법 일러 주기",
+   "sources": [
+    "CV",
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F3-19",
+   "task": "먹을 것·마실 것 권하기",
+   "sources": [
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F3-20",
+   "task": "권한 것을 사양하기",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F3-21",
+   "task": "하겠다고 나서기",
+   "sources": [
+    "CV",
+    "JF",
+    "PCIC",
+    "VA",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F3-22",
+   "task": "시간 있는지 묻기",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F3-23",
+   "task": "만날 때와 곳 정하기",
+   "sources": [
+    "JF",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F3-24",
+   "task": "사정하기",
+   "sources": [
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F3-25",
+   "task": "부탁 들어주기",
+   "sources": [
+    "PCIC",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F4-01",
+   "task": "만났을 때 인사",
+   "sources": [
+    "CASAS",
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "F4-02",
+   "task": "처음 만났을 때",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F4-03",
+   "task": "헤어질 때 인사",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-04",
+   "task": "고맙다고 하기",
+   "sources": [
+    "CASAS",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F4-05",
+   "task": "고맙다는 말에 답하기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-06",
+   "task": "사과하기",
+   "sources": [
+    "CASAS",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "VA",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F4-07",
+   "task": "사과 받아 주기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-08",
+   "task": "모르는 사람 부르기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-09",
+   "task": "안부 묻기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F4-10",
+   "task": "남 소개하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-11",
+   "task": "축하하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-12",
+   "task": "먹기 전에",
+   "sources": [
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-13",
+   "task": "먹고 나서",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-14",
+   "task": "나갈 때 집에 남은 사람에게",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F4-15",
+   "task": "건배",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F4-16",
+   "task": "위로하기",
+   "sources": [
+    "KR-STD",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-17",
+   "task": "일을 마친 사람에게",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F4-18",
+   "task": "새해 인사",
+   "sources": [
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-19",
+   "task": "다음 만남 약속",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-20",
+   "task": "아픈 사람에게",
+   "sources": [
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-21",
+   "task": "칭찬에 답하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-22",
+   "task": "안부에 답하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-23",
+   "task": "잘 부탁한다고 하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F4-24",
+   "task": "손님 맞이하기",
+   "sources": [
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "VA",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F4-25",
+   "task": "손님에게 음식 권하기",
+   "sources": [
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-26",
+   "task": "나가는 사람에게",
+   "sources": [
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-27",
+   "task": "집에 돌아와서",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F4-28",
+   "task": "돌아온 사람에게",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F4-29",
+   "task": "좋은 일 빌어 주기",
+   "sources": [
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-30",
+   "task": "선물 건네기",
+   "sources": [
+    "JF"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-31",
+   "task": "선물 받고 고마워하기",
+   "sources": [
+    "JF"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-32",
+   "task": "까닭을 대며 사과하기",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F4-33",
+   "task": "떠나며 그동안 고마웠다고 하기",
+   "sources": [
+    "JF"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-34",
+   "task": "지나가게 비켜 달라고 하기",
+   "sources": [
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-35",
+   "task": "환영에 답하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-36",
+   "task": "조의 표하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-37",
+   "task": "축하에 답하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-38",
+   "task": "자리 뜰 뜻 비치기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-39",
+   "task": "서로 아는지 묻기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-40",
+   "task": "소개해 달라고 하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-41",
+   "task": "안부 전해 달라고 하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F5-01",
+   "task": "이야기 꺼내기",
+   "sources": [
+    "CV",
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F5-02",
+   "task": "순서대로 말하기",
+   "sources": [
+    "CV",
+    "JF",
+    "KR-STD",
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F5-03",
+   "task": "예 들기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F5-04",
+   "task": "덧붙이기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F5-05",
+   "task": "맞서는 내용 잇기",
+   "sources": [
+    "KR-STD",
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F5-06",
+   "task": "한마디로 줄이기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F5-07",
+   "task": "결론 내기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F5-08",
+   "task": "하던 이야기로 돌아가기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F5-09",
+   "task": "의견 말하기",
+   "sources": [
+    "CASAS",
+    "CV",
+    "JF",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "F5-10",
+   "task": "듣고 있다는 신호 보내기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F5-11",
+   "task": "계속하라고 하기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F5-12",
+   "task": "말할 차례 넘기기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F5-13",
+   "task": "마저 말하겠다고 하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F5-14",
+   "task": "끝나 감을 알리기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F5-15",
+   "task": "대화 마무리하기",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F5-16",
+   "task": "조용히 해 달라고 하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F5-17",
+   "task": "그 이야기를 피하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F6-01",
+   "task": "다시 말해 달라고 하기",
+   "sources": [
+    "CASAS",
+    "CV",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F6-02",
+   "task": "천천히 말해 달라고 하기",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F6-03",
+   "task": "그 말을 조금만 한다고 말하기",
+   "sources": [
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "T",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F6-04",
+   "task": "뜻 묻기",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F6-05",
+   "task": "그 말로 뭐라고 하는지 묻기",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F6-06",
+   "task": "써 달라고 하기",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F6-07",
+   "task": "알아들었는지 묻기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F6-08",
+   "task": "말이 막힐 때",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F6-09",
+   "task": "고쳐 말하기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F6-10",
+   "task": "되물어 확인하기",
+   "sources": [
+    "CASAS",
+    "CV",
+    "PCIC",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide"
+   ],
+   "n": 4
+  },
+  {
+   "id": "F6-11",
+   "task": "못 알아들었다고 말하기",
+   "sources": [
+    "CV",
+    "TL90",
+    "VA",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "F6-12",
+   "task": "쓰는 법 묻기",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F6-13",
+   "task": "에둘러 말하기",
+   "sources": [
+    "CV",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "F6-14",
+   "task": "말 거들어 주기",
+   "sources": [
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F6-15",
+   "task": "통하는 말을 하는 사람 찾기",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-01",
+   "task": "신상: 생일",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-02",
+   "task": "집",
+   "sources": [
+    "JF",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-03",
+   "task": "하루 일과",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-04",
+   "task": "여가",
+   "sources": [
+    "CASAS",
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-05",
+   "task": "교통: 표 사기",
+   "sources": [
+    "CASAS",
+    "JF",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "T-06",
+   "task": "교통: 가는 길 묻기",
+   "sources": [
+    "CASAS",
+    "JF",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "T-07",
+   "task": "교통: 자리",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-08",
+   "task": "가족",
+   "sources": [
+    "JF"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-09",
+   "task": "건강: 아픈 곳",
+   "sources": [
+    "CASAS",
+    "JF",
+    "PCIC",
+    "TL90",
+    "VA",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "T-10",
+   "task": "건강: 병원",
+   "sources": [
+    "CASAS",
+    "JF",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "T-11",
+   "task": "배움",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-12",
+   "task": "쇼핑: 다른 것",
+   "sources": [
+    "CASAS",
+    "CV",
+    "JF",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "T-13",
+   "task": "쇼핑: 입어 보기",
+   "sources": [
+    "JF",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-14",
+   "task": "쇼핑: 계산",
+   "sources": [
+    "CASAS",
+    "JF",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "T-15",
+   "task": "식당: 메뉴",
+   "sources": [
+    "CASAS",
+    "CV",
+    "JF",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "T-16",
+   "task": "식당: 추천",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-17",
+   "task": "식당: 계산",
+   "sources": [
+    "JF",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-18",
+   "task": "숙소: 예약",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-19",
+   "task": "서비스: 와이파이",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-20",
+   "task": "장소: 근처",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-21",
+   "task": "장소: 길 알려 주기",
+   "sources": [
+    "CASAS",
+    "TL90"
+   ],
+   "families": [
+    "T",
+    "casas"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-22",
+   "task": "언어 배우기",
+   "sources": [
+    "JF",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-23",
+   "task": "날씨",
+   "sources": [
+    "CASAS",
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-24",
+   "task": "날씨: 예상",
+   "sources": [
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-25",
+   "task": "긴급: 도움",
+   "sources": [
+    "CASAS",
+    "PCIC",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "T-26",
+   "task": "긴급: 분실",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "T-27",
+   "task": "긴급: 경찰",
+   "sources": [
+    "CASAS",
+    "seikatsu"
+   ],
+   "families": [
+    "casas",
+    "seikatsu"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-28",
+   "task": "장소: 지금 있는 곳",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-29",
+   "task": "교통: 택시",
+   "sources": [
+    "JF",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-30",
+   "task": "교통: 내릴 곳",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-31",
+   "task": "여행: 온 까닭",
+   "sources": [
+    "CASAS",
+    "JF",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "T-32",
+   "task": "식당: 사람 수",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-33",
+   "task": "식당: 못 먹는 것",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-34",
+   "task": "쇼핑: 값 깎기",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-35",
+   "task": "쇼핑: 바꾸기",
+   "sources": [
+    "CASAS",
+    "JF",
+    "TL90",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide"
+   ],
+   "n": 4
+  },
+  {
+   "id": "T-36",
+   "task": "건강: 약국",
+   "sources": [
+    "CASAS",
+    "JF",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 5
+  },
+  {
+   "id": "T-37",
+   "task": "서비스: 우체국",
+   "sources": [
+    "CASAS",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "T-38",
+   "task": "서비스: 환전",
+   "sources": [
+    "CASAS",
+    "TL90",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "T",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "T-39",
+   "task": "일",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-40",
+   "task": "전화: 받기·걸기",
+   "sources": [
+    "CASAS",
+    "CV",
+    "PCIC",
+    "TL90",
+    "VA",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "casas",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "T-41",
+   "task": "전화: 바꿔 달라고 하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-42",
+   "task": "전화: 기다려 달라고 하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-43",
+   "task": "전화: 잘 안 들릴 때",
+   "sources": [
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-44",
+   "task": "전화: 다시 걸겠다고 하기",
+   "sources": [
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-45",
+   "task": "편지·메일: 첫머리",
+   "sources": [
+    "CV",
+    "JF",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-46",
+   "task": "편지·메일: 끝맺음",
+   "sources": [
+    "CV",
+    "JF",
+    "TL90",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "T",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-47",
+   "task": "날씨: 계절",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-48",
+   "task": "자연·환경",
+   "sources": [
+    "JF"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-49",
+   "task": "사회",
+   "sources": [
+    "JF",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-50",
+   "task": "과학기술",
+   "sources": [
+    "JF"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-51",
+   "task": "전화: 말 전해 달라고 하기",
+   "sources": [
+    "CASAS",
+    "PCIC"
+   ],
+   "families": [
+    "T",
+    "casas"
+   ],
+   "n": 2
+  },
+  {
+   "id": "C-01",
+   "task": "말 누그러뜨리기",
+   "sources": [
+    "JF",
+    "PCIC"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "C-02",
+   "task": "정중하게 반박하기",
+   "sources": [
+    "JF",
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "C-03",
+   "task": "인정하고 뒤집기",
+   "sources": [
+    "JF",
+    "PCIC"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "C-04",
+   "task": "힘주어 말하기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-05",
+   "task": "화제 바꾸기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-06",
+   "task": "말 중간에 끼어들기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90",
+    "VA",
+    "fide"
+   ],
+   "families": [
+    "E",
+    "T",
+    "fide"
+   ],
+   "n": 3
+  },
+  {
+   "id": "C-07",
+   "task": "시간 벌기",
+   "sources": [
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-08",
+   "task": "돌려서 거절하기",
+   "sources": [
+    "PCIC",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-09",
+   "task": "부드럽게 비판하기",
+   "sources": [
+    "CV",
+    "KR-STD",
+    "PCIC"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "C-10",
+   "task": "지난 일을 가정하기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "C-11",
+   "task": "그럴 리 없다고 말하기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "C-12",
+   "task": "들은 말과 거리 두기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-13",
+   "task": "다시 말해 정리하기",
+   "sources": [
+    "CV",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "C-14",
+   "task": "논거 늘어놓기",
+   "sources": [
+    "CV",
+    "JF",
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "C-15",
+   "task": "맞장구치기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-16",
+   "task": "공식 자리 첫인사",
+   "sources": [
+    "CV",
+    "JF"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-17",
+   "task": "조건 걸고 동의하기",
+   "sources": [
+    "JF",
+    "PCIC"
+   ],
+   "families": [
+    "E",
+    "T"
+   ],
+   "n": 2
+  },
+  {
+   "id": "C-18",
+   "task": "서운함을 점잖게 말하기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "C-19",
+   "task": "반어로 말하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-20",
+   "task": "넌지시 부탁하기",
+   "sources": [
+    "PCIC",
+    "TL90",
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-21",
+   "task": "마지못해 받아들이기",
+   "sources": [
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-22",
+   "task": "뜻을 정해 두고 말하기",
+   "sources": [
+    "VA"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-23",
+   "task": "과거형으로 누그러뜨리기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-24",
+   "task": "거듭 권하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-25",
+   "task": "상관없는 말이라고 짚기",
+   "sources": [
+    "KR-STD",
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-26",
+   "task": "곁가지 이야기 꺼내기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "C-27",
+   "task": "헤어지려는 사람 붙잡기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  }
+ ],
+ "candidates": [
+  {
+   "id": "N-01",
+   "task": "집 구하기·빌리기(집 보고 묻기, 계약)",
+   "group": "T",
+   "sources": [
+    "CASAS",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "N-02",
+   "task": "고장·문제 알리고 고쳐 달라고 하기(맡기기 포함)",
+   "group": "T",
+   "sources": [
+    "CASAS",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "N-03",
+   "task": "그만둔다고 알리기(집 계약 해지·퇴사)",
+   "group": "T",
+   "sources": [
+    "fide"
+   ],
+   "families": [
+    "fide"
+   ],
+   "n": 1
+  },
+  {
+   "id": "N-04",
+   "task": "신청·등록하기(수업·모임·기관·보험)",
+   "group": "T",
+   "sources": [
+    "CASAS",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "N-05",
+   "task": "못 간다고 알리기(결석·결근·빠짐)",
+   "group": "T",
+   "sources": [
+    "fide"
+   ],
+   "families": [
+    "fide"
+   ],
+   "n": 1
+  },
+  {
+   "id": "N-06",
+   "task": "아이 맡기고 데려오기",
+   "group": "T",
+   "sources": [
+    "CASAS",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "N-07",
+   "task": "일 구하기(지원·면접)",
+   "group": "T",
+   "sources": [
+    "CASAS",
+    "CV",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "N-08",
+   "task": "예약·약속 날짜 잡기(기관·가게)",
+   "group": "T",
+   "sources": [
+    "CASAS",
+    "fide"
+   ],
+   "families": [
+    "casas",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "N-09",
+   "task": "재난 때 알리고 피하기(불·지진·태풍)",
+   "group": "T",
+   "sources": [
+    "seikatsu"
+   ],
+   "families": [
+    "seikatsu"
+   ],
+   "n": 1
+  },
+  {
+   "id": "N-10",
+   "task": "여럿에게 알리기(주목시키고 안내하기)",
+   "group": "F5",
+   "sources": [
+    "CV"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "N-11",
+   "task": "온라인 대화·댓글·채팅",
+   "group": "T",
+   "sources": [
+    "CV"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "N-12",
+   "task": "그래프·표 설명하기(늘고 줄기)",
+   "group": "F5",
+   "sources": [
+    "CV"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "N-13",
+   "task": "통역·번역해 주기(이 말은 ~라는 뜻이에요)",
+   "group": "F6",
+   "sources": [
+    "CV"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "N-14",
+   "task": "사이에서 중재하기(다툼 가라앉히기)",
+   "group": "C",
+   "sources": [
+    "CASAS",
+    "CV"
+   ],
+   "families": [
+    "E",
+    "casas"
+   ],
+   "n": 2
+  },
+  {
+   "id": "N-15",
+   "task": "우리 문화 설명하기(한국에서는 ~해요)",
+   "group": "F5",
+   "sources": [
+    "CV"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
+   "id": "N-16",
+   "task": "상대를 부르는 말(호칭)",
+   "group": "F4",
+   "sources": [
+    "KR-STD"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "N-17",
+   "task": "말 놓자고 하기(높임 바꾸기)",
+   "group": "F4",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "N-18",
+   "task": "누가 낼지 정하기(한턱내기·나눠 내기)",
+   "group": "F4",
+   "sources": [],
+   "families": [],
+   "n": 0
+  }
+ ]
+}
