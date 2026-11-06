@@ -51,6 +51,17 @@ h2 small{font-family:var(--body);color:var(--mute);font-size:.8rem;font-weight:4
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .sw{display:inline-block;width:18px;height:12px;border-radius:3px;border:1px solid var(--line)}
 .sw.new{background:var(--newbg)}
+.filter{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:14px 16px 6px;margin:0 0 28px}
+.filter h2{margin-top:4px}
+.filter h3{font-size:1rem;margin:18px 0 6px}
+.filter ol{margin:0 0 6px;padding-left:20px;font-size:.88rem;color:var(--mute)}
+.fx{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;padding:7px 4px;border-bottom:1px dashed var(--line)}
+.fx .why{grid-column:2;font-size:.85rem;color:var(--mute)}
+.rec{font-size:.75rem;font-weight:700;border-radius:4px;padding:1px 7px;white-space:nowrap;align-self:baseline}
+.rec.넣음{color:var(--accent);border:1px solid var(--accent)}
+.rec.거름,.rec.합침{color:var(--warn);border:1px solid var(--warn);background:var(--warnbg)}
+.rec.둠{color:var(--mute);border:1px solid var(--line)}
+.fam{font-size:.74rem;color:var(--mute);font-family:ui-monospace,monospace}
 """
 parts = ['<title>언어불문 필수 표현</title><meta name="claude:viewport-fit-sides" content="cover">',
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap">',
@@ -65,6 +76,29 @@ parts = ['<title>언어불문 필수 표현</title><meta name="claude:viewport-f
           + '. 회색 글씨가 근거 위치예요.</p>' if n_by else ''),
          '<div class="legend"><span><span class="sw"></span>0.3까지의 문장</span><span><span class="sw new"></span>0.4에서 새로 쓴 칸</span></div>',
          '<div class="kinds"><div><b>same</b>거의 번역으로 통한다</div><div><b>counterpart</b>같은 상황, 다른 표현</div><div><b>none</b>그 언어에 해당 표현 없음</div></div>']
+
+# 거르기 제안(있으면 맨 위에). 줄마다 id가 있어 댓글이 그 줄에 붙는다.
+FILTER = sorted(HERE.glob('filter-*.json'))
+if FILTER:
+    f = json.loads(FILTER[-1].read_text())
+    def fx(rid, rec, head, why, fam=None):
+        famtxt = f'<span class="fam">계보 {fam}</span>' if fam is not None else ''
+        return (f'<div class="fx" id="x-{e(rid)}"><span class="rec {e(rec)}">{e(rec)}</span>'
+                f'<span><span class="id">{e(rid)}</span> {e(head)} {famtxt}</span><span class="why">{e(why)}</span></div>')
+    parts.append(f'<section class="filter"><h2>{e(f["title"])}</h2>')
+    parts.append(f'<p class="lead">{e(f["how"]["result"])} 줄마다 댓글로 "좋아" 또는 고칠 점을 달아 주세요.</p><ol>'
+                 + ''.join(f'<li>{e(c)}</li>' for c in f['how']['criteria']) + '</ol>')
+    parts.append('<h3>풀 후보: 원장에 넣을지</h3>')
+    parts += [fx(a['id'], a['rec'], f'{a["task"]} · {a["group"]}', a['why'], a['families']) for a in f['add']]
+    parts.append(f'<h3>묻는 꼴을 따로 펴기</h3><p class="lead">{e(f["ask_forms"]["why"])}</p>')
+    parts += [fx(q['id'], q['rec'], f'{q["task"]} (짝: {q["pair"]})', q.get('note', '')) for q in f['ask_forms']['items']]
+    parts.append('<h3>원장에서 거를 것</h3>')
+    parts += [fx(d['id'], d['rec'], d['task'], d['why']) for d in f['drop']]
+    parts.append('<h3>합칠 것</h3>')
+    parts += [fx(m['id'], m['rec'], m['task'], m['why']) for m in f['merge']]
+    parts.append(f'<h3>참고: 한국어 쪽 정해진 말(층 표시)</h3><p class="lead">{e(f["layer"]["why"])} {e(f["layer"]["mirror"])}</p>'
+                 f'<p class="lead">{e(" · ".join(f["layer"]["items"]))}</p></section>')
+
 for g, name in doc['groups'].items():
     rows = [i for i in items if i['group'] == g]
     rs = [r for i in rows for r in i['rungs']]
