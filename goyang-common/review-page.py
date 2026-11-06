@@ -81,21 +81,23 @@ parts = ['<title>언어불문 필수 표현</title><meta name="claude:viewport-f
 FILTER = sorted(HERE.glob('filter-*.json'))
 if FILTER:
     f = json.loads(FILTER[-1].read_text())
-    def fx(rid, rec, head, why, fam=None):
+    def fx(rid, rec, head, why, fam=None, decided=None):
         famtxt = f'<span class="fam">계보 {fam}</span>' if fam is not None else ''
-        return (f'<div class="fx" id="x-{e(rid)}"><span class="rec {e(rec)}">{e(rec)}</span>'
-                f'<span><span class="id">{e(rid)}</span> {e(head)} {famtxt}</span><span class="why">{e(why)}</span></div>')
+        dec = f'<span class="why"><b>{e(decided)}</b></span>' if decided else ''
+        badge = f'{e(rec)} 확정' if decided else e(rec)
+        return (f'<div class="fx" id="x-{e(rid)}"><span class="rec {e(rec)}">{badge}</span>'
+                f'<span><span class="id">{e(rid)}</span> {e(head)} {famtxt}</span><span class="why">{e(why)}</span>{dec}</div>')
     parts.append(f'<section class="filter"><h2>{e(f["title"])}</h2>')
     parts.append(f'<p class="lead">{e(f["how"]["result"])} 줄마다 댓글로 "좋아" 또는 고칠 점을 달아 주세요.</p><ol>'
                  + ''.join(f'<li>{e(c)}</li>' for c in f['how']['criteria']) + '</ol>')
     parts.append('<h3>풀 후보: 원장에 넣을지</h3>')
-    parts += [fx(a['id'], a['rec'], f'{a["task"]} · {a["group"]}', a['why'], a['families']) for a in f['add']]
+    parts += [fx(a['id'], a['rec'], f'{a["task"]} · {a["group"]}', a['why'], a['families'], a.get('decided')) for a in f['add']]
     parts.append(f'<h3>묻는 꼴을 따로 펴기</h3><p class="lead">{e(f["ask_forms"]["why"])}</p>')
-    parts += [fx(q['id'], q['rec'], f'{q["task"]} (짝: {q["pair"]})', q.get('note', '')) for q in f['ask_forms']['items']]
+    parts += [fx(q['id'], q['rec'], f'{q["task"]} (짝: {q["pair"]})', q.get('note', ''), decided=q.get('decided')) for q in f['ask_forms']['items']]
     parts.append('<h3>원장에서 거를 것</h3>')
-    parts += [fx(d['id'], d['rec'], d['task'], d['why']) for d in f['drop']]
+    parts += [fx(d['id'], d['rec'], d['task'], d['why'], decided=d.get('decided')) for d in f['drop']]
     parts.append('<h3>합칠 것</h3>')
-    parts += [fx(m['id'], m['rec'], m['task'], m['why']) for m in f['merge']]
+    parts += [fx(m['id'], m['rec'], m['task'], m['why'], decided=m.get('decided')) for m in f['merge']]
     parts.append(f'<h3>참고: 한국어 쪽 정해진 말(층 표시)</h3><p class="lead">{e(f["layer"]["why"])} {e(f["layer"]["mirror"])}</p>'
                  f'<p class="lead">{e(" · ".join(f["layer"]["items"]))}</p></section>')
 
