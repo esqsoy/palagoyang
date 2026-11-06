@@ -179,6 +179,9 @@ def build(f5, t6):
 
     rows = []
     for it in led["items"]:
+        if "rungs" in it:  # 원장 0.4부터: 0.3 문장은 base 칸에 있다
+            b = next(r for r in it["rungs"] if r.get("base"))
+            it = {**it, "level": b["level"], "ko": b["ko"]}
         lv, used = set(), []
         for ch, no in refs.get(it["id"], []):
             s = f5_levels(no) if ch == "5" else t6_levels(no)
@@ -218,7 +221,7 @@ def write_json(led, rows, levels_stat, big, n_func):
         "title": "공통 원장 기능×수준 사다리 칸 초안",
         "date": "2026-11-04",
         "ledger_version": led["version"],
-        "status": "칸 수 확정(영신 26.11.06): 낮은 칸도 두고, 묶음 1.2·1.3은 B·C 칸을 대표에만, F6 6항목에 B 칸. 문장은 아직 없다.",
+        "status": "칸 수 확정(영신 26.11.06): 낮은 칸도 두고, 묶음 1.2·1.3은 B·C 칸을 대표에만, F6 6항목에 B 칸. 원장 0.4부터 칸과 문장은 expressions.json의 rungs에 있다(이 파일은 칸 수의 근거).",
         "bands": BAND_LABEL,
         "rule": [
             "칸은 A(A1~A2 기본꼴)·B(B1~B2)·C(C1 다듬은 꼴) 셋. PCIC의 C2는 C에 합친다(원장은 C1까지).",

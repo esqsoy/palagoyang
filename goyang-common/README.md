@@ -2,11 +2,11 @@
 
 모든 제2외국어 고양 시리즈(탄고고양·빨라고양 등)가 같이 쓰는 예문 뼈대다. 보카고양(영어)과 고전어판(그리스어·라틴어)은 쓰지 않는다. 이유는 [PRINCIPLES 0](https://github.com/esqsoy/tangogoyang/blob/main/PRINCIPLES.md#0-목적)에 있다.
 
-- 원장: [expressions.json](expressions.json) · 초안 0.3(2026-11-03) · 258항목. 0.1의 141항목에 원문 대조로 0.2에서 85항목(Threshold 1990·Vantage·JF), 0.3에서 32항목(PCIC)을 더했다(`"added"`에 판, 근거는 `ref`).
+- 원장: [expressions.json](expressions.json) · 초안 0.4(2026-11-06) · 258항목 556칸. 0.1의 141항목에 원문 대조로 0.2에서 85항목(Threshold 1990·Vantage·JF), 0.3에서 32항목(PCIC)을 더했다(`"added"`에 판, 근거는 `ref`). 0.4부터 항목마다 사다리 칸(`rungs`)이 있다(아래 '사다리 칸').
 - 원문 대조표: [source-check-20261103.json](source-check-20261103.json). 원문 목차 한 줄마다 원장 id와 상태(있음·더함·보강·묻기 꼴·판 고유·뺌)를 적었다.
 - 빨라고양(스페인어판)용으로 남긴 PCIC 자료: [spanish-pcic-sources.md](spanish-pcic-sources.md). 보관본 주소와 쓰는 법. 원문 파일은 공개 저장소라 넣지 않고 맥미니 비공개 폴더(`10 언어/고양/비공개/`)에 둔다.
 - 기능×수준 사다리 칸 초안(26.11.04): [ladder-draft-20261104.json](ladder-draft-20261104.json), [ladder.py](ladder.py)로 만든다(PCIC 원문은 맥미니 지정 폴더에서 읽음). 영신 검토 페이지 https://claude.ai/artifact/5v9b3inZWWQU1jvLEVigMb
-- 아직 영신 검수 전이다. 항목·문장·수준은 바뀔 수 있다. 직검수 페이지 https://claude.ai/artifact/TDwB3yZf3sAwqooZS38zXA (0.3으로 갱신, 새 항목은 '0.2 추가'·'0.3 추가' 표시).
+- 아직 영신 검수 전이다. 항목·문장·수준은 바뀔 수 있다. 직검수 페이지 https://claude.ai/artifact/TDwB3yZf3sAwqooZS38zXA (0.4로 갱신, 칸마다 한 줄, 0.4에서 새로 쓴 칸은 연두 바탕, 쓸 칸은 '쓸 차례').
 - 26.11.03 탄고고양 저장소에서 만들고, 26.11.04 영신 결정으로 이 저장소(palagoyang)로 옮겼다. 그 전 기록은 [tangogoyang WORK_LOG](https://github.com/esqsoy/tangogoyang/blob/main/WORK_LOG.md)의 11/03 고양공유 절들.
 
 ## 무엇인가
@@ -26,6 +26,22 @@
 이 원장에 없는 것, 곧 **그 언어 고유의 관용 표현과 문법을 녹인 예문**은 각 판의 고유 원장에 따로 둔다.
 
 `hint`는 한국어 쪽이 문화에 묶인 표현이라 `counterpart`·`none`이 될 가능성이 큰 항목이다. 미리 짐작한 것일 뿐 판정은 각 판이 한다.
+
+## 사다리 칸 (0.4, 영신 26.11.06)
+
+항목마다 같은 일을 수준별로 말하는 칸을 둔다. 같은 내용을 수준을 올려 다시 만나게 하려는 것이다.
+
+| 칸 | 수준 | 쓰는 기준 |
+|---|---|---|
+| A | A1~A2 | 기본꼴. 짧은 한 문장, 해요체 |
+| B | B1~B2 | 이유·조건·간접 질문 등으로 한 겹 더하고, 정중함을 한 단계 올린다 |
+| C | C1 | 완곡·격식·상황 맞춤. 두 절까지, 한눈에 읽히는 길이 |
+
+- 상황·내용은 칸끼리 같게 두고 말하는 꼴만 올린다.
+- 칸 id는 항목 id 뒤에 A·B·C(`F1-07B`). 각 판은 칸마다 `same`/`counterpart`/`none`을 단다.
+- `base: true`는 0.3까지 그 항목의 문장이 들어간 칸이다. `ko: null`은 아직 쓰지 않은 칸이다.
+- 칸 수(556)와 근거는 [ladder-draft-20261104.json](ladder-draft-20261104.json)에 있다. PCIC 수준 분포를 쓰고 영신이 정했다.
+- 새 칸 문장은 갈래별로 쓴다(F1 26.11.06).
 
 ## 짜임
 
