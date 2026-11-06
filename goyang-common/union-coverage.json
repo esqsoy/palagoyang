@@ -9,11 +9,11 @@
  ],
  "how": "계보 수 = 그 항목을 덮는 출처들의 계보(T, E, 독자 목록 하나하나) 수. 출처는 union-pool.json sources. 원장 항목은 source-check의 대조와 항목 ref, 26.11.07 대조의 '있음'을 합쳐 센다.",
  "ledger_distribution": {
-  "0": 8,
-  "1": 128,
-  "2": 61,
-  "3": 34,
-  "4": 16,
+  "0": 15,
+  "1": 133,
+  "2": 60,
+  "3": 36,
+  "4": 17,
   "5": 11
  },
  "ledger": [
@@ -393,6 +393,52 @@
   {
    "id": "F1-26",
    "task": "못 이룬 계획 말하기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F1-27",
+   "task": "이름 묻기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F1-28",
+   "task": "어디서 왔는지 묻기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F1-29",
+   "task": "사는 곳 묻기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F1-30",
+   "task": "하는 일 묻기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F1-31",
+   "task": "나이 묻기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F1-32",
+   "task": "계획 묻기",
    "sources": [
     "PCIC"
    ],
@@ -1117,9 +1163,33 @@
    "n": 1
   },
   {
+   "id": "F2-57",
+   "task": "좋아하는 것 묻기",
+   "sources": [
+    "PCIC"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F2-58",
+   "task": "할 줄 아는지 묻기",
+   "sources": [
+    "PCIC",
+    "TL90"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
    "id": "F3-01",
    "task": "부탁하기",
    "sources": [
+    "JF",
     "KR-STD",
     "PCIC",
     "TL90",
@@ -1127,11 +1197,12 @@
     "seikatsu"
    ],
    "families": [
+    "E",
     "T",
     "fide",
     "seikatsu"
    ],
-   "n": 3
+   "n": 4
   },
   {
    "id": "F3-02",
@@ -1319,24 +1390,6 @@
    "families": [
     "T",
     "casas",
-    "fide",
-    "seikatsu"
-   ],
-   "n": 4
-  },
-  {
-   "id": "F3-15",
-   "task": "정중하게 부탁하기",
-   "sources": [
-    "JF",
-    "PCIC",
-    "TL90",
-    "fide",
-    "seikatsu"
-   ],
-   "families": [
-    "E",
-    "T",
     "fide",
     "seikatsu"
    ],
@@ -2000,6 +2053,31 @@
    "n": 1
   },
   {
+   "id": "F4-42",
+   "task": "상대를 부르는 말(호칭)",
+   "sources": [
+    "KR-STD"
+   ],
+   "families": [
+    "T"
+   ],
+   "n": 1
+  },
+  {
+   "id": "F4-43",
+   "task": "말 놓자고 하기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
+   "id": "F4-44",
+   "task": "누가 낼지 정하기",
+   "sources": [],
+   "families": [],
+   "n": 0
+  },
+  {
    "id": "F5-01",
    "task": "이야기 꺼내기",
    "sources": [
@@ -2242,6 +2320,17 @@
    "n": 1
   },
   {
+   "id": "F5-18",
+   "task": "우리 문화 설명하기",
+   "sources": [
+    "CV"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
    "id": "F6-01",
    "task": "다시 말해 달라고 하기",
    "sources": [
@@ -2436,6 +2525,17 @@
    "n": 2
   },
   {
+   "id": "F6-16",
+   "task": "통역해 주기(말 옮겨 주기)",
+   "sources": [
+    "CV"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
+  },
+  {
    "id": "T-01",
    "task": "신상: 생일",
    "sources": [
@@ -2589,19 +2689,6 @@
     "seikatsu"
    ],
    "n": 5
-  },
-  {
-   "id": "T-11",
-   "task": "배움",
-   "sources": [
-    "JF",
-    "TL90"
-   ],
-   "families": [
-    "E",
-    "T"
-   ],
-   "n": 2
   },
   {
    "id": "T-12",
@@ -3000,19 +3087,6 @@
    "n": 4
   },
   {
-   "id": "T-39",
-   "task": "일",
-   "sources": [
-    "JF",
-    "TL90"
-   ],
-   "families": [
-    "E",
-    "T"
-   ],
-   "n": 2
-  },
-  {
    "id": "T-40",
    "task": "전화: 받기·걸기",
    "sources": [
@@ -3127,17 +3201,6 @@
    "n": 2
   },
   {
-   "id": "T-48",
-   "task": "자연·환경",
-   "sources": [
-    "JF"
-   ],
-   "families": [
-    "E"
-   ],
-   "n": 1
-  },
-  {
    "id": "T-49",
    "task": "사회",
    "sources": [
@@ -3151,17 +3214,6 @@
    "n": 2
   },
   {
-   "id": "T-50",
-   "task": "과학기술",
-   "sources": [
-    "JF"
-   ],
-   "families": [
-    "E"
-   ],
-   "n": 1
-  },
-  {
    "id": "T-51",
    "task": "전화: 말 전해 달라고 하기",
    "sources": [
@@ -3173,6 +3225,114 @@
     "casas"
    ],
    "n": 2
+  },
+  {
+   "id": "T-52",
+   "task": "집: 구하기·빌리기",
+   "sources": [
+    "CASAS",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-53",
+   "task": "고장 알리고 고쳐 달라고 하기",
+   "sources": [
+    "CASAS",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-54",
+   "task": "신청·등록하기",
+   "sources": [
+    "CASAS",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 3
+  },
+  {
+   "id": "T-55",
+   "task": "못 간다고 알리기(결석·결근)",
+   "sources": [
+    "fide"
+   ],
+   "families": [
+    "fide"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-56",
+   "task": "일 구하기(지원·면접)",
+   "sources": [
+    "CASAS",
+    "CV",
+    "fide",
+    "seikatsu"
+   ],
+   "families": [
+    "E",
+    "casas",
+    "fide",
+    "seikatsu"
+   ],
+   "n": 4
+  },
+  {
+   "id": "T-57",
+   "task": "예약하기(날짜·시간 잡기)",
+   "sources": [
+    "CASAS",
+    "fide"
+   ],
+   "families": [
+    "casas",
+    "fide"
+   ],
+   "n": 2
+  },
+  {
+   "id": "T-58",
+   "task": "긴급: 불·지진",
+   "sources": [
+    "seikatsu"
+   ],
+   "families": [
+    "seikatsu"
+   ],
+   "n": 1
+  },
+  {
+   "id": "T-59",
+   "task": "온라인: 채팅·댓글",
+   "sources": [
+    "CV"
+   ],
+   "families": [
+    "E"
+   ],
+   "n": 1
   },
   {
    "id": "C-01",
@@ -3392,17 +3552,6 @@
    "n": 0
   },
   {
-   "id": "C-19",
-   "task": "반어로 말하기",
-   "sources": [
-    "PCIC"
-   ],
-   "families": [
-    "T"
-   ],
-   "n": 1
-  },
-  {
    "id": "C-20",
    "task": "넌지시 부탁하기",
    "sources": [
@@ -3418,17 +3567,6 @@
   {
    "id": "C-21",
    "task": "마지못해 받아들이기",
-   "sources": [
-    "VA"
-   ],
-   "families": [
-    "T"
-   ],
-   "n": 1
-  },
-  {
-   "id": "C-22",
-   "task": "뜻을 정해 두고 말하기",
    "sources": [
     "VA"
    ],

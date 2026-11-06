@@ -15,7 +15,7 @@ out = Path(sys.argv[sys.argv.index('--out') + 1]) if '--out' in sys.argv else HE
 e = html.escape
 items = doc['items']
 n_by = Counter(i['added'] for i in items if i.get('added'))
-SRC = {'0.2': 'Threshold 1990·Vantage·JF Can-do', '0.3': 'PCIC'}
+SRC = {'0.2': 'Threshold 1990·Vantage·JF Can-do', '0.3': 'PCIC', '0.5': '합집합 풀·묻는 꼴 펴기'}
 rungs = [r for i in items for r in i['rungs']]
 n_new = sum(1 for r in rungs if not r.get('base'))
 n_new_done = sum(1 for r in rungs if not r.get('base') and r['ko'])
@@ -88,7 +88,9 @@ if FILTER:
         return (f'<div class="fx" id="x-{e(rid)}"><span class="rec {e(rec)}">{badge}</span>'
                 f'<span><span class="id">{e(rid)}</span> {e(head)} {famtxt}</span><span class="why">{e(why)}</span>{dec}</div>')
     parts.append(f'<section class="filter"><h2>{e(f["title"])}</h2>')
-    parts.append(f'<p class="lead">{e(f["how"]["result"])} 줄마다 댓글로 "좋아" 또는 고칠 점을 달아 주세요.</p><ol>'
+    note = (f'<p class="lead"><b>{e(f["how"]["decided"])}</b></p>' if f['how'].get('decided')
+            else f'<p class="lead">{e(f["how"]["result"])} 줄마다 댓글로 "좋아" 또는 고칠 점을 달아 주세요.</p>')
+    parts.append(f'{note}<ol>'
                  + ''.join(f'<li>{e(c)}</li>' for c in f['how']['criteria']) + '</ol>')
     parts.append('<h3>풀 후보: 원장에 넣을지</h3>')
     parts += [fx(a['id'], a['rec'], f'{a["task"]} · {a["group"]}', a['why'], a['families'], a.get('decided')) for a in f['add']]

@@ -23,11 +23,12 @@ SC_KEYS = {  # source-check의 목록 → 출처 id
 }
 REF_PREFIX = {"TL90": "TL90", "VA": "VA", "JF": "JF", "PCIC": "PCIC"}
 
+ALIAS = {old: it["id"] for it in led["items"] for old in it.get("merged", [])}  # 0.5에서 합친 옛 id → 새 자리
 hits = defaultdict(set)       # 원장 항목 id → 출처 id
 for key, src in SC_KEYS.items():
     for row in sc.get(key, []):
         for lid in row.get("ledger", []):
-            hits[lid].add(src)
+            hits[ALIAS.get(lid, lid)].add(src)
 for it in led["items"]:        # 항목에 직접 단 ref(0.2·0.3에서 더한 근거)
     for r in it.get("ref", []):
         for src, pre in REF_PREFIX.items():
@@ -38,9 +39,13 @@ for src, entries in pool["entries"].items():
     for e in entries:
         if e["status"] == "있음":
             for lid in e.get("ledger", []):
-                hits[lid].add(src)
+                hits[ALIAS.get(lid, lid)].add(src)
         elif e["status"] in ("새", "후보"):
             cand_hits[e["cand"]].add(src)
+
+for it in led["items"]:        # 0.5에서 풀 후보로 들어온 항목은 그 후보의 출처를 받는다
+    if it.get("from_pool", "").startswith("N-"):
+        hits[it["id"]] |= cand_hits.get(it["from_pool"], set())
 
 def fams(srcs):
     return sorted({FAM[s] for s in srcs})
@@ -66,7 +71,7 @@ out = {
 }
 (HERE / "union-coverage.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n")
 print("계보", all_fams)
-print("원장 258항목의 계보 수 분포", out["ledger_distribution"])
+print(f"원장 {len(items)}항목의 계보 수 분포", out["ledger_distribution"])
 print("풀 후보", [(c["id"], c["n"]) for c in cands])
 low = [x for x in items if x["n"] <= 1]
 print("계보 1 이하 원장 항목", len(low))

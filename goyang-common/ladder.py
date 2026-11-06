@@ -180,7 +180,9 @@ def build(f5, t6):
     rows = []
     for it in led["items"]:
         if "rungs" in it:  # 원장 0.4부터: 0.3 문장은 base 칸에 있다
-            b = next(r for r in it["rungs"] if r.get("base"))
+            b = next((r for r in it["rungs"] if r.get("base")), None)
+            if b is None:  # 0.5에서 더한 항목: 칸 수 근거(0.4)에 없다
+                continue
             it = {**it, "level": b["level"], "ko": b["ko"]}
         lv, used = set(), []
         for ch, no in refs.get(it["id"], []):
