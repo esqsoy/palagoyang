@@ -1,12 +1,17 @@
 # 고양공유 인수인계
 
-갱신: 2026-11-04. 이 문서는 최신 상태로 교체하고, 경위는 [WORK_LOG.md](WORK_LOG.md)에 남긴다.
+갱신: 2026-11-06. 이 문서는 최신 상태로 교체하고, 경위는 [WORK_LOG.md](WORK_LOG.md)에 남긴다.
 
 ## 지금 상태
 
 - **언어불문 필수 표현 원장 초안 0.3** (258항목, [goyang-common/](goyang-common/README.md)). **영신 검수 대기.** 직검수 페이지 https://claude.ai/artifact/TDwB3yZf3sAwqooZS38zXA (0.3, 새 항목에 '0.2 추가'·'0.3 추가' 표시, 줄마다 댓글).
   - 0.1(141항목)을 원문과 대조해 0.2에서 85항목(Threshold 1990·Vantage·JF Can-do), 0.3에서 32항목(PCIC)을 더했다. 네 원문 대조는 끝났다. 대조표는 [source-check-20261103.json](goyang-common/source-check-20261103.json).
   - 각 판은 항목마다 `same`/`counterpart`/`none`을 단다. 원장에 없는 그 언어 고유 표현은 판 고유 원장에 둔다.
+- **기능×수준 사다리 칸 수 확정**(영신 26.11.06). 항목마다 A(A1~A2 기본꼴)·B(B1~B2)·C(C1 다듬은 꼴) 가운데 몇 칸을 둘지 정했다. **556문장 = 지금 258 + 새로 298.** 문장은 아직 없다.
+  - 검토 페이지 https://claude.ai/artifact/5v9b3inZWWQU1jvLEVigMb (줄마다 댓글), 데이터 [ladder-draft-20261104.json](goyang-common/ladder-draft-20261104.json)(`rungs`가 확정 칸), 스크립트 [ladder.py](goyang-common/ladder.py).
+  - 규칙: PCIC가 그 기능에 꼴을 둔 띠마다 한 칸, 지금 문장의 띠는 늘 한 칸. 지금보다 낮은 띠도 둔다. 근거 없는 항목(대부분 주제 T)은 한 칸.
+  - 영신 결정으로 고친 20항목(`decision`): 묶음 1.2 정보 묻기는 B·C 칸을 F1-07·13·14에만, 1.3 정보 주기는 F1-04에만. F6 여섯 항목(01·02·04·08·11·13)에 B 칸.
+  - PCIC 5장 실측: 기능 표 140개, 기능×수준 840칸 가운데 643칸에 표현 꼴이 있다(예전 '약 860칸'은 어림).
 - **PCIC 원문은 빨라고양 판 고유 원장용으로 남김**(영신 26.11.03). 주소와 쓰는 법은 [spanish-pcic-sources.md](goyang-common/spanish-pcic-sources.md). 원문 8쪽(5·6장 목록 6쪽, 소개 2쪽)은 26.11.04 맥미니 세션이 Internet Archive에서 다시 받아 아래 비공개 폴더 `pcic/`에 두었다.
 
 ## 작업 환경 (26.11.04~)
@@ -21,11 +26,7 @@
 
 ## 열린 질문 (영신 결정 대기)
 
-- 공통 원장을 **기능×수준 사다리**로 키울지. **칸 수 초안(26.11.04). 지금 수준보다 낮은 칸도 둔다(영신 26.11.06).** 검토 페이지 https://claude.ai/artifact/5v9b3inZWWQU1jvLEVigMb (줄마다 댓글), 데이터 [ladder-draft-20261104.json](goyang-common/ladder-draft-20261104.json), 만드는 스크립트 [ladder.py](goyang-common/ladder.py).
-  - 칸은 A(A1~A2 기본꼴)·B(B1~B2)·C(C1 다듬은 꼴). PCIC가 그 기능에 꼴을 둔 띠마다 한 칸, 지금 문장의 띠는 늘 한 칸. 근거 없는 89항목(대부분 주제 T)은 한 칸.
-  - 낮은 띠도 두는 규칙으로 570문장(새로 312). 지금 수준부터만 두었으면 516문장이었다.
-  - 아직 영신이 정할 것: 한 PCIC 기능을 여러 항목이 나눠 쓰는 묶음(1.2 정보 묻기 9항목, 1.3 정보 주기 5항목 등)에서 B·C 칸을 줄일지, 근거 없는 F6(말이 막혔을 때)에 B 칸을 더할지.
-  - PCIC 5장 실측: 기능 표 140개, 기능×수준 840칸 가운데 643칸에 표현 꼴이 있다(예전 '약 860칸'은 어림).
+- 사다리 칸을 원장에 넣는 짜임(항목 하나에 A·B·C 문장을 어떻게 달지)과 새 문장 298개 쓰기. 원장 짜임을 바꾸는 일이라 Claude가 안을 먼저 내고 영신이 정한다.
 - 고양공유 원칙 전문(지금은 tangogoyang PRINCIPLES 0절)을 이 저장소로 옮길지.
 
 ## 그 밖의 고양공유 후보 (tangogoyang HANDOFF에서 넘겨받음)

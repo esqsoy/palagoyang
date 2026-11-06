@@ -24,6 +24,16 @@ OWN = {"A1": "A", "A2": "A", "B1": "B", "B2": "B", "C1": "C"}
 BAND_LABEL = {"A": "A1~A2 기본꼴", "B": "B1~B2", "C": "C1 다듬은 꼴"}
 OUT_JSON = HERE / "ladder-draft-20261104.json"
 
+# 영신 결정(26.11.06 "추천대로 해"): PCIC 규칙으로 낸 칸을 항목별로 고친다
+_B12 = "1.2 정보 묻기 묶음: B·C 칸은 대표(어디·이유·방법)에만"
+_B13 = "1.3 정보 주기 묶음: B·C 칸은 대표(하는 일)에만"
+OWN_ONLY = {**{i: _B12 for i in ["F1-06", "F1-08", "F1-09", "F1-10", "F1-11", "F1-12"]},
+            **{i: _B13 for i in ["F1-01", "F1-02", "F1-03", "F1-05"]}}
+REPRESENTATIVE = {**{i: "1.2 정보 묻기 묶음 대표" for i in ["F1-07", "F1-13", "F1-14"]},
+                  "F1-04": "1.3 정보 주기 묶음 대표"}
+ADD = {i: ["B"] for i in ["F6-01", "F6-02", "F6-04", "F6-08", "F6-11", "F6-13"]}
+ADD_NOTE = "말이 막혔을 때: B 칸 더함(PCIC 5·6장에 없는 기능)"
+
 
 def numkey(no):
     return [int(x) for x in no.split(".")]
@@ -179,11 +189,19 @@ def build(f5, t6):
         bands = {BAND[l] for l in lv}
         rec = sorted(bands | {own}, key=BANDS.index)
         alt = [b for b in rec if BANDS.index(b) >= BANDS.index(own)]
-        rows.append({
+        final, note = rec, REPRESENTATIVE.get(it["id"])
+        if it["id"] in OWN_ONLY:
+            final, note = [own], OWN_ONLY[it["id"]]
+        if it["id"] in ADD:
+            final, note = sorted(set(rec) | set(ADD[it["id"]]), key=BANDS.index), ADD_NOTE
+        row = {
             "id": it["id"], "group": it["group"], "level": it["level"], "task": it["task"], "ko": it["ko"],
             "pcic": used, "pcic_levels": [l for l in LEVELS if l in lv], "own": own,
-            "rungs": rec, "rungs_from_own": alt,
-        })
+            "rungs": final, "rungs_pcic": rec, "rungs_from_own": alt,
+        }
+        if note:
+            row["decision"] = note
+        rows.append(row)
 
     levels_stat = {l: {"functions": sum(1 for r in f5.values() if r[l] > 0), "forms": sum(r[l] for r in f5.values())} for l in LEVELS}
     big = []
@@ -200,18 +218,22 @@ def write_json(led, rows, levels_stat, big, n_func):
         "title": "공통 원장 기능×수준 사다리 칸 초안",
         "date": "2026-11-04",
         "ledger_version": led["version"],
-        "status": "낮은 칸도 둔다(영신 26.11.06). 묶음 칸 줄이기와 F6 B 칸은 영신 검토 대기. 칸 수만 정한 것이고 문장은 아직 없다.",
+        "status": "칸 수 확정(영신 26.11.06): 낮은 칸도 두고, 묶음 1.2·1.3은 B·C 칸을 대표에만, F6 6항목에 B 칸. 문장은 아직 없다.",
         "bands": BAND_LABEL,
         "rule": [
             "칸은 A(A1~A2 기본꼴)·B(B1~B2)·C(C1 다듬은 꼴) 셋. PCIC의 C2는 C에 합친다(원장은 C1까지).",
-            "rungs(채택, 영신 26.11.06): PCIC가 그 기능에 표현 꼴을 둔 띠마다 한 칸 + 지금 문장의 띠. 지금 수준보다 낮은 띠도 둔다.",
-            "rungs_from_own(채택 안 함, 비교용): 같은 규칙에서 지금 수준보다 낮은 띠는 뺀다.",
+            "rungs_pcic: PCIC가 그 기능에 표현 꼴을 둔 띠마다 한 칸 + 지금 문장의 띠. 지금 수준보다 낮은 띠도 둔다(영신 26.11.06).",
+            "rungs(확정): rungs_pcic에 영신 결정(26.11.06)을 얹은 것. 고친 항목은 decision에 까닭을 적었다.",
+            "  - 묶음 1.2 정보 묻기(9항목): B·C 칸은 대표 F1-07·F1-13·F1-14에만. 묶음 1.3 정보 주기(5항목): 대표 F1-04에만. 4.7·5.17 묶음은 항목마다 행동·상황이 달라 그대로.",
+            "  - F6 말이 막혔을 때: F6-01·02·04·08·11·13에 B 칸을 더함. C 수준 고쳐 말하기·끼어들기는 C 갈래가 맡는다.",
+            "rungs_from_own(채택 안 함, 비교용): PCIC 규칙에서 지금 수준보다 낮은 띠는 뺀 것.",
             "PCIC 근거가 없는 항목은 지금 문장 한 칸.",
             "표가 따로 없는 PCIC 5장 하위 항목(1.2.1 등)은 부모 기능의 수준, 6장 2.2는 3.1의 수준을 썼다.",
         ],
         "pcic_levels": {"functions_with_tables": n_func, "per_level": levels_stat},
         "shared_functions": big,
-        "totals": {"rungs": sum(len(r["rungs"]) for r in rows), "rungs_from_own": sum(len(r["rungs_from_own"]) for r in rows)},
+        "totals": {"rungs": sum(len(r["rungs"]) for r in rows), "rungs_pcic": sum(len(r["rungs_pcic"]) for r in rows),
+                   "rungs_from_own": sum(len(r["rungs_from_own"]) for r in rows)},
         "items": rows,
     }
     OUT_JSON.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
@@ -271,6 +293,8 @@ ol.rules li{margin:4px 0}
 .rung.up{border-color:var(--accent);color:var(--accent)}
 .rung.down{border-color:var(--accent);border-style:dashed;color:var(--accent)}
 .rung.off{color:var(--line)}
+.rung.cut{color:var(--mute);border-color:var(--line);text-decoration:line-through}
+.dec{display:inline-block;margin-top:2px;font-size:.72rem;color:var(--accent);border:1px solid var(--accent2);border-radius:4px;padding:0 5px}
 .cnt{font-family:var(--display);font-size:1.15rem;text-align:right;font-variant-numeric:tabular-nums}
 @media (max-width:560px){.row{grid-template-columns:52px 28px minmax(0,1fr) 26px}.row .strip{grid-column:3}.row .rungs{grid-column:3}.row .cnt{grid-row:1;grid-column:4}}
 """
@@ -308,17 +332,18 @@ def render(doc):
              "<li>칸은 셋입니다. <b>A</b> A1~A2 기본꼴, <b>B</b> B1~B2, <b>C</b> C1 다듬은 꼴. PCIC의 C2는 C에 합쳤어요(원장은 C1까지).</li>"
              "<li>PCIC 근거가 있는 항목은 PCIC가 그 기능에 표현 꼴을 둔 띠마다 한 칸, 그리고 지금 문장이 있는 띠는 늘 한 칸입니다.</li>"
              "<li>지금 수준보다 낮은 띠도 PCIC에 있으면 칸을 둡니다(점선 칸). 같은 일을 처음부터 쉽게 말해 보게 하려는 것이에요(영신 26.11.06 결정).</li>"
-             "<li>PCIC 근거가 없는 항목(주제 상황, 한국어 쪽 사교 표현, 말이 막혔을 때 등)은 지금 문장 한 칸 그대로입니다.</li>"
+             "<li>PCIC 근거가 없는 항목(주제 상황, 한국어 쪽 사교 표현 등)은 지금 문장 한 칸 그대로입니다.</li>"
+             "<li>영신 결정(26.11.06)으로 고친 항목: 한 기능을 여러 항목이 나눠 쓰는 묶음(1.2 정보 묻기, 1.3 정보 주기)은 B·C 칸을 대표 항목에만 두고, 말이 막혔을 때(F6) 여섯 항목에 B 칸을 더했어요. 줄 아래 초록 글씨가 그 표시입니다.</li>"
              "<li>PCIC 5장에서 표가 따로 없는 하위 항목(1.2.1 등 25개)은 부모 기능의 수준을, 6장 2.2(누그러뜨리기)는 3.1을 보라고만 되어 있어 3.1의 수준을 썼어요.</li></ol>")
 
     # 정할 것
     big = doc["shared_functions"]
-    big_txt = ", ".join(f'{e(b["no"])} {e(b["heading"])} → {len(b["items"])}항목' for b in big)
-    P.append("<h2>정해 줄 것</h2>"
+    big_txt = ", ".join(f'{e(b["no"])} {e(b["heading"])} {len(b["items"])}항목' for b in big)
+    P.append("<h2>정한 것</h2>"
              '<div class="ask done"><b>1. 낮은 칸을 둘까 <span class="tag">정함 · 둔다</span></b><p>영신 26.11.06. 지금 B1인 항목이라도 PCIC가 A2에 꼴을 두면 A 칸을 만듭니다. 이 칸이 '
-             f'{tot["rungs"] - tot["rungs_from_own"]}문장이에요.</p></div>'
-             f'<div class="ask"><b>2. 한 기능을 여러 항목이 나눠 쓰는 묶음</b><p>{big_txt}. 예를 들어 정보 묻기 9항목이 모두 A·B·C면 27문장인데, B·C의 다듬은 꼴(정중한 간접 질문 등)은 항목마다 비슷해집니다. 묶음에서는 B·C 칸을 한두 항목에만 두는 방법도 있어요.</p></div>'
-             f'<div class="ask"><b>3. 근거 없는 {no_ref}항목</b><p>대부분 주제 상황(T)이라 수준이 올라가면 문장보다 단어와 문법이 늘어납니다. 그래서 한 칸으로 두었어요. 말이 막혔을 때(F6)는 PCIC 5·6장에 해당 기능이 없어서(Threshold 6·12장에서 온 항목) 근거가 비었을 뿐이라, 다시 말해 달라기·되물어 확인하기처럼 B 칸이 자연스러운 것은 따로 더할 수 있습니다.</p></div>')
+             f'{tot["rungs_pcic"] - tot["rungs_from_own"]}문장이에요.</p></div>'
+             f'<div class="ask done"><b>2. 한 기능을 여러 항목이 나눠 쓰는 묶음 <span class="tag">정함 · 대표에만</span></b><p>영신 26.11.06. 묶음은 {big_txt}. 정보 묻기는 B·C 칸을 어디·이유·방법에만, 정보 주기는 하는 일에만 둡니다(B·C 꼴이 항목마다 같은 간접 질문·정정이 되어서). 부탁에 답하기(4.7)와 좋은 일 빌기(5.17)는 항목마다 행동·상황이 달라 그대로예요. 20문장 줄었어요.</p></div>'
+             f'<div class="ask done"><b>3. 근거 없는 {no_ref}항목 <span class="tag">정함 · F6에 B 칸 6</span></b><p>영신 26.11.06. 대부분 주제 상황(T)이라 수준이 올라가면 문장보다 단어와 문법이 늘어서 한 칸 그대로입니다. 말이 막혔을 때(F6)는 PCIC 5·6장에 해당 기능이 없을 뿐이라, 다시 말해 달라기·천천히·뜻 묻기·말이 막힐 때·못 알아들었다기·에둘러 말하기에 B 칸을 더했어요. C 칸은 C 갈래가 맡습니다.</p></div>')
 
     # PCIC 분포
     ls = doc["pcic_levels"]["per_level"]
@@ -332,7 +357,7 @@ def render(doc):
 
     # 범례
     P.append('<div class="legend"><span><span class="strip"><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i></span>PCIC에 꼴이 있는 수준(A1 A2 · B1 B2 · C1 C2)</span>'
-             '<span><span class="rung own">A</span>지금 문장</span><span><span class="rung up">B</span>새 칸</span><span><span class="rung down">A</span>새 칸(지금보다 낮음)</span></div>')
+             '<span><span class="rung own">A</span>지금 문장</span><span><span class="rung up">B</span>새 칸</span><span><span class="rung down">A</span>새 칸(지금보다 낮음)</span><span><span class="rung cut">C</span>묶음이라 뺀 칸</span></div>')
 
     for g, name in groups.items():
         rs = [r for r in rows if r["group"] == g]
@@ -343,14 +368,18 @@ def render(doc):
             for b in BANDS:
                 if b == r["own"]:
                     chips.append(f'<span class="rung own" title="{BAND_LABEL[b]} · 지금 문장">{b}</span>')
-                elif b in r["rungs_from_own"]:
+                elif b in r["rungs"] and BANDS.index(b) > BANDS.index(r["own"]):
                     chips.append(f'<span class="rung up" title="{BAND_LABEL[b]} · 새 칸">{b}</span>')
                 elif b in r["rungs"]:
                     chips.append(f'<span class="rung down" title="{BAND_LABEL[b]} · 새 칸(낮음)">{b}</span>')
+                elif b in r["rungs_pcic"]:
+                    chips.append(f'<span class="rung cut" title="{BAND_LABEL[b]} · 묶음이라 뺌">{b}</span>')
                 else:
                     chips.append(f'<span class="rung off">{b}</span>')
             ref = (f'<div class="refs">PCIC {e(" · ".join(r["pcic"]))}</div>' if r["pcic"]
                    else '<div><span class="none">PCIC 근거 없음</span></div>')
+            if r.get("decision"):
+                ref += f'<div><span class="dec">{e(r["decision"])}</span></div>'
             P.append(f'<div class="row" id="{e(r["id"])}"><span class="id">{e(r["id"])}</span><span class="lv">{e(r["level"])}</span>'
                      f'<div><div class="task">{e(r["task"])}</div><div class="ko">{e(r["ko"])}</div>{ref}</div>'
                      f'<span class="strip">{strip}</span><span class="rungs">{"".join(chips)}</span><span class="cnt">{len(r["rungs"])}</span></div>')

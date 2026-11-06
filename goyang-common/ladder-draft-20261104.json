@@ -2,7 +2,7 @@
  "title": "공통 원장 기능×수준 사다리 칸 초안",
  "date": "2026-11-04",
  "ledger_version": "0.3",
- "status": "낮은 칸도 둔다(영신 26.11.06). 묶음 칸 줄이기와 F6 B 칸은 영신 검토 대기. 칸 수만 정한 것이고 문장은 아직 없다.",
+ "status": "칸 수 확정(영신 26.11.06): 낮은 칸도 두고, 묶음 1.2·1.3은 B·C 칸을 대표에만, F6 6항목에 B 칸. 문장은 아직 없다.",
  "bands": {
   "A": "A1~A2 기본꼴",
   "B": "B1~B2",
@@ -10,8 +10,11 @@
  },
  "rule": [
   "칸은 A(A1~A2 기본꼴)·B(B1~B2)·C(C1 다듬은 꼴) 셋. PCIC의 C2는 C에 합친다(원장은 C1까지).",
-  "rungs(채택, 영신 26.11.06): PCIC가 그 기능에 표현 꼴을 둔 띠마다 한 칸 + 지금 문장의 띠. 지금 수준보다 낮은 띠도 둔다.",
-  "rungs_from_own(채택 안 함, 비교용): 같은 규칙에서 지금 수준보다 낮은 띠는 뺀다.",
+  "rungs_pcic: PCIC가 그 기능에 표현 꼴을 둔 띠마다 한 칸 + 지금 문장의 띠. 지금 수준보다 낮은 띠도 둔다(영신 26.11.06).",
+  "rungs(확정): rungs_pcic에 영신 결정(26.11.06)을 얹은 것. 고친 항목은 decision에 까닭을 적었다.",
+  "  - 묶음 1.2 정보 묻기(9항목): B·C 칸은 대표 F1-07·F1-13·F1-14에만. 묶음 1.3 정보 주기(5항목): 대표 F1-04에만. 4.7·5.17 묶음은 항목마다 행동·상황이 달라 그대로.",
+  "  - F6 말이 막혔을 때: F6-01·02·04·08·11·13에 B 칸을 더함. C 수준 고쳐 말하기·끼어들기는 C 갈래가 맡는다.",
+  "rungs_from_own(채택 안 함, 비교용): PCIC 규칙에서 지금 수준보다 낮은 띠는 뺀 것.",
   "PCIC 근거가 없는 항목은 지금 문장 한 칸.",
   "표가 따로 없는 PCIC 5장 하위 항목(1.2.1 등)은 부모 기능의 수준, 6장 2.2는 3.1의 수준을 썼다."
  ],
@@ -91,7 +94,8 @@
   }
  ],
  "totals": {
-  "rungs": 570,
+  "rungs": 556,
+  "rungs_pcic": 570,
   "rungs_from_own": 516
  },
  "items": [
@@ -114,6 +118,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -122,7 +129,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.3 정보 주기 묶음: B·C 칸은 대표(하는 일)에만"
   },
   {
    "id": "F1-02",
@@ -143,6 +151,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -151,7 +162,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.3 정보 주기 묶음: B·C 칸은 대표(하는 일)에만"
   },
   {
    "id": "F1-03",
@@ -172,6 +184,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -180,7 +195,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.3 정보 주기 묶음: B·C 칸은 대표(하는 일)에만"
   },
   {
    "id": "F1-04",
@@ -205,11 +221,17 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.3 정보 주기 묶음 대표"
   },
   {
    "id": "F1-05",
@@ -230,6 +252,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -238,7 +263,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.3 정보 주기 묶음: B·C 칸은 대표(하는 일)에만"
   },
   {
    "id": "F1-06",
@@ -260,6 +286,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -268,7 +297,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.2 정보 묻기 묶음: B·C 칸은 대표(어디·이유·방법)에만"
   },
   {
    "id": "F1-07",
@@ -293,11 +323,17 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.2 정보 묻기 묶음 대표"
   },
   {
    "id": "F1-08",
@@ -318,6 +354,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -326,7 +365,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.2 정보 묻기 묶음: B·C 칸은 대표(어디·이유·방법)에만"
   },
   {
    "id": "F1-09",
@@ -347,6 +387,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -355,7 +398,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.2 정보 묻기 묶음: B·C 칸은 대표(어디·이유·방법)에만"
   },
   {
    "id": "F1-10",
@@ -376,6 +420,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -384,7 +431,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.2 정보 묻기 묶음: B·C 칸은 대표(어디·이유·방법)에만"
   },
   {
    "id": "F1-11",
@@ -405,6 +453,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -413,7 +464,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.2 정보 묻기 묶음: B·C 칸은 대표(어디·이유·방법)에만"
   },
   {
    "id": "F1-12",
@@ -434,6 +486,9 @@
    ],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -442,7 +497,8 @@
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.2 정보 묻기 묶음: B·C 칸은 대표(어디·이유·방법)에만"
   },
   {
    "id": "F1-13",
@@ -469,11 +525,17 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.2 정보 묻기 묶음 대표"
   },
   {
    "id": "F1-14",
@@ -498,11 +560,17 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
     "C"
-   ]
+   ],
+   "decision": "1.2 정보 묻기 묶음 대표"
   },
   {
    "id": "F1-15",
@@ -523,6 +591,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -552,6 +625,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -586,6 +664,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -602,6 +685,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -628,6 +714,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -661,6 +752,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -685,6 +781,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -717,6 +818,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -735,6 +841,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -749,6 +858,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -778,6 +890,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -802,6 +919,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -835,6 +957,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -859,6 +986,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -893,6 +1025,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -918,6 +1055,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -951,6 +1093,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -976,6 +1123,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1010,6 +1162,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1036,6 +1193,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1068,6 +1230,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1092,6 +1259,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1124,6 +1296,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1152,6 +1329,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1174,6 +1356,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -1205,6 +1391,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -1229,6 +1420,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1264,6 +1460,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -1286,6 +1487,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -1318,6 +1523,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -1341,6 +1551,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1374,6 +1589,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -1398,6 +1618,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1434,6 +1659,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1460,6 +1690,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1492,6 +1727,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1508,6 +1748,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -1532,6 +1775,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1566,6 +1814,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1589,6 +1842,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1621,6 +1879,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1645,6 +1908,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1677,6 +1945,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1695,6 +1968,9 @@
    "rungs": [
     "B"
    ],
+   "rungs_pcic": [
+    "B"
+   ],
    "rungs_from_own": [
     "B"
    ]
@@ -1709,6 +1985,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -1735,6 +2014,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1766,6 +2050,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1789,6 +2078,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1817,6 +2111,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1850,6 +2149,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -1879,6 +2183,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -1896,6 +2205,9 @@
    "rungs": [
     "B"
    ],
+   "rungs_pcic": [
+    "B"
+   ],
    "rungs_from_own": [
     "B"
    ]
@@ -1910,6 +2222,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -1935,6 +2250,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -1968,6 +2288,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -1990,6 +2315,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2019,6 +2349,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2053,6 +2388,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -2076,6 +2416,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2109,6 +2454,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2133,6 +2483,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2165,6 +2520,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2189,6 +2549,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2220,6 +2585,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2243,6 +2613,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -2271,6 +2645,10 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -2293,6 +2671,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -2321,6 +2703,10 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -2344,6 +2730,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2377,6 +2768,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2401,6 +2797,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2430,6 +2831,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2464,6 +2870,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2488,6 +2899,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2517,6 +2933,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2552,6 +2973,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2581,6 +3007,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2597,6 +3028,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -2621,6 +3055,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2653,6 +3092,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -2668,6 +3112,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -2691,6 +3138,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -2723,6 +3174,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -2738,6 +3194,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -2761,6 +3220,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2794,6 +3258,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2819,6 +3288,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2852,6 +3326,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2880,6 +3359,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -2898,6 +3382,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -2912,6 +3399,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -2934,6 +3424,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -2962,6 +3456,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -2995,6 +3494,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3020,6 +3524,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -3054,6 +3563,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3083,6 +3597,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3105,6 +3624,10 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "C"
    ],
@@ -3136,6 +3659,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3160,6 +3688,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -3195,6 +3728,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3219,6 +3757,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -3252,6 +3795,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3281,6 +3829,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3299,6 +3852,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -3315,6 +3871,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -3329,6 +3888,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -3352,6 +3914,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -3383,6 +3950,10 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -3398,6 +3969,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -3422,6 +3996,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -3455,6 +4034,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -3482,6 +4066,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -3504,6 +4093,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -3537,6 +4130,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3562,6 +4160,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -3593,6 +4196,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3611,6 +4219,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -3625,6 +4236,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -3643,6 +4257,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -3657,6 +4274,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -3685,6 +4305,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3703,6 +4328,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -3717,6 +4345,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -3746,6 +4377,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3764,6 +4400,9 @@
    "rungs": [
     "B"
    ],
+   "rungs_pcic": [
+    "B"
+   ],
    "rungs_from_own": [
     "B"
    ]
@@ -3778,6 +4417,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -3801,6 +4443,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -3833,6 +4480,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -3855,6 +4507,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -3887,6 +4544,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -3910,6 +4572,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -3938,6 +4604,10 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -3958,6 +4628,9 @@
    ],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -3986,6 +4659,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -4020,6 +4698,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -4045,6 +4728,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -4078,6 +4766,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -4103,6 +4796,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -4135,6 +4833,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -4158,6 +4861,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -4186,6 +4894,10 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -4210,6 +4922,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -4247,6 +4964,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -4277,6 +4999,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -4302,6 +5029,10 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -4324,6 +5055,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -4354,6 +5089,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -4369,6 +5109,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -4393,6 +5136,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -4422,6 +5170,10 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -4437,11 +5189,16 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A",
+    "B"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
     "A"
-   ]
+   ],
+   "decision": "말이 막혔을 때: B 칸 더함(PCIC 5·6장에 없는 기능)"
   },
   {
    "id": "F6-02",
@@ -4453,11 +5210,16 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A",
+    "B"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
     "A"
-   ]
+   ],
+   "decision": "말이 막혔을 때: B 칸 더함(PCIC 5·6장에 없는 기능)"
   },
   {
    "id": "F6-03",
@@ -4469,6 +5231,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4485,11 +5250,16 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A",
+    "B"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
     "A"
-   ]
+   ],
+   "decision": "말이 막혔을 때: B 칸 더함(PCIC 5·6장에 없는 기능)"
   },
   {
    "id": "F6-05",
@@ -4501,6 +5271,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4517,6 +5290,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4544,6 +5320,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -4560,11 +5341,16 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A",
+    "B"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
     "A"
-   ]
+   ],
+   "decision": "말이 막혔을 때: B 칸 더함(PCIC 5·6장에 없는 기능)"
   },
   {
    "id": "F6-09",
@@ -4585,6 +5371,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -4618,6 +5409,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -4633,11 +5429,16 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A",
+    "B"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
     "A"
-   ]
+   ],
+   "decision": "말이 막혔을 때: B 칸 더함(PCIC 5·6장에 없는 기능)"
   },
   {
    "id": "F6-12",
@@ -4649,6 +5450,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4665,11 +5469,16 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A",
+    "B"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
     "A"
-   ]
+   ],
+   "decision": "말이 막혔을 때: B 칸 더함(PCIC 5·6장에 없는 기능)"
   },
   {
    "id": "F6-14",
@@ -4681,6 +5490,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -4699,6 +5511,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -4713,6 +5528,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4731,6 +5549,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -4745,6 +5566,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4763,6 +5587,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -4777,6 +5604,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4795,6 +5625,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -4811,6 +5644,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -4825,6 +5661,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4853,6 +5692,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -4871,6 +5715,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -4885,6 +5732,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4903,6 +5753,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -4917,6 +5770,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4935,6 +5791,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -4949,6 +5808,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4967,6 +5829,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -4981,6 +5846,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -4999,6 +5867,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5013,6 +5884,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5031,6 +5905,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5045,6 +5922,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5063,6 +5943,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5079,6 +5962,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5093,6 +5979,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5122,6 +6011,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -5140,6 +6034,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5154,6 +6051,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5172,6 +6072,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5186,6 +6089,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5204,6 +6110,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5218,6 +6127,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5236,6 +6148,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5250,6 +6165,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5268,6 +6186,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5282,6 +6203,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -5300,6 +6224,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5314,6 +6241,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5332,6 +6262,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5346,6 +6279,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5370,6 +6306,10 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B"
+   ],
+   "rungs_pcic": [
     "A",
     "B"
    ],
@@ -5403,6 +6343,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -5432,6 +6377,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "A",
     "B",
@@ -5450,6 +6400,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5464,6 +6417,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5482,6 +6438,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5496,6 +6455,9 @@
    "pcic_levels": [],
    "own": "A",
    "rungs": [
+    "A"
+   ],
+   "rungs_pcic": [
     "A"
    ],
    "rungs_from_own": [
@@ -5514,6 +6476,9 @@
    "rungs": [
     "A"
    ],
+   "rungs_pcic": [
+    "A"
+   ],
    "rungs_from_own": [
     "A"
    ]
@@ -5528,6 +6493,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -5546,6 +6514,9 @@
    "rungs": [
     "B"
    ],
+   "rungs_pcic": [
+    "B"
+   ],
    "rungs_from_own": [
     "B"
    ]
@@ -5560,6 +6531,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -5582,6 +6556,11 @@
    ],
    "own": "A",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -5619,6 +6598,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -5648,6 +6632,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -5673,6 +6662,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -5709,6 +6703,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -5731,6 +6730,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -5761,6 +6764,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -5786,6 +6794,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -5820,6 +6833,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -5848,6 +6866,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "C"
    ]
@@ -5864,6 +6887,9 @@
    "rungs": [
     "C"
    ],
+   "rungs_pcic": [
+    "C"
+   ],
    "rungs_from_own": [
     "C"
    ]
@@ -5878,6 +6904,9 @@
    "pcic_levels": [],
    "own": "C",
    "rungs": [
+    "C"
+   ],
+   "rungs_pcic": [
     "C"
    ],
    "rungs_from_own": [
@@ -5902,6 +6931,10 @@
    ],
    "own": "C",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -5934,6 +6967,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "C"
    ]
@@ -5962,6 +7000,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "C"
    ]
@@ -5986,6 +7029,10 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "C"
    ]
@@ -6000,6 +7047,9 @@
    "pcic_levels": [],
    "own": "C",
    "rungs": [
+    "C"
+   ],
+   "rungs_pcic": [
     "C"
    ],
    "rungs_from_own": [
@@ -6026,6 +7076,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "C"
    ]
@@ -6040,6 +7095,9 @@
    "pcic_levels": [],
    "own": "C",
    "rungs": [
+    "C"
+   ],
+   "rungs_pcic": [
     "C"
    ],
    "rungs_from_own": [
@@ -6063,6 +7121,10 @@
    ],
    "own": "C",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -6095,6 +7157,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -6112,6 +7179,9 @@
    "rungs": [
     "B"
    ],
+   "rungs_pcic": [
+    "B"
+   ],
    "rungs_from_own": [
     "B"
    ]
@@ -6126,6 +7196,9 @@
    "pcic_levels": [],
    "own": "B",
    "rungs": [
+    "B"
+   ],
+   "rungs_pcic": [
     "B"
    ],
    "rungs_from_own": [
@@ -6155,6 +7228,11 @@
    ],
    "own": "B",
    "rungs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "A",
     "B",
     "C"
@@ -6189,6 +7267,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -6217,6 +7300,11 @@
     "B",
     "C"
    ],
+   "rungs_pcic": [
+    "A",
+    "B",
+    "C"
+   ],
    "rungs_from_own": [
     "B",
     "C"
@@ -6238,6 +7326,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
@@ -6263,6 +7355,10 @@
    ],
    "own": "B",
    "rungs": [
+    "B",
+    "C"
+   ],
+   "rungs_pcic": [
     "B",
     "C"
    ],
