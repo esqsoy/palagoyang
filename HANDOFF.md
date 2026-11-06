@@ -5,7 +5,7 @@
 ## 지금 상태
 
 - **언어불문 필수 표현 원장 초안 0.4** (258항목 556칸, [goyang-common/](goyang-common/README.md)). **영신 검수 대기.** 직검수 페이지 https://claude.ai/artifact/TDwB3yZf3sAwqooZS38zXA (0.4, 칸마다 한 줄, 새 칸은 연두 바탕, 칸마다 댓글).
-  - **사다리 칸 문장 쓰는 중:** 새 칸 298개 가운데 F1 26개를 썼다(26.11.06). 남은 순서는 F2 96 → F3 38 → F4 51 → F5 28 → F6 12 → T 11 → C 36. 짜임과 쓰는 기준은 영신 승인(26.11.06), [goyang-common/README](goyang-common/README.md) '사다리 칸'.
+  - **사다리 칸 문장 다 씀(26.11.06):** 새 칸 298개, 빈 칸 없음. 영신 검수 대기(0.3까지의 문장 258개와 함께). 짜임과 쓰는 기준은 영신 승인(26.11.06), [goyang-common/README](goyang-common/README.md) '사다리 칸'.
   - 0.1(141항목)을 원문과 대조해 0.2에서 85항목(Threshold 1990·Vantage·JF Can-do), 0.3에서 32항목(PCIC)을 더했다. 네 원문 대조는 끝났다. 대조표는 [source-check-20261103.json](goyang-common/source-check-20261103.json).
   - 각 판은 항목마다 `same`/`counterpart`/`none`을 단다. 원장에 없는 그 언어 고유 표현은 판 고유 원장에 둔다.
 - **기능×수준 사다리 칸 수 확정**(영신 26.11.06). 항목마다 A(A1~A2 기본꼴)·B(B1~B2)·C(C1 다듬은 꼴) 가운데 몇 칸을 둘지 정했다. **556문장 = 지금 258 + 새로 298.** 칸은 원장 0.4의 `rungs`에 들어갔다.
