@@ -200,12 +200,12 @@ def write_json(led, rows, levels_stat, big, n_func):
         "title": "공통 원장 기능×수준 사다리 칸 초안",
         "date": "2026-11-04",
         "ledger_version": led["version"],
-        "status": "영신 검토 대기. 칸 수만 정한 것이고 문장은 아직 없다.",
+        "status": "낮은 칸도 둔다(영신 26.11.06). 묶음 칸 줄이기와 F6 B 칸은 영신 검토 대기. 칸 수만 정한 것이고 문장은 아직 없다.",
         "bands": BAND_LABEL,
         "rule": [
             "칸은 A(A1~A2 기본꼴)·B(B1~B2)·C(C1 다듬은 꼴) 셋. PCIC의 C2는 C에 합친다(원장은 C1까지).",
-            "rungs(추천): PCIC가 그 기능에 표현 꼴을 둔 띠마다 한 칸 + 지금 문장의 띠. 지금 수준보다 낮은 띠도 둔다.",
-            "rungs_from_own(대안): 같은 규칙에서 지금 수준보다 낮은 띠는 뺀다.",
+            "rungs(채택, 영신 26.11.06): PCIC가 그 기능에 표현 꼴을 둔 띠마다 한 칸 + 지금 문장의 띠. 지금 수준보다 낮은 띠도 둔다.",
+            "rungs_from_own(채택 안 함, 비교용): 같은 규칙에서 지금 수준보다 낮은 띠는 뺀다.",
             "PCIC 근거가 없는 항목은 지금 문장 한 칸.",
             "표가 따로 없는 PCIC 5장 하위 항목(1.2.1 등)은 부모 기능의 수준, 6장 2.2는 3.1의 수준을 썼다.",
         ],
@@ -245,6 +245,8 @@ ol.rules li{margin:4px 0}
 .ask{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:12px 14px;margin:10px 0;max-width:68ch}
 .ask b{display:block;margin-bottom:2px}
 .ask p{margin:4px 0;font-size:.92rem}
+.ask.done{background:transparent;border-style:dashed}
+.ask .tag{display:inline-block;margin-left:6px;font-size:.75rem;font-weight:600;color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:0 6px;vertical-align:middle}
 .bars{display:grid;grid-template-columns:2.4em 1fr auto;gap:5px 10px;align-items:center;max-width:520px;margin:10px 0;font-size:.82rem;font-variant-numeric:tabular-nums}
 .bars .lab{font-family:var(--mono);color:var(--mute)}
 .bars .bar{height:12px;background:var(--cell);border-radius:2px;position:relative}
@@ -287,26 +289,25 @@ def render(doc):
          "<h1>공통 원장 기능×수준 사다리 칸표</h1>",
          f'<p class="lead">원장 초안 {e(doc["ledger_version"])}의 {n_items}항목마다, 같은 일을 수준별로 몇 번 말하게 할지(칸 수)를 PCIC 5·6장의 수준 분포로 정한 초안입니다. 문장은 아직 없어요. 줄을 눌러 댓글로 칸을 고쳐 주세요(예: “B 칸 빼자”, “C 칸 더”).</p>',
          '<div class="nums">'
-         f'<div><b>{tot["rungs"]}</b><span>추천 규칙 문장 수</span></div>'
+         f'<div><b>{tot["rungs"]}</b><span>전체 문장 수</span></div>'
          f'<div><b>{tot["rungs"] - n_items}</b><span>그중 새로 쓸 문장</span></div>'
-         f'<div><b>{tot["rungs_from_own"]}</b><span>대안(제 수준부터)</span></div>'
          f'<div><b>{no_ref}</b><span>PCIC 근거 없는 항목</span></div></div>']
 
     # 갈래별 합계
-    P.append('<div class="tbl"><table><thead><tr><th>갈래</th><th>항목</th><th>PCIC 근거</th><th>1칸</th><th>2칸</th><th>3칸</th><th>추천</th><th>대안</th></tr></thead><tbody>')
+    P.append('<div class="tbl"><table><thead><tr><th>갈래</th><th>항목</th><th>PCIC 근거</th><th>1칸</th><th>2칸</th><th>3칸</th><th>문장</th></tr></thead><tbody>')
     for g, name in groups.items():
         rs = [r for r in rows if r["group"] == g]
         c = Counter(len(r["rungs"]) for r in rs)
         P.append(f'<tr><td>{e(g)} {e(name)}</td><td>{len(rs)}</td><td>{sum(1 for r in rs if r["pcic"])}</td>'
-                 f'<td>{c[1]}</td><td>{c[2]}</td><td>{c[3]}</td><td>{sum(len(r["rungs"]) for r in rs)}</td><td>{sum(len(r["rungs_from_own"]) for r in rs)}</td></tr>')
+                 f'<td>{c[1]}</td><td>{c[2]}</td><td>{c[3]}</td><td>{sum(len(r["rungs"]) for r in rs)}</td></tr>')
     c = Counter(len(r["rungs"]) for r in rows)
-    P.append(f'</tbody><tfoot><tr><td>합계</td><td>{n_items}</td><td>{n_items - no_ref}</td><td>{c[1]}</td><td>{c[2]}</td><td>{c[3]}</td><td>{tot["rungs"]}</td><td>{tot["rungs_from_own"]}</td></tr></tfoot></table></div>')
+    P.append(f'</tbody><tfoot><tr><td>합계</td><td>{n_items}</td><td>{n_items - no_ref}</td><td>{c[1]}</td><td>{c[2]}</td><td>{c[3]}</td><td>{tot["rungs"]}</td></tr></tfoot></table></div>')
 
     # 규칙
     P.append("<h2>칸을 정한 규칙</h2><ol class=\"rules\">"
              "<li>칸은 셋입니다. <b>A</b> A1~A2 기본꼴, <b>B</b> B1~B2, <b>C</b> C1 다듬은 꼴. PCIC의 C2는 C에 합쳤어요(원장은 C1까지).</li>"
              "<li>PCIC 근거가 있는 항목은 PCIC가 그 기능에 표현 꼴을 둔 띠마다 한 칸, 그리고 지금 문장이 있는 띠는 늘 한 칸입니다.</li>"
-             "<li><b>추천</b>은 지금 수준보다 낮은 띠도 PCIC에 있으면 칸을 둡니다(점선 칸). <b>대안</b>은 그 칸을 빼고 지금 수준부터 위로만 둡니다.</li>"
+             "<li>지금 수준보다 낮은 띠도 PCIC에 있으면 칸을 둡니다(점선 칸). 같은 일을 처음부터 쉽게 말해 보게 하려는 것이에요(영신 26.11.06 결정).</li>"
              "<li>PCIC 근거가 없는 항목(주제 상황, 한국어 쪽 사교 표현, 말이 막혔을 때 등)은 지금 문장 한 칸 그대로입니다.</li>"
              "<li>PCIC 5장에서 표가 따로 없는 하위 항목(1.2.1 등 25개)은 부모 기능의 수준을, 6장 2.2(누그러뜨리기)는 3.1을 보라고만 되어 있어 3.1의 수준을 썼어요.</li></ol>")
 
@@ -314,8 +315,8 @@ def render(doc):
     big = doc["shared_functions"]
     big_txt = ", ".join(f'{e(b["no"])} {e(b["heading"])} → {len(b["items"])}항목' for b in big)
     P.append("<h2>정해 줄 것</h2>"
-             '<div class="ask"><b>1. 낮은 칸을 둘까</b><p>추천은 둡니다. 지금 B1인 항목이라도 PCIC가 A2에 꼴을 두면 A 칸을 만들어, 같은 일을 처음부터 쉽게 말해 보게 합니다. 빼면 '
-             f'{tot["rungs"] - tot["rungs_from_own"]}문장이 줄어요.</p></div>'
+             '<div class="ask done"><b>1. 낮은 칸을 둘까 <span class="tag">정함 · 둔다</span></b><p>영신 26.11.06. 지금 B1인 항목이라도 PCIC가 A2에 꼴을 두면 A 칸을 만듭니다. 이 칸이 '
+             f'{tot["rungs"] - tot["rungs_from_own"]}문장이에요.</p></div>'
              f'<div class="ask"><b>2. 한 기능을 여러 항목이 나눠 쓰는 묶음</b><p>{big_txt}. 예를 들어 정보 묻기 9항목이 모두 A·B·C면 27문장인데, B·C의 다듬은 꼴(정중한 간접 질문 등)은 항목마다 비슷해집니다. 묶음에서는 B·C 칸을 한두 항목에만 두는 방법도 있어요.</p></div>'
              f'<div class="ask"><b>3. 근거 없는 {no_ref}항목</b><p>대부분 주제 상황(T)이라 수준이 올라가면 문장보다 단어와 문법이 늘어납니다. 그래서 한 칸으로 두었어요. 말이 막혔을 때(F6)는 PCIC 5·6장에 해당 기능이 없어서(Threshold 6·12장에서 온 항목) 근거가 비었을 뿐이라, 다시 말해 달라기·되물어 확인하기처럼 B 칸이 자연스러운 것은 따로 더할 수 있습니다.</p></div>')
 
@@ -331,7 +332,7 @@ def render(doc):
 
     # 범례
     P.append('<div class="legend"><span><span class="strip"><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i></span>PCIC에 꼴이 있는 수준(A1 A2 · B1 B2 · C1 C2)</span>'
-             '<span><span class="rung own">A</span>지금 문장</span><span><span class="rung up">B</span>새 칸</span><span><span class="rung down">A</span>새 칸(지금보다 낮음, 추천만)</span></div>')
+             '<span><span class="rung own">A</span>지금 문장</span><span><span class="rung up">B</span>새 칸</span><span><span class="rung down">A</span>새 칸(지금보다 낮음)</span></div>')
 
     for g, name in groups.items():
         rs = [r for r in rows if r["group"] == g]
