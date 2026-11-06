@@ -6,7 +6,7 @@
 - 원문 대조표: [source-check-20261103.json](source-check-20261103.json). 원문 목차 한 줄마다 원장 id와 상태(있음·더함·보강·묻기 꼴·판 고유·뺌)를 적었다.
 - 빨라고양(스페인어판)용으로 남긴 PCIC 자료: [spanish-pcic-sources.md](spanish-pcic-sources.md). 보관본 주소와 쓰는 법. 원문 파일은 공개 저장소라 넣지 않고 맥미니 비공개 폴더(`10 언어/고양/비공개/`)에 둔다.
 - 기능×수준 사다리 칸 초안(26.11.04): [ladder-draft-20261104.json](ladder-draft-20261104.json), [ladder.py](ladder.py)로 만든다(PCIC 원문은 맥미니 지정 폴더에서 읽음). 영신 검토 페이지 https://claude.ai/artifact/5v9b3inZWWQU1jvLEVigMb
-- 아직 영신 검수 전이다. 항목·문장·수준은 바뀔 수 있다. 직검수 페이지 https://claude.ai/artifact/TDwB3yZf3sAwqooZS38zXA (0.4로 갱신, 칸마다 한 줄, 0.4에서 새로 쓴 칸은 연두 바탕, 쓸 칸은 '쓸 차례').
+- 한국어 문장 검수는 0.5에서 끝났다(26.11.07, Claude 검수 + Fable·Sonnet·Opus 직검수 [review-20261107.json](review-20261107.json), 영신 "충분"). 판 문장을 쓰며 고칠 수는 있다. 검수 페이지 https://claude.ai/artifact/TDwB3yZf3sAwqooZS38zXA (칸마다 한 줄, 0.4에서 새로 쓴 칸은 연두 바탕).
 - 26.11.03 탄고고양 저장소에서 만들고, 26.11.04 영신 결정으로 이 저장소(palagoyang)로 옮겼다. 그 전 기록은 [tangogoyang WORK_LOG](https://github.com/esqsoy/tangogoyang/blob/main/WORK_LOG.md)의 11/03 고양공유 절들.
 
 ## 무엇인가
@@ -108,5 +108,5 @@
   - T 갈래(상황)에서는 잘 갈린다. 5계보 모두에 든 것: 이름, 인사, 의견, 표 사기, 길 묻기, 아픈 곳, 병원, 쇼핑, 계산, 온 까닭, 약국.
   - F·C 갈래(기능·전략)는 거의 1계보(T)뿐이다. 기능을 늘어놓는 목록이 거의 다 Threshold에서 나왔고, 독자 계보인 생활 과제 목록은 감정·태도를 따로 적지 않는다. 그래서 F·C 항목은 계보 수로 거를 수 없다. 거를 때는 다른 기준(쓸모, 언어별 실현)을 쓴다.
   - 계보 0인 항목: F4-14·17·27·28(집 나서고 들어올 때, 일 마친 사람에게)은 한국어·일본어 쪽 정해진 말이다. 화용 조사에서도 스페인어는 풀어 말함으로 나왔다. T-26 분실, C-10·11·18은 0.1에서 기억으로 넣은 것이다.
-- 거르기 제안(26.11.07): [filter-20261107.json](filter-20261107.json). 직검수 페이지 맨 위에 그려진다. 영신 결정 대기.
+- 거르기 제안(26.11.07): [filter-20261107.json](filter-20261107.json). 직검수 페이지 맨 위에 그려진다. 영신 확정(26.11.07), 원장 0.5에 반영.
 - 원장 0.5(26.11.07): 거르기를 반영해 272항목 585칸. 새 필드 `added: 0.5`·`from_pool`·`merged`·`routine_ko`의 뜻은 expressions.json `fields_0.5`에 적었다. ladder-draft-20261104.json은 0.4 칸 수의 근거로 그대로 둔다.
