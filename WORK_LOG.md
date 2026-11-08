@@ -267,3 +267,46 @@
 - **문법 지도:** C2 띠 12항목을 더해 141항목. 감탄 ¡Qué frío que hace!, 되물음 ¿Cómo que ...?, 나무람 ¡Me hubieras avisado!, todo un / un señor, un amor de persona, 명령 + y, 놀람 미래, 구어의 le, 보도 조건형, 접속법 미래·직전 과거 알아보기, ello·cuán·harto. 규칙 '알아보기 항목'(빈칸을 그 꼴에 두지 않음)을 더하고, 세트 번호 규칙의 이정표를 A1~C1로 고침. PCIC 2장 C2 절을 비공개 사본으로 훑어 골랐고, 보기는 Claude가 썼다.
 - **남은 것:** 탄고고양·보카고양 PRINCIPLES 0절의 "C1까지" 문장은 그쪽 세션에서 고친다.
 
+## 2026-11-09 · 빨라고양 첫 과정 Sonidos y letras, 단어 풀 11,000·HSK
+
+- **요청:**
+  - 영신: "단어 선정시에는 우리가 hsk 풀을 가져다 써도 되겠는데?"
+  - 영신: "11000단어수준이면 충분한 단어풀이 될 것 같아 / 그럼 이제 빨라고양을 만들고 푸쉬해볼까? 탄고고양이랑 보카고양을 최대한 참조한 후에 작업시작하면 됩니다"
+  - 영신: "뼈대로 쓰기 어려운 이유에 해당하는 사항은 안쓰면 돼. 4번에 대해서는 아예 리서치를 제대로 해봐줘."
+- **HSK:**
+  - Claude 안: 중국어 고유어 빼기, 낱말 단위 묶기, 급수 안 옮기기. 영신이 받았다.
+  - 권리는 서브에이전트가 조사했다(중국 저작권법 5조, 1999 답복, 2024 산둥 판결, 공개 데이터셋, 한국 편집저작물·DB권, Feist). 결론: 원본 목록은 비공개 폴더, 공개 저장소에는 우리가 새로 쓴 낱말만 둔다.
+  - FÁBULA는 약 11,000 수준이다(Claude가 '8,000 → 11,000'으로 읽음, 영신 확인 대기).
+  - 고친 곳: word-pool.md 새 절, PRINCIPLES 0-1 1·12번, design 머리말, HANDOFF.
+- **참조한 것(읽기만, 고치지 않음):** esqsoy/tangogoyang main 881e403, esqsoy/vocagoyang main d7e077d를 scratchpad에 받아 읽었다.
+  - AGENTS, SHARED, UI_STANDARD, PRINCIPLES 0·0-1(五十音), HANDOFF 시작 기록
+  - pipeline/jlpt(build.py·derive-template.py·gojuon.py·template.html), index.html
+  - 보카고양 기록 옮기기
+- **만든 것:**
+  - `pipeline/sonidos/`:
+    - derive-template.py(탄고고양 틀 → template.html, 한 번)
+    - es_sound.py(음절·발음기호·발음 설명, 발음기호 128개 기대값 검사)
+    - sonidos.py(5강·22연습·184낱말)
+    - build.py, review-page.py, README
+  - 생성물: `palagoyangsonidos.html`
+  - `index.html`(교재 선택, 탄고고양 것을 한 번 바꿈)
+  - 기록 옮기기: `pipeline/record-transfer/`(보카고양 69e8d5e 그대로 + 빨라고양 config.json), `pipeline/record_transfer_build.py`(node 없는 맥미니용 같은 결과 빌드)
+  - 문서: SHARED.md, AGENTS '게임 파일을 고칠 때', README 게임 절, PRINCIPLES 0-1 9번 '만든 것'
+- **검증(실제로 한 것):**
+  - 맥미니 내장 브라우저 375×812, 로컬 `python3 -m http.server`.
+  - 함수 검사 26개 통과: 대소문자, 악센트·ñ·tú/tu, ¿?, a'·n~·~n·u: 변환, 오답 대사 9갈래, 끝 모음 대기, 저장 키, 카드 368.
+  - 화면:
+    - cafe → ' → café 자동 정답, 공개 칸.
+    - cafe + Enter → 악센트 대사·따라쓰기 → é 단추로 마침(초점 유지).
+    - sena → "소리는 맞다고양!"
+    - 연습 한 판 끝까지(2회독 포함), 결과 화면.
+  - 기록 옮기기: palagoyang-sonidos- 키만 모으고 종류를 맞게 가른다(goyang-·tangogoyang- 키는 뺀다). `record_transfer_build.py --check` 통과. 콘솔 오류 없음.
+- **고친 것(확인 중):** 맞힌 뒤에도 글자 단추 줄이 공개 칸 사이에 남아 복잡해 보여서, 맞히면 숨기고 따라쓰기 때만 둔다.
+- **남은 것:**
+  - 실기기 소리 확인(이 브라우저에 스페인어 음성 없음, 아이폰 짧은 낱말 끊김 여부)
+  - 영신 직검수 https://claude.ai/artifact/WePZx77PBnCnL9ni8LrH7v
+  - 과정 이름 Sonidos y letras 확인, FÁBULA 11,000 해석 확인
+  - GitHub Pages 켜기(영신)
+  - 그다음 설계 12번 2단계(원장 585칸 스페인어 문장)
+- **배포 상태:** main에 푸시. Pages는 꺼져 있어 공개 전이다.
+

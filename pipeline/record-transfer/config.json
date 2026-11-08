@@ -1,0 +1,17 @@
+{
+  "about": "이 저장소(게임)마다 다른 값. merge.js·runtime.js는 단어장끼리 같이 쓰고, 이 파일만 고친다. 공통 기능 표는 SHARED.md.",
+  "game": "빨라고양",
+  "app": "palagoyang-records",
+  "prefix": "palagoyang-",
+  "skip": [],
+  "target": "index.html",
+  "kinds": {
+    "progress": "^palagoyang-(sonidos-)?seoul-v1$",
+    "saved": "-saved-cards-v1$",
+    "learned": "^palagoyang-(sonidos-)?learned-words-v1$",
+    "missed": "^palagoyang-(sonidos-)?missed-words-v1$",
+    "milestone": "^palagoyang-(sonidos-)?milestone-v1$",
+    "paceMeta": "^palagoyang-(sonidos-)?pace-meta-",
+    "pace": "^palagoyang-(sonidos-)?pace-"
+  }
+}

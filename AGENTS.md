@@ -13,6 +13,15 @@
 - 공통 원장의 원본은 이 저장소의 `goyang-common/`이다. 탄고고양 저장소의 `goyang-common/`은 여기를 가리키는 안내만 남아 있다.
 - 단어·항목을 더하거나 빼는 것, 원장 짜임을 바꾸는 것은 먼저 영신에게 의견을 낸다. 승인된 범위의 수정은 다시 묻지 않는다.
 
+## 게임 파일을 고칠 때 (26.11.09~)
+
+- 게임 HTML(`palagoyang*.html`)은 생성물이다. 직접 고치지 않고 `pipeline/<과정>/`의 원본(template.html, 데이터 스크립트)을 고친 뒤 다시 만든다. 만드는 법은 과정마다 README에 있다(지금은 [pipeline/sonidos/](pipeline/sonidos/README.md)).
+- 화면·입력·발음 표준은 보카고양 [UI_STANDARD](https://github.com/esqsoy/vocagoyang/blob/main/UI_STANDARD.md)와 탄고고양 五十音 기록을 따른다. 빨라고양에서 달리한 것은 [PRINCIPLES 0-1](PRINCIPLES.md#0-1-빨라고양-기본-설계-2026-11-08)과 과정 README에 이유와 함께 적는다.
+- 같이 쓰는 기능은 [SHARED.md](SHARED.md)를 따른다. 같이 쓰는 파일은 여기서 고치지 않는다.
+- 맥미니에는 node가 없다. 검사는 파이썬 스크립트와 Claude 내장 브라우저(로컬 서버 `python3 -I -m http.server`)로 한다.
+- 미리보기·로컬 수정·커밋·푸시·공개 배포를 구분해서 보고한다. 공개(GitHub Pages)는 영신이 켠다. 공개를 확인했을 때만 DEPLOYMENT.md를 만들거나 고친다.
+- 과정을 만들거나 낱말을 고치면 영신 직검수 페이지(`review-page.py`)를 같은 Artifact 주소에 다시 올린다(`capabilities: {comments: {composer_only: true}}`).
+
 ## 공개 저장소다
 
 - 이 저장소는 공개다. **저작권이 있는 원문(PCIC·Threshold·JF 등의 본문, 보기 문장, Can-do 문장)은 넣지 않는다.** 목차 번호와 짧은 제목, 출처 주소만 적는다.
