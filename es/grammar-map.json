@@ -1,7 +1,7 @@
 {
  "name": "빨라고양 문법 지도",
  "version": "0.1",
- "date": "2026-11-08",
+ "date": "2026-11-09",
  "about": "FÁBULA 예문을 놓는 문법 차례(PRINCIPLES 0-1 5번). Claude가 PCIC 2장 문법(2006)의 수준 배치를 참고해 중남미 기준으로 짰다. PCIC 문구는 옮기지 않고 절 번호만 적는다. 보기 문장은 Claude가 쓴 것이다.",
  "sources": [
   {
@@ -37,11 +37,15 @@
   },
   {
    "title": "세트 번호",
-   "body": "세트 번호와 이정표(A1~B2 상당) 위치는 FÁBULA 후보를 뽑을 때 정한다(PRINCIPLES 0-1 12번 3단계). 지금은 띠와 차례만 정한다."
+   "body": "세트 번호와 이정표(A1~C1 상당) 위치는 FÁBULA 후보를 뽑을 때 정한다(PRINCIPLES 0-1 12번 3단계). 지금은 띠와 차례만 정한다."
   },
   {
    "title": "원장 문장과 잇기",
    "body": "다음 일(원장 585칸 스페인어 문장)에서 문장마다 쓴 문법 항목 id를 단다(`grammar`). 그 문장은 그 항목이 모두 소개된 세트부터 놓는다. A 칸이라도 단순과거를 쓰면 A2-09 뒤다."
+  },
+  {
+   "title": "알아보기 항목",
+   "body": "vos(B1-28)처럼 '알아보기만 한다'고 적은 항목은 예문에 나와도 빈칸을 그 꼴에 두지 않는다. 학습자가 쳐서 쓸 일이 없는 꼴이라서다."
   }
  ],
  "deviations": [
@@ -104,6 +108,11 @@
    "band": "C1",
    "name": "C1",
    "about": "섞인 가정, 굳은 접속법, 분사 구문, 글말 이음말, 어순."
+  },
+  {
+   "band": "C2",
+   "name": "C2",
+   "about": "말맛과 격식. 감탄 · 되물음 · 나무람의 강조 꼴, 구어의 le, 뉴스 · 법률 · 문학 글의 알아보기 꼴. C1과의 차이는 새 짜임보다 말맛이다(고양공유 단어 풀 끝점 C2, 26.11.09)."
   }
  ],
  "items": [
@@ -1777,6 +1786,172 @@
    "pcic": [
     "15.1.2"
    ]
+  },
+  {
+   "id": "C2-01",
+   "band": "C2",
+   "title": "감탄 강조: ¡Qué + 형용사 · 명사 + que + 동사!",
+   "es": [
+    "¡Qué frío que hace!",
+    "¡Qué rico que está esto!"
+   ],
+   "pcic": [
+    "7.4"
+   ],
+   "note": "que 없이도 맞다(¡Qué frío hace!). que를 넣으면 더 세게 말한다."
+  },
+  {
+   "id": "C2-02",
+   "band": "C2",
+   "title": "¿Cómo que ...? 놀라서 따지는 되물음",
+   "es": [
+    "¿Cómo que no vienes?",
+    "¿Cómo que ya se fue?"
+   ],
+   "pcic": [
+    "8.8"
+   ],
+   "ko": "'안 온다니, 그게 무슨 말이야?'에 가깝다."
+  },
+  {
+   "id": "C2-03",
+   "band": "C2",
+   "title": "지난 일 나무람: ¡Me hubieras avisado! · ¡Haberme avisado!",
+   "es": [
+    "¡Me hubieras avisado!",
+    "¡Haberlo dicho antes!"
+   ],
+   "pcic": [
+    "9.2.4",
+    "9.4.1"
+   ],
+   "ko": "'미리 말하지 그랬어'와 같은 나무람이다.",
+   "latam": "접속법 대과거 꼴(¡Me hubieras avisado!)을 주로 쓴다. haber + 과거분사 원형(¡Haberlo dicho antes!)은 에스파냐 구어에 흔해 알아보기만 한다."
+  },
+  {
+   "id": "C2-04",
+   "band": "C2",
+   "title": "강조 한정: todo un + 명사, un señor + 명사",
+   "es": [
+    "Es todo un profesional.",
+    "Tiene una señora casa."
+   ],
+   "pcic": [
+    "3.2"
+   ],
+   "note": "un señor / una señora + 명사는 '대단한 ~'이다. 구어에 흔하다."
+  },
+  {
+   "id": "C2-05",
+   "band": "C2",
+   "title": "평가 + de + 명사: un amor de persona",
+   "es": [
+    "Es un amor de persona.",
+    "Fue un desastre de viaje."
+   ],
+   "pcic": [
+    "10.2"
+   ],
+   "ko": "앞 명사가 뒤 명사를 평가한다: '사랑스러운 사람', '엉망인 여행'."
+  },
+  {
+   "id": "C2-06",
+   "band": "C2",
+   "title": "명령 + y: '~하면' (조건 · 으름장)",
+   "es": [
+    "Sigue así y vas a ver.",
+    "Estudia y vas a aprobar."
+   ],
+   "pcic": [
+    "9.3"
+   ],
+   "ko": "'계속 그래 봐, 두고 봐'처럼 명령 꼴이 '~하면'을 뜻한다.",
+   "latam": "뒤 절은 ir a + 원형(vas a ver)으로 쓴다."
+  },
+  {
+   "id": "C2-07",
+   "band": "C2",
+   "title": "미래 · 미래완료로 놀람 · 나무람",
+   "es": [
+    "¿Será posible?",
+    "¿No te habrás olvidado otra vez?"
+   ],
+   "pcic": [
+    "9.1.4",
+    "9.1.9"
+   ],
+   "ko": "'설마 또 잊어버린 건 아니겠지?'처럼 '설마'의 뜻이다.",
+   "note": "C1-05(Será muy listo, pero ...)를 넓힌다."
+  },
+  {
+   "id": "C2-08",
+   "band": "C2",
+   "title": "le가 les를 대신함 (구어)",
+   "es": [
+    "No le tengas miedo a los perros."
+   ],
+   "pcic": [
+    "7.1.3"
+   ],
+   "latam": "구어에 아주 흔하다. 시험과 격식 글은 les(No les tengas miedo a los perros).",
+   "note": "알아보기만 한다. 쓸 때는 les."
+  },
+  {
+   "id": "C2-09",
+   "band": "C2",
+   "title": "보도 조건형: 확인되지 않은 소식",
+   "es": [
+    "El ministro habría renunciado, según fuentes oficiales."
+   ],
+   "pcic": [
+    "9.1.5",
+    "9.1.10"
+   ],
+   "ko": "뉴스의 '~한 것으로 알려졌다'에 가깝다.",
+   "note": "뉴스 글에서 알아본다. 문체 지침은 흔히 피하라고 하므로, 쓸 때는 Según ..., renunció처럼 쓴다."
+  },
+  {
+   "id": "C2-10",
+   "band": "C2",
+   "title": "접속법 미래 알아보기: 법률 · 맹세 · 굳은 말",
+   "es": [
+    "Sea como fuere.",
+    "Si así no lo hiciere, que la Nación me lo demande."
+   ],
+   "pcic": [
+    "9.2.5"
+   ],
+   "latam": "멕시코 대통령 취임 선서(헌법 87조) 끝 구절에 남아 있다.",
+   "note": "알아보기만 한다. 말과 보통 글은 접속법 현재 · 과거를 쓴다(Sea como sea, C1-02)."
+  },
+  {
+   "id": "C2-11",
+   "band": "C2",
+   "title": "직전 과거 알아보기: hubo + 과거분사",
+   "es": [
+    "Apenas hubo terminado, se fue."
+   ],
+   "pcic": [
+    "9.1.7"
+   ],
+   "note": "문학 글에만 나온다. 말과 보통 글은 단순과거(Apenas terminó, se fue). 알아보기만 한다."
+  },
+  {
+   "id": "C2-12",
+   "band": "C2",
+   "title": "격식 글말: ello, cuán, harto",
+   "es": [
+    "Ello explica la demora.",
+    "¡Cuán difícil es!",
+    "Es harto difícil."
+   ],
+   "pcic": [
+    "7.1.1",
+    "7.4",
+    "8.7"
+   ],
+   "latam": "harto는 에스파냐에서는 격식 글말이지만, 칠레 등에서는 '많이 · 아주'의 구어다(Hay harta gente).",
+   "note": "ello · cuán은 알아보기만 한다."
   }
  ],
  "chunks": [

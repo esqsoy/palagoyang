@@ -1,6 +1,6 @@
 # 빨라고양 문법 지도 0.1
 
-갱신: 2026-11-08. 원본은 [grammar-map.json](grammar-map.json)이고, 이 문서는 `python3 -I es/grammar-page.py es/grammar-map.json --md es/grammar-map.md`로 다시 만든다(손으로 고치지 않는다).
+갱신: 2026-11-09. 원본은 [grammar-map.json](grammar-map.json)이고, 이 문서는 `python3 -I es/grammar-page.py es/grammar-map.json --md es/grammar-map.md`로 다시 만든다(손으로 고치지 않는다).
 
 FÁBULA 예문을 놓는 문법 차례(PRINCIPLES 0-1 5번). Claude가 PCIC 2장 문법(2006)의 수준 배치를 참고해 중남미 기준으로 짰다. PCIC 문구는 옮기지 않고 절 번호만 적는다. 보기 문장은 Claude가 쓴 것이다.
 
@@ -12,8 +12,9 @@ FÁBULA 예문을 놓는 문법 차례(PRINCIPLES 0-1 5번). Claude가 PCIC 2장
 - **첫 소개와 반복.** 첫 소개는 전형적인 낱말 하나로 하고, 반복은 매번 다른 낱말 · 새 문장으로 고르게 한다(보카고양 12절, Year & Gordon 2009).
 - **중남미 기본값.** PRINCIPLES 0-1 3번을 따른다: vosotros 없음, ustedes 하나, 단순과거 먼저, 미래는 ir a 먼저, 접속법 과거는 -ra, 작게 말하기(-ito) 일찍. 에스파냐 꼴(vosotros, 현재완료로 말하는 오늘 일, leísmo)은 해설 표시로만 둔다.
 - **한국어 비교.** 도움이 될 때만 해설 한 줄로 쓴다(보카고양 4절): gustar의 방향, 목적 대명사의 자리, 이중 부정, 주어 빼기.
-- **세트 번호.** 세트 번호와 이정표(A1~B2 상당) 위치는 FÁBULA 후보를 뽑을 때 정한다(PRINCIPLES 0-1 12번 3단계). 지금은 띠와 차례만 정한다.
+- **세트 번호.** 세트 번호와 이정표(A1~C1 상당) 위치는 FÁBULA 후보를 뽑을 때 정한다(PRINCIPLES 0-1 12번 3단계). 지금은 띠와 차례만 정한다.
 - **원장 문장과 잇기.** 다음 일(원장 585칸 스페인어 문장)에서 문장마다 쓴 문법 항목 id를 단다(`grammar`). 그 문장은 그 항목이 모두 소개된 세트부터 놓는다. A 칸이라도 단순과거를 쓰면 A2-09 뒤다.
+- **알아보기 항목.** vos(B1-28)처럼 '알아보기만 한다'고 적은 항목은 예문에 나와도 빈칸을 그 꼴에 두지 않는다. 학습자가 쳐서 쓸 일이 없는 꼴이라서다.
 
 ## PCIC와 다르게 둔 것
 
@@ -366,6 +367,54 @@ FÁBULA 예문을 놓는 문법 차례(PRINCIPLES 0-1 5번). Claude가 PCIC 2장
   - PCIC 2장 2.1.3
 - **C1-10 el hecho de que + 접속법** — El hecho de que no llame me preocupa.
   - PCIC 2장 15.1.2
+
+## C2 (12항목)
+
+말맛과 격식. 감탄 · 되물음 · 나무람의 강조 꼴, 구어의 le, 뉴스 · 법률 · 문학 글의 알아보기 꼴. C1과의 차이는 새 짜임보다 말맛이다(고양공유 단어 풀 끝점 C2, 26.11.09).
+
+- **C2-01 감탄 강조: ¡Qué + 형용사 · 명사 + que + 동사!** — ¡Qué frío que hace! / ¡Qué rico que está esto!
+  - 덧붙임: que 없이도 맞다(¡Qué frío hace!). que를 넣으면 더 세게 말한다.
+  - PCIC 2장 7.4
+- **C2-02 ¿Cómo que ...? 놀라서 따지는 되물음** — ¿Cómo que no vienes? / ¿Cómo que ya se fue?
+  - 한국어: '안 온다니, 그게 무슨 말이야?'에 가깝다.
+  - PCIC 2장 8.8
+- **C2-03 지난 일 나무람: ¡Me hubieras avisado! · ¡Haberme avisado!** — ¡Me hubieras avisado! / ¡Haberlo dicho antes!
+  - 중남미: 접속법 대과거 꼴(¡Me hubieras avisado!)을 주로 쓴다. haber + 과거분사 원형(¡Haberlo dicho antes!)은 에스파냐 구어에 흔해 알아보기만 한다.
+  - 한국어: '미리 말하지 그랬어'와 같은 나무람이다.
+  - PCIC 2장 9.2.4, 9.4.1
+- **C2-04 강조 한정: todo un + 명사, un señor + 명사** — Es todo un profesional. / Tiene una señora casa.
+  - 덧붙임: un señor / una señora + 명사는 '대단한 ~'이다. 구어에 흔하다.
+  - PCIC 2장 3.2
+- **C2-05 평가 + de + 명사: un amor de persona** — Es un amor de persona. / Fue un desastre de viaje.
+  - 한국어: 앞 명사가 뒤 명사를 평가한다: '사랑스러운 사람', '엉망인 여행'.
+  - PCIC 2장 10.2
+- **C2-06 명령 + y: '~하면' (조건 · 으름장)** — Sigue así y vas a ver. / Estudia y vas a aprobar.
+  - 중남미: 뒤 절은 ir a + 원형(vas a ver)으로 쓴다.
+  - 한국어: '계속 그래 봐, 두고 봐'처럼 명령 꼴이 '~하면'을 뜻한다.
+  - PCIC 2장 9.3
+- **C2-07 미래 · 미래완료로 놀람 · 나무람** — ¿Será posible? / ¿No te habrás olvidado otra vez?
+  - 한국어: '설마 또 잊어버린 건 아니겠지?'처럼 '설마'의 뜻이다.
+  - 덧붙임: C1-05(Será muy listo, pero ...)를 넓힌다.
+  - PCIC 2장 9.1.4, 9.1.9
+- **C2-08 le가 les를 대신함 (구어)** — No le tengas miedo a los perros.
+  - 중남미: 구어에 아주 흔하다. 시험과 격식 글은 les(No les tengas miedo a los perros).
+  - 덧붙임: 알아보기만 한다. 쓸 때는 les.
+  - PCIC 2장 7.1.3
+- **C2-09 보도 조건형: 확인되지 않은 소식** — El ministro habría renunciado, según fuentes oficiales.
+  - 한국어: 뉴스의 '~한 것으로 알려졌다'에 가깝다.
+  - 덧붙임: 뉴스 글에서 알아본다. 문체 지침은 흔히 피하라고 하므로, 쓸 때는 Según ..., renunció처럼 쓴다.
+  - PCIC 2장 9.1.5, 9.1.10
+- **C2-10 접속법 미래 알아보기: 법률 · 맹세 · 굳은 말** — Sea como fuere. / Si así no lo hiciere, que la Nación me lo demande.
+  - 중남미: 멕시코 대통령 취임 선서(헌법 87조) 끝 구절에 남아 있다.
+  - 덧붙임: 알아보기만 한다. 말과 보통 글은 접속법 현재 · 과거를 쓴다(Sea como sea, C1-02).
+  - PCIC 2장 9.2.5
+- **C2-11 직전 과거 알아보기: hubo + 과거분사** — Apenas hubo terminado, se fue.
+  - 덧붙임: 문학 글에만 나온다. 말과 보통 글은 단순과거(Apenas terminó, se fue). 알아보기만 한다.
+  - PCIC 2장 9.1.7
+- **C2-12 격식 글말: ello, cuán, harto** — Ello explica la demora. / ¡Cuán difícil es! / Es harto difícil.
+  - 중남미: harto는 에스파냐에서는 격식 글말이지만, 칠레 등에서는 '많이 · 아주'의 구어다(Hay harta gente).
+  - 덧붙임: ello · cuán은 알아보기만 한다.
+  - PCIC 2장 7.1.1, 7.4, 8.7
 
 ## 덩어리 (먼저 통째로 쓰는 말, 15개)
 
