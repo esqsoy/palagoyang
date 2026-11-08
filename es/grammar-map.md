@@ -43,7 +43,7 @@ FÁBULA 예문을 놓는 문법 차례(PRINCIPLES 0-1 5번). Claude가 PCIC 2장
   - PCIC 2장 1.2, 3.1, 3.2
 - **0-05 복수: -s / -es, los / las, unos / unas** — los gatos / las ciudades / unos amigos
   - PCIC 2장 1.3, 2.3
-- **0-06 형용사: 명사 뒤에, 성 · 수를 맞춘다** — un perro grande / una casa blanca / los zapatos negros
+- **0-06 형용사: 명사 뒤에, 성 · 수를 맞춘다** — un perro grande / una casa blanca / los zapatos negros / Choi Hyuk es coreano. / Lee Soyeon es coreana.
   - 한국어: 한국어와 반대로 꾸미는 말이 뒤에 온다.
   - PCIC 2장 2.2, 2.4, 10.3
 - **0-07 estar 1: 있는 곳** — Estoy en casa. / ¿Dónde está el baño?
