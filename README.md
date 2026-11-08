@@ -6,7 +6,8 @@
 
 - [goyang-common/](goyang-common/README.md): 언어불문 필수 표현 원장(초안 0.5, 272항목 585칸, 한국어 문장 검수 끝)과 원문 대조표, 합집합 풀
 - [goyang-common/spanish-pcic-sources.md](goyang-common/spanish-pcic-sources.md): 빨라고양을 시작할 때 쓸 PCIC 자료 안내
-- [design-20261107.md](design-20261107.md): 빨라고양 기본 설계 안(Claude 제안, 영신 결정 대기). 결정 페이지는 `python3 design-page.py design-20261107.md <out.html>`로 그린다
+- [PRINCIPLES.md](PRINCIPLES.md): 빨라고양 원칙과 이유. 0-1이 기본 설계(26.11.08 확정)
+- [design-20261107.md](design-20261107.md): 기본 설계 안의 근거·출처 전문. 결정 페이지는 `python3 design-page.py design-20261107.md <out.html>`로 그린다
 - 현재 상태는 [HANDOFF.md](HANDOFF.md), 작업 기록은 [WORK_LOG.md](WORK_LOG.md), 작업 지침은 [AGENTS.md](AGENTS.md)
 
 다른 판: 보카고양(영어) [esqsoy/vocagoyang](https://github.com/esqsoy/vocagoyang), 탄고고양(일본어) [esqsoy/tangogoyang](https://github.com/esqsoy/tangogoyang).

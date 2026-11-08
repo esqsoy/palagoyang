@@ -4,7 +4,7 @@
 
 1. `git status --short`로 진행 중인 변경을 확인한다. 기존 변경을 덮어쓰지 않는다. 고치기 전에 pull 한다.
 2. [HANDOFF.md](HANDOFF.md)에서 최신 상태와 열린 질문을 확인한다.
-3. 공통 원장을 다루면 [goyang-common/README.md](goyang-common/README.md)를 읽는다.
+3. 빨라고양 일을 하면 [PRINCIPLES.md](PRINCIPLES.md)를 읽는다(0-1 기본 설계). 공통 원장을 다루면 [goyang-common/README.md](goyang-common/README.md)를 읽는다.
 4. 고양공유 원칙 전문은 아직 탄고고양 저장소 [PRINCIPLES 0절](https://github.com/esqsoy/tangogoyang/blob/main/PRINCIPLES.md#0-목적)에 있다. 예문 원칙(단어 통제 2-1, 소재 2-10, 빈칸 중의성 3절)도 그 문서를 따른다. 공통 원장의 사람 이름만은 따로 정했다: 영신초이·이소연·최혁 셋(영신은 늘 영신초이, 부를 때 "초이!"·"영신 쪼이!"), 가족관계 그대로(영신 26.11.06, [goyang-common README](goyang-common/README.md#예문-원칙과의-관계)).
 
 ## 이 저장소의 일
