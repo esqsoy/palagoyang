@@ -81,7 +81,7 @@ P = ['<meta charset="utf-8"><meta name="viewport" content="width=device-width,in
      '<li><b>문장이 자연스러운지.</b> A → B → C로 갈수록 정중하고 길어지는지도 본다. 귤빛 칸이 빈칸 낱말이다.</li>'
      '<li><b>빈칸과 대체 정답.</b> 빈칸에 같은 뜻으로 들어가는 다른 말은 정답으로 받는다(F1-02A Soy / Vengo).</li>'
      '<li><b>높임.</b> 한국어에 -시-·-세요·성함이 있으면 usted, 해요체면 tú로 썼다(F1-27A ¿Cómo te llamas? / F1-27B ¿cómo se llama usted?).</li>'
-     '<li><b>성이 드러나는 \'나\'.</b> F1-20B Estoy seguro / segura처럼 두 꼴을 다 적었다. 화면에 어떻게 보일지는 대화에서 묻는다.</li>'
+     '<li><b>성이 드러나는 \'나\'.</b> F1-20B Estoy seguro / segura처럼 두 꼴을 다 적고 둘 다 정답으로 받는다. 화면에는 기기마다 처음 시작할 때 고른 \'남자 / 여자\'의 꼴이 보인다(영신 26.11.09).</li>'
      '<li>고칠 문장은 그 줄 댓글로.</li></ul></details>',
      '<details class="rules"><summary>쓰는 규칙</summary><ul>' + ''.join(f'<li>{e(r)}</li>' for r in es['rules']) + '</ul></details>']
 for it in groups:
