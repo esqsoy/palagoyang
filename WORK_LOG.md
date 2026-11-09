@@ -334,3 +334,29 @@
 - **이어서(같은 날):** 영신 "나중에 넣으면 됨! 생각난김에 이야기한거야 무세오델쁘라도 맞아 마드리드 생각하다 섞임".
   - 무세오델마드리드 = 프라도 미술관으로 확정했다(es/topics.md).
   - Sonidos 여행 낱말 10개 안은 '나중에 넣는다'로 HANDOFF에 남겼다. 지금 과정은 그대로다.
+
+## 2026-11-09 · 설계 12번 2단계 시작: 스페인어 판 원장 0.1(F1 시범 60칸)
+
+- **요청:** 영신 "좋아 그럼 우리는 우리 작업으로 돌아오자"(키체인 창 이야기 뒤).
+- **한 일:**
+  - 원장 585칸(272항목)을 모두 읽었다.
+  - 판 원장 형식을 정했다: kind·es·es_f·blank·alt·grammar·chunks·gap·map·note·conf, 고유 층 own(of).
+  - F1 32항목 60칸을 썼다. 모두 same이다(사실 정보라 상황과 하는 일이 같다). 성 두 꼴 1칸, 대체 정답 든 칸 11, 고유 층 3.
+- **Claude 판단:**
+  - 높임은 한국어 칸을 따른다. -시-·-세요·성함이 있으면 usted, 해요체면 tú다. 사다리 B 칸이 '정중함 한 단계'를 올리는 것과 맞다.
+  - 문법 짜임만 다른 것(Me llamo, Tengo diecisiete años)도 same으로 쳤다. counterpart는 정해진 말 자체가 다를 때만 쓴다.
+  - 듣는 사람의 성이 드러나는 말은 피했다(F1-25C ocupado/a 대신 tiene mucho trabajo).
+  - 빈칸에 같은 뜻으로 들어가는 말은 대체 정답으로 받았다(Soy/Vengo, cuesta/vale, empieza/comienza, pregunta/duda). 대체 정답이 많이 필요하면 빈칸을 옮겼다(F1-13C contratiempo → preguntar, F1-16C programada → haya).
+- **새 파일:**
+  - `es/expressions-es.json`
+  - `es/ledger-check.py`(검사)
+  - `es/ledger-page.py`(직검수 페이지 → https://claude.ai/artifact/BuJjt34KCbgTw7TKcc6xPB)
+- **검증:**
+  - ledger-check 통과(오류 0). 경고 1은 F1-17A의 B1-21이다. 지도 제안으로 적었다.
+  - 직검수 페이지는 내장 브라우저 375×812로 봤다. 가로 넘침과 콘솔 오류가 없다. 처음에는 모바일 한 줄 배치가 안 먹고 로컬 서버에서 글자가 깨져 있어서, 고친 뒤 다시 봤다.
+- **남은 것:**
+  - 영신 결정: 이름 없는 '나'의 성을 어떻게 보일지.
+  - 영신 직검수(F1 60칸).
+  - 문법 지도에 no … sino 넣기, B1-21 당기기.
+  - 나머지 525칸.
+
