@@ -34,9 +34,11 @@ def words(s):
 
 
 def check_entry(where, x):
-    for f in ('es', 'es_f'):
-        if f in x and x['blank'].lower() not in words(x[f]):
-            err.append(f'{where}: 빈칸 "{x["blank"]}"이 {f}에 낱말째로 없다')
+    for f, b in (('es', x['blank']), ('es_f', x.get('blank_f', x['blank']))):
+        if f in x and b.lower() not in words(x[f]):
+            err.append(f'{where}: 빈칸 "{b}"이 {f}에 낱말째로 없다')
+    if 'blank_f' in x and 'es_f' not in x:
+        err.append(f'{where}: blank_f가 있는데 es_f가 없다')
     if 'es_f' in x and x['es_f'] == x['es']:
         err.append(f'{where}: es_f가 es와 같다')
     for a in x.get('alt', []):

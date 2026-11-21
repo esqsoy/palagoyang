@@ -19,6 +19,7 @@ css = (ROOT / 'es' / 'grammar-page.py').read_text(encoding='utf-8').split('css =
 css += """
 .it{grid-template-columns:72px minmax(0,1fr)}
 .lv{display:block;font-size:.72rem;color:var(--mute)}
+.it,h2,h3{scroll-margin-top:100px}
 .ko{font-weight:650;line-height:1.45}
 .sp{font-family:var(--display);font-size:1.08rem;line-height:1.5;margin:2px 0 0}
 .sp mark{background:var(--accent-bg);color:var(--accent);font-weight:700;border-radius:4px;padding:0 3px}
@@ -74,17 +75,27 @@ n = sum(1 for it in groups for r in it['rungs'] if r['id'] in mine)
 P = ['<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>스페인어 판 원장 직검수</title><meta name="claude:viewport-fit-sides" content="cover">',
      '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap">',
      f'<style>{css}</style><div class="wrap">',
-     f'<h1>{e(es["name"])} · F1 시범</h1>',
+     f'<h1>{e(es["name"])} · {" · ".join(sorted({r["id"].split("-")[0] for r in es["rungs"]}))}</h1>',
      f'<p class="sub">{e(es["version"])} · {e(es["date"])} · Claude 초안 · {len(groups)}항목 {n}칸 / 원장 585칸 · 고유 층 {len(es.get("own", []))}</p>',
      f'<p class="about">{e(es["about"])}</p>',
      '<details class="rules" open><summary>봐 줄 것</summary><ul>'
-     '<li><b>문장이 자연스러운지.</b> A → B → C로 갈수록 정중하고 길어지는지도 본다. 귤빛 칸이 빈칸 낱말이다.</li>'
-     '<li><b>빈칸과 대체 정답.</b> 빈칸에 같은 뜻으로 들어가는 다른 말은 정답으로 받는다(F1-02A Soy / Vengo).</li>'
-     '<li><b>높임.</b> 한국어에 -시-·-세요·성함이 있으면 usted, 해요체면 tú로 썼다(F1-27A ¿Cómo te llamas? / F1-27B ¿cómo se llama usted?).</li>'
-     '<li><b>성이 드러나는 \'나\'.</b> F1-20B Estoy seguro / segura처럼 두 꼴을 다 적고 둘 다 정답으로 받는다. 화면에는 기기마다 처음 시작할 때 고른 \'남자 / 여자\'의 꼴이 보인다(영신 26.11.09).</li>'
-     '<li>고칠 문장은 그 줄 댓글로.</li></ul></details>',
+     '<li><b>F1은 받았다</b>(26.11.21 "마음에 듭니다"). 이번에 새로 볼 것은 <a href="#g-F2">F2 태도·감정</a> 154칸이다.</li>'
+     '<li><b>성이 드러나는 \'나\'.</b> 남성·여성 두 줄로 적었다(Estoy cansado / cansada). 둘 다 정답이고, 화면에는 처음 시작할 때 고른 \'남자 / 여자\'의 꼴이 보인다.</li>'
+     '<li><b>관용 표현.</b> 한국어와 그림이 같은 것을 골랐다: 쥐구멍 → que me trague la tierra(F2-55C), 꿈에도 → ni en sueños(F2-10C), 화가 치민다 → me hierve la sangre(F2-49C). 어렵거나 어색하면 댓글로.</li>'
+     '<li><b>빈칸과 대체 정답.</b> 한국어 뜻대로 그 자리에 들어가 맞는 말은 정답으로 받는다. 판단 담당(judge) 검수로 19칸을 고쳤고, 대체 정답을 12칸 더 넣었다.</li>'
+     '<li>고칠 문장은 그 줄 댓글로. 귤빛 칸이 빈칸 낱말이다.</li></ul></details>',
      '<details class="rules"><summary>쓰는 규칙</summary><ul>' + ''.join(f'<li>{e(r)}</li>' for r in es['rules']) + '</ul></details>']
+gs = []
 for it in groups:
+    if it['group'] not in gs:
+        gs.append(it['group'])
+P.append('<nav class="bands" aria-label="묶음">' + ''.join(
+    f'<a href="#g-{g}">{e(g)} {e(led["groups"][g])}<small>{sum(1 for i in mine if i.split("-")[0] == g)}</small></a>' for g in gs) + '</nav>')
+seen_g = set()
+for it in groups:
+    if it['group'] not in seen_g:
+        seen_g.add(it['group'])
+        P.append(f'<h2 id="g-{e(it["group"])}" style="margin-top:28px;scroll-margin-top:52px">{e(it["group"])} · {e(led["groups"][it["group"]])}</h2>')
     P.append(f'<h3><small>{e(it["id"])}</small>{e(it["task"])}</h3>')
     for r in it['rungs']:
         x = mine.get(r['id'])
@@ -93,7 +104,7 @@ for it in groups:
         sp = f'<p class="sp" lang="es">{mark(x["es"], x["blank"])}</p>'
         if x.get('es_f'):
             sp = (f'<p class="sp" lang="es"><small>남성</small>{mark(x["es"], x["blank"])}</p>'
-                  f'<p class="sp" lang="es"><small>여성</small>{mark(x["es_f"], x["blank"])}</p>')
+                  f'<p class="sp" lang="es"><small>여성</small>{mark(x["es_f"], x.get("blank_f", x["blank"]))}</p>')
         ow = ''.join(f'<div class="own"><p class="nt"><span class="tag la">고유 층 둘째 꼴</span>따로 카드</p>'
                      f'<p class="sp" lang="es">{mark(o["es"], o["blank"])}</p>{meta(o)}{notes(o)}</div>' for o in own.get(r['id'], []))
         P.append(f'<div class="it" id="{e(r["id"])}"><div class="id">{e(r["id"])}<span class="lv">{e(r["level"])}</span></div><div>'
