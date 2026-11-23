@@ -79,10 +79,11 @@ P = ['<meta charset="utf-8"><meta name="viewport" content="width=device-width,in
      f'<p class="sub">{e(es["version"])} · {e(es["date"])} · Claude 초안 · {len(groups)}항목 {n}칸 / 원장 585칸 · 고유 층 {len(es.get("own", []))}</p>',
      f'<p class="about">{e(es["about"])}</p>',
      '<details class="rules" open><summary>봐 줄 것</summary><ul>'
-     '<li><b>F1은 받았다</b>(26.11.21 "마음에 듭니다"). 이번에 새로 볼 것은 <a href="#g-F2">F2 태도·감정</a> 154칸이다.</li>'
+     '<li><b>F1은 받았다</b>(26.11.21 "마음에 듭니다"). <a href="#g-F2">F2 태도·감정</a> 154칸과 <a href="#g-F3">F3 일 시키기</a> 60칸이 직검수 대기다.</li>'
      '<li><b>성이 드러나는 \'나\'.</b> 남성·여성 두 줄로 적었다(Estoy cansado / cansada). 둘 다 정답이고, 화면에는 처음 시작할 때 고른 \'남자 / 여자\'의 꼴이 보인다.</li>'
-     '<li><b>관용 표현.</b> 한국어와 그림이 같은 것을 골랐다: 쥐구멍 → que me trague la tierra(F2-55C), 꿈에도 → ni en sueños(F2-10C), 화가 치민다 → me hierve la sangre(F2-49C). 어렵거나 어색하면 댓글로.</li>'
-     '<li><b>빈칸과 대체 정답.</b> 한국어 뜻대로 그 자리에 들어가 맞는 말은 정답으로 받는다. 판단 담당(judge) 검수로 19칸을 고쳤고, 대체 정답을 12칸 더 넣었다.</li>'
+     '<li><b>F3 부탁·허락.</b> A 칸의 \'-세요\'는 명령보다 poder 물음(¿Puede abrir la ventana, por favor?)이나 tú 꼴로 썼다. usted 명령(Abra, Siéntese)은 B1에 나오므로 해설·대체 정답에 둔다.</li>'
+     '<li><b>관용 표현.</b> 한국어와 그림이 같은 것을 골랐다: 쥐구멍 → que me trague la tierra(F2-55C), 꿈에도 → ni en sueños(F2-10C), 면목이 없다 → no tengo cara(F3-24C). 어렵거나 어색하면 댓글로.</li>'
+     '<li><b>빈칸과 대체 정답.</b> 한국어 뜻대로 그 자리에 들어가 맞는 말은 정답으로 받는다. 판단 담당(judge) 검수로 F2 19칸, F3 10칸을 고쳤다.</li>'
      '<li>고칠 문장은 그 줄 댓글로. 귤빛 칸이 빈칸 낱말이다.</li></ul></details>',
      '<details class="rules"><summary>쓰는 규칙</summary><ul>' + ''.join(f'<li>{e(r)}</li>' for r in es['rules']) + '</ul></details>']
 gs = []
